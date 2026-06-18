@@ -80,7 +80,7 @@ export function ForecastView() {
               />
             </AreaChart>
           </ResponsiveContainer>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12, marginTop: 20 }}>
+          <div className="responsive-grid-4" style={{ gap: 12, marginTop: 20 }}>
             {[
               { label: "Peak Month", value: peakMonth.month, sub: `$${peakMonth.forecast?.toLocaleString()} predicted` },
               { label: "Model R2", value: "0.94", sub: "Variance explained" },

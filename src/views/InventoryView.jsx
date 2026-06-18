@@ -23,7 +23,7 @@ export function InventoryView() {
   return (
     <div style={{ display: "grid", gap: 18 }}>
       <DemoBanner />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
+      <div className="responsive-grid-3" style={{ gap: 10 }}>
         {allProducts.map((p) => {
           const oh = isFillerProduct(p.product) ? p.totalMlOnHand : p.totalUnitsOnHand;
           const alert = oh <= p.reorderPoint;
@@ -85,7 +85,7 @@ export function InventoryView() {
         })}
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 12 }}>
+      <div className="responsive-grid-5">
         {[
           {
             label: `On Hand (${unit})`,
@@ -150,7 +150,7 @@ export function InventoryView() {
         ))}
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: 14 }}>
+      <div className="responsive-grid-main-side">
         <Card>
           <CardHeader
             title={`Session Log — ${selected.product}`}
@@ -158,6 +158,7 @@ export function InventoryView() {
           />
           <Divider />
           <CardBody style={{ paddingTop: 0 }}>
+            <div className="table-scroll">
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
               <thead>
                 <tr style={{ borderBottom: `1px solid ${T.border}` }}>
@@ -224,6 +225,7 @@ export function InventoryView() {
                 })}
               </tbody>
             </table>
+            </div>
             {selected.wasteLog.length > 0 && (
               <div
                 style={{
@@ -325,6 +327,7 @@ export function InventoryView() {
         />
         <Divider />
         <CardBody style={{ paddingTop: 0 }}>
+          <div className="table-scroll">
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <thead>
               <tr style={{ borderBottom: `1px solid ${T.border}` }}>
@@ -391,6 +394,7 @@ export function InventoryView() {
               })}
             </tbody>
           </table>
+          </div>
         </CardBody>
       </Card>
     </div>

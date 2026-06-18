@@ -28,7 +28,7 @@ export function HypothesisView() {
   return (
     <div style={{ display: "grid", gap: 18 }}>
       <DemoBanner />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 12 }}>
+      <div className="responsive-grid-4" style={{ gap: 12 }}>
         {hypothesisTests.map((t) => (
           <button
             key={t.id}
@@ -94,7 +94,7 @@ export function HypothesisView() {
           </button>
         ))}
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <div className="responsive-grid-2">
         <Card>
           <CardHeader title="Distribution Overlap" subtitle="Group A vs B — separation indicates effect magnitude" />
           <Divider />
@@ -125,7 +125,7 @@ export function HypothesisView() {
           <CardHeader title="Statistical Results" subtitle={test.hypothesis} />
           <Divider />
           <CardBody style={{ paddingTop: 16 }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 16 }}>
+            <div className="responsive-grid-2" style={{ gap: 12, marginBottom: 16 }}>
               {[
                 { label: test.groupA.label + " Mean", value: test.groupA.mean.toLocaleString(), sub: `n = ${test.groupA.n}` },
                 { label: test.groupB.label + " Mean", value: test.groupB.mean.toLocaleString(), sub: `n = ${test.groupB.n}` },
@@ -186,6 +186,7 @@ export function HypothesisView() {
         <CardHeader title="All Experiments" subtitle="Active hypothesis tests across key business levers" />
         <Divider />
         <CardBody style={{ paddingTop: 0 }}>
+          <div className="table-scroll">
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <thead>
               <tr style={{ borderBottom: `1px solid ${T.border}` }}>
@@ -241,6 +242,7 @@ export function HypothesisView() {
               ))}
             </tbody>
           </table>
+          </div>
         </CardBody>
       </Card>
     </div>

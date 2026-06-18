@@ -3,15 +3,13 @@ import { T } from "../../theme/tokens";
 export function DemoBanner() {
   return (
     <div
+      className="demo-banner"
       style={{
         background: T.goldLight,
         border: `1px solid ${T.gold}55`,
         borderRadius: 10,
         padding: "10px 18px",
         marginBottom: 20,
-        display: "flex",
-        alignItems: "center",
-        gap: 12,
       }}
     >
       <div
@@ -72,11 +70,9 @@ export function Card({ children, style = {} }) {
 export function CardHeader({ title, subtitle, right }) {
   return (
     <div
+      className="card-header-row"
       style={{
         padding: "18px 22px 14px",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "flex-start",
       }}
     >
       <div>

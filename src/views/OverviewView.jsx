@@ -18,17 +18,19 @@ import {
   CardBody,
   KPICard,
 } from "../components/ui";
+import { AnalysisActionButtons } from "../components/analysis";
+import { buildLapseRiskPrompt, buildLapseRiskContext } from "../constants/amilaTeam";
 
-export function OverviewView() {
+export function OverviewView({ onRequestAnalysis }) {
   return (
     <div style={{ display: "grid", gap: 18 }}>
       <DemoBanner />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 14 }}>
+      <div className="responsive-grid-4">
         {mockData.kpis.map((k) => (
           <KPICard key={k.label} {...k} />
         ))}
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: 14 }}>
+      <div className="responsive-grid-main-side">
         <Card>
           <CardHeader title="Revenue Velocity" subtitle="Month-over-month vs prior year" />
           <Divider />
@@ -92,7 +94,7 @@ export function OverviewView() {
           </CardBody>
         </Card>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <div className="responsive-grid-2">
         <Card>
           <CardHeader title="Suite Utilization" subtitle="Revenue generated per treatment room" />
           <Divider />
@@ -133,17 +135,19 @@ export function OverviewView() {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
+                  gap: 8,
                   padding: "10px 0",
                   borderBottom: i < mockData.lapseRisk.length - 1 ? `1px solid ${T.border}` : "none",
+                  flexWrap: "wrap",
                 }}
               >
-                <div>
+                <div style={{ minWidth: 0, flex: "1 1 120px" }}>
                   <div style={{ fontSize: 12, fontWeight: 600, color: T.text }}>{c.name}</div>
                   <div style={{ fontSize: 10, color: T.textMuted, marginTop: 1 }}>
                     {c.tag} · {c.lastVisit}
                   </div>
                 </div>
-                <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+                <div style={{ display: "flex", gap: 10, alignItems: "center", flexShrink: 0 }}>
                   <span style={{ fontSize: 11, color: T.gold, fontWeight: 700 }}>{c.ltv}</span>
                   <div style={{ width: 48, height: 5, background: T.bg, borderRadius: 99 }}>
                     <div
@@ -166,6 +170,24 @@ export function OverviewView() {
                     {c.risk}%
                   </span>
                 </div>
+                {onRequestAnalysis && (
+                  <AnalysisActionButtons
+                    compact
+                    onAi={() =>
+                      onRequestAnalysis({
+                        mode: "ai",
+                        prefill: buildLapseRiskPrompt(c),
+                        context: buildLapseRiskContext(c),
+                      })
+                    }
+                    onExpert={() =>
+                      onRequestAnalysis({
+                        mode: "expert",
+                        context: buildLapseRiskContext(c),
+                      })
+                    }
+                  />
+                )}
               </div>
             ))}
           </CardBody>

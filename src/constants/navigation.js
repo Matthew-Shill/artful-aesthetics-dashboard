@@ -4,7 +4,7 @@ export const NAV = [
   { id: "forecast", label: "Forecast", icon: "⟁" },
   { id: "hypothesis", label: "Experiments", icon: "⌬" },
   { id: "providers", label: "Providers", icon: "◉" },
-  { id: "ai", label: "AI Analyst", icon: "✦", badge: "ai" },
+  { id: "ai", label: "Analysis Hub", icon: "✦", badge: "ai" },
 ];
 
 export const PAGE_SUBTITLES = {
@@ -15,5 +15,5 @@ export const PAGE_SUBTITLES = {
     "XGBoost model with 95% prediction intervals, trained on 24 months of revenue and treatment-mix signals",
   hypothesis: "Statistically rigorous experiments across key business levers",
   providers: "Retention, upsell conversion, and revenue contribution by provider",
-  ai: "Ask anything about the data in this dashboard — powered by Claude",
+  ai: "Instant AI insights or personal analysis from the Amila team",
 };

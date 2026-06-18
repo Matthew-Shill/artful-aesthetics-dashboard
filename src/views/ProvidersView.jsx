@@ -18,7 +18,7 @@ export function ProvidersView() {
   return (
     <div style={{ display: "grid", gap: 18 }}>
       <DemoBanner />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 }}>
+      <div className="responsive-grid-3">
         {mockData.providers.map((p) => (
           <Card key={p.name}>
             <div style={{ padding: "20px 22px" }}>
@@ -60,7 +60,7 @@ export function ProvidersView() {
           </Card>
         ))}
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <div className="responsive-grid-2">
         <Card>
           <CardHeader title="Rebooking vs Upsell" subtitle="Top-right quadrant indicates highest-impact providers" />
           <Divider />
