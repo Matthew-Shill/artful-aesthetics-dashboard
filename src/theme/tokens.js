@@ -1,0 +1,36 @@
+export const T = {
+  bg: "#F5F2EE",
+  surface: "#FFFFFF",
+  sidebar: "#1A1612",
+  sidebarActive: "#B8924A",
+  border: "#E8E2DA",
+  borderDark: "#CFC5B8",
+  gold: "#C9A96E",
+  goldLight: "#FAF3E8",
+  goldDark: "#9A7840",
+  sage: "#7A9E8E",
+  sageLight: "#EBF3F0",
+  rose: "#C0544A",
+  roseLight: "#FDF0EE",
+  green: "#4A8C6A",
+  greenLight: "#EBF5EF",
+  amber: "#B87333",
+  amberLight: "#FBF3EA",
+  text: "#1A1612",
+  textMid: "#5C4F3F",
+  textMuted: "#9C8C7C",
+  white: "#FFFFFF",
+  charcoal: "#2E2620",
+};
+
+export const chartTooltip = {
+  contentStyle: {
+    background: T.surface,
+    border: `1px solid ${T.border}`,
+    borderRadius: 10,
+    fontSize: 12,
+    color: T.text,
+    boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
+  },
+  cursor: false,
+};
