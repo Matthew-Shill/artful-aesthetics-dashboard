@@ -7,14 +7,18 @@ import { useAuth } from "@/admin/context/AuthContext";
 import { DashboardShell } from "./DashboardShell";
 
 export function AdminDashboardGate() {
-  const { session, loading, authEnabled } = useAuth();
+  const { session, loading, authEnabled, isAdmin } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
-    if (!loading && authEnabled && !session) {
-      router.replace("/admin/login");
+    if (!loading && authEnabled) {
+      if (!session) {
+        router.replace("/login");
+      } else if (!isAdmin) {
+        router.replace("/account");
+      }
     }
-  }, [authEnabled, loading, session, router]);
+  }, [authEnabled, isAdmin, loading, session, router]);
 
   if (loading) {
     return (
@@ -32,7 +36,7 @@ export function AdminDashboardGate() {
     );
   }
 
-  if (!authEnabled || !session) {
+  if (!authEnabled || !session || !isAdmin) {
     return null;
   }
 

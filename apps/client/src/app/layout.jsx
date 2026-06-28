@@ -1,4 +1,5 @@
 import "./globals.css";
+import { AuthProvider } from "@/context/AuthContext";
 
 export const metadata = {
   metadataBase: new URL("https://artfulaestheticmedicine.com"),
@@ -28,7 +29,9 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }

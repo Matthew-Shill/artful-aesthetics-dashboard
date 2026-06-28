@@ -1,10 +1,5 @@
-import { AdminLoginPage } from "@/admin/AdminLoginPage";
+import { redirect } from "next/navigation";
 
-export const metadata = {
-  title: "Admin Login",
-  robots: { index: false, follow: false },
-};
-
-export default function AdminLoginRoute() {
-  return <AdminLoginPage />;
+export default function AdminLoginRedirect() {
+  redirect("/login");
 }

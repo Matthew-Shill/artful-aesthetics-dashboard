@@ -1,39 +1,47 @@
 import { NextResponse } from "next/server";
-import { isAllowedAdminEmail } from "@/config/admin";
+import { getPostLoginPath, isAllowedAdminEmail } from "@/config/admin";
 import { updateSession } from "@/lib/supabase/middleware";
 
 export async function middleware(request) {
   const { pathname } = request.nextUrl;
-
-  if (!pathname.startsWith("/admin")) {
-    return NextResponse.next();
-  }
-
   const { supabaseResponse, user, authConfigured } = await updateSession(request);
 
-  if (!authConfigured) {
-    if (pathname === "/admin/login") {
-      return supabaseResponse;
-    }
-    return NextResponse.redirect(new URL("/admin/login", request.url));
+  if (pathname === "/admin/login") {
+    return NextResponse.redirect(new URL("/login", request.url));
   }
 
-  const isLoginRoute = pathname === "/admin/login";
-
-  if (isLoginRoute) {
-    if (user && isAllowedAdminEmail(user.email)) {
-      return NextResponse.redirect(new URL("/admin/overview", request.url));
+  if (pathname === "/login") {
+    if (authConfigured && user?.email) {
+      return NextResponse.redirect(new URL(getPostLoginPath(user.email), request.url));
     }
     return supabaseResponse;
   }
 
+  if (pathname === "/account" || pathname.startsWith("/account/")) {
+    if (!authConfigured) {
+      return supabaseResponse;
+    }
+    if (!user) {
+      return NextResponse.redirect(new URL("/login", request.url));
+    }
+    return supabaseResponse;
+  }
+
+  if (!pathname.startsWith("/admin")) {
+    return supabaseResponse;
+  }
+
+  if (!authConfigured) {
+    return NextResponse.redirect(new URL("/login", request.url));
+  }
+
   if (!user || !isAllowedAdminEmail(user.email)) {
-    return NextResponse.redirect(new URL("/admin/login", request.url));
+    return NextResponse.redirect(new URL("/login", request.url));
   }
 
   return supabaseResponse;
 }
 
 export const config = {
-  matcher: ["/admin", "/admin/:path*"],
+  matcher: ["/login", "/account", "/account/:path*", "/admin", "/admin/:path*"],
 };

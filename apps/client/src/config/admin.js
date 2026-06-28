@@ -8,3 +8,8 @@ export function isAllowedAdminEmail(email) {
   if (!email) return false;
   return ADMIN_EMAILS.includes(email.trim().toLowerCase());
 }
+
+export function getPostLoginPath(email) {
+  if (isAllowedAdminEmail(email)) return "/admin/overview";
+  return "/account";
+}

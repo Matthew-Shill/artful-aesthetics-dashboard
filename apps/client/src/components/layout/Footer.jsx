@@ -52,8 +52,8 @@ export function Footer() {
             <Link href="/privacy" className={styles.footerLink}>
               Privacy Policy
             </Link>
-            <Link href="/admin/login" className={styles.footerLink}>
-              Staff Login
+            <Link href={siteConfig.loginUrl} className={styles.footerLink}>
+              Login
             </Link>
           </div>
         </div>

@@ -108,6 +108,9 @@ export function Header() {
           </nav>
 
           <div className={styles.headerActions}>
+            <Link href={siteConfig.loginUrl} className={styles.loginLink}>
+              Login
+            </Link>
             <Button href={siteConfig.bookingUrl} external variant="primary" className={styles.headerBookBtn}>
               Book Now
             </Button>
@@ -150,6 +153,9 @@ export function Header() {
           </Link>
           <Link href="/contact" className={styles.mobilePrimaryLink} onClick={() => setMobileOpen(false)}>
             Contact
+          </Link>
+          <Link href={siteConfig.loginUrl} className={styles.mobilePrimaryLink} onClick={() => setMobileOpen(false)}>
+            Login
           </Link>
         </div>
 

@@ -257,6 +257,19 @@
   justify-self: end;
 }
 
+.loginLink {
+  display: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.loginLink:hover {
+  color: var(--text);
+}
+
 .headerBookBtn {
   display: none;
   padding: 0.7rem 1.25rem !important;
@@ -414,6 +427,10 @@
 @media (min-width: 900px) {
   .nav {
     display: flex;
+  }
+
+  .loginLink {
+    display: inline-flex;
   }
 
   .headerBookBtn {

@@ -20,6 +20,7 @@ export const siteConfig = {
     "Discover the transformative experience at Artful Aesthetic Medicine, where beauty meets artistry. Located in Englewood, CO, we offer a comprehensive range of aesthetic services tailored to enhance your natural beauty.",
   url: "https://artfulaestheticmedicine.com",
   bookingUrl: "https://artfulaestheticmedicine.com/book-now",
+  loginUrl: "/login",
   phone: "303.901.3381",
   phoneHref: "tel:+13039013381",
   email: "erica@artfulaestheticmedicine.com",

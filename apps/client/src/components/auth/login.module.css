@@ -1,0 +1,127 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 2rem 1rem;
+}
+
+.loading {
+  color: var(--text-muted);
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+  display: inline-flex;
+  margin-bottom: 1.5rem;
+  height: 48px;
+}
+
+.logo :global(img) {
+  height: 48px;
+  width: auto;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+.subtitle {
+  margin: 0 0 1.75rem;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.error {
+  background: #fce8e6;
+  color: var(--rose);
+  padding: 0.75rem 0.875rem;
+  border-radius: 10px;
+  font-size: 0.8125rem;
+  margin-bottom: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-bottom: 0.375rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background: var(--surface);
+}
+
+.input:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.5rem;
+  background: var(--gold);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--gold-dark);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.footerNote {
+  margin: 1.5rem 0 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.inlineLink {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.inlineLink:hover {
+  text-decoration: underline;
+}
