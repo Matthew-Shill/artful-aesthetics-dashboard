@@ -1,21 +1,18 @@
 {
-  "name": "artful-aesthetics-dashboard",
+  "name": "artful-aesthetics",
   "private": true,
   "version": "1.0.0",
-  "description": "Analytics dashboard demo for Artful Aesthetic Medicine — powered by Amila Health Analytics",
-  "type": "module",
+  "description": "Artful Aesthetic Medicine — public website and admin analytics dashboard",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "recharts": "^2.15.3"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.5.2",
-    "vite": "^6.3.5"
+    "dev": "npm run dev:admin & npm run dev:client",
+    "dev:admin": "npm run dev -w @artful/admin",
+    "dev:client": "npm run dev -w @artful/client",
+    "build": "npm run build -w @artful/client && npm run build -w @artful/admin",
+    "build:admin": "npm run build -w @artful/admin",
+    "build:client": "npm run build -w @artful/client"
   }
 }

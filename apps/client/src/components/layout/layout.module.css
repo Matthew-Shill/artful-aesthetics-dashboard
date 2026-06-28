@@ -1,0 +1,462 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+  overflow: visible;
+}
+
+.headerInner {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  min-height: var(--header-height);
+  padding-block: 0.75rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.875rem;
+  flex-shrink: 0;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.logoOwnerImage {
+  width: auto;
+  height: clamp(2.5rem, 3.5vw, 3.25rem);
+  max-width: min(7.5rem, 28vw);
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  width: auto;
+  height: clamp(2.75rem, 4.5vw, 3.75rem);
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.logoIconInverted {
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  line-height: 1;
+}
+
+.logoWordmark {
+  font-family: var(--font-serif);
+  font-size: clamp(1.625rem, 2.8vw, 2.125rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text);
+}
+
+.logoTagline {
+  font-family: var(--font-sans);
+  font-size: clamp(0.5625rem, 1vw, 0.6875rem);
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.logoWordmarkInverted {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.logoTaglineInverted {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.footerLogo {
+  margin-bottom: 1.25rem;
+}
+
+.footerLogo .logoOwnerImage {
+  height: clamp(3.5rem, 5vw, 5rem);
+}
+
+.footerLogo .logoIcon {
+  height: clamp(3rem, 4.5vw, 3.75rem);
+}
+
+.footerLogo .logoWordmark {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+.nav {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  border-radius: 999px;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.navLink:hover,
+.navLinkActive {
+  color: var(--text);
+  background: var(--gold-light);
+}
+
+.megaWrap {
+  position: relative;
+}
+
+.megaWrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 0.85rem;
+}
+
+.megaTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.625rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  line-height: 1;
+  transition: color 0.2s, background 0.2s;
+}
+
+.megaTrigger:hover,
+.megaTriggerOpen {
+  color: var(--text);
+  background: var(--gold-light);
+}
+
+.megaChevron {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  transition: transform 0.2s;
+}
+
+.megaTriggerOpen .megaChevron {
+  transform: rotate(180deg);
+}
+
+.megaPanel {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(920px, calc(100vw - 2rem));
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 24px 60px rgba(26, 22, 18, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  z-index: 110;
+}
+
+.megaWrapOpen .megaPanel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.megaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+}
+
+.megaColumn {
+  min-width: 0;
+}
+
+.megaCategory {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.625rem;
+  line-height: 1.3;
+  transition: color 0.2s;
+}
+
+.megaCategory:hover {
+  color: var(--gold-dark);
+}
+
+.megaList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.megaItemLink {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  padding: 0.25rem 0;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.megaItemLink:hover {
+  color: var(--text);
+}
+
+.megaViewAll {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-self: end;
+}
+
+.headerBookBtn {
+  display: none;
+  padding: 0.7rem 1.25rem !important;
+  font-size: 0.8125rem !important;
+  white-space: nowrap;
+}
+
+.menuBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.menuBtn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+}
+
+.mobileNav {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--surface);
+  padding: 1.5rem;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobileNavOpen {
+  transform: translateX(0);
+}
+
+.mobileNavHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mobileNavHeader .logo {
+  flex: 1;
+  min-width: 0;
+}
+
+.mobileNavClose {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobilePrimaryLinks {
+  display: grid;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobilePrimaryLink {
+  display: block;
+  padding: 1rem 0;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.mobileNavSection {
+  margin-bottom: 1.25rem;
+}
+
+.mobileNavSectionTitle {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 0.5rem;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 0.625rem 0;
+  font-size: 0.9375rem;
+  color: var(--text-mid);
+}
+
+.mobileBookBtn {
+  margin-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.footer {
+  background: var(--sidebar);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 4rem 0 2rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.footerText {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.footerHeading {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.footerLink {
+  display: block;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: var(--surface);
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (min-width: 900px) {
+  .nav {
+    display: flex;
+  }
+
+  .headerBookBtn {
+    display: inline-flex;
+  }
+
+  .menuBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .headerInner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .logoOwnerImage {
+    height: 2.5rem;
+    max-width: 6.5rem;
+  }
+
+  .logoIcon {
+    height: 2.5rem;
+  }
+
+  .logoWordmark {
+    font-size: 1.375rem;
+  }
+
+  .logoTagline {
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1100px) {
+  .navLink,
+  .megaTrigger {
+    padding-inline: 0.625rem;
+    font-size: 0.8125rem;
+  }
+
+  .megaGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
