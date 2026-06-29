@@ -124,12 +124,42 @@ input {
 .page-header-inner {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 14px;
+}
+
+.page-header-leading {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
 }
 
 .page-header-text {
   flex: 1;
   min-width: 0;
+}
+
+.sign-out-button {
+  flex-shrink: 0;
+  margin-top: 2px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid #e8e2da;
+  border-radius: 8px;
+  color: #6b6560;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.sign-out-button:hover {
+  color: #1a1612;
+  border-color: #d4cdc4;
+  background: #faf8f5;
 }
 
 .menu-button {

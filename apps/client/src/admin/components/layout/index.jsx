@@ -21,7 +21,7 @@ export function Sidebar({
 
   async function handleSignOut() {
     await signOut();
-    router.push("/login");
+    router.replace("/");
   }
 
   return (
@@ -283,6 +283,14 @@ export function Sidebar({
 }
 
 export function PageHeader({ title, subtitle, onMenuToggle, showMenuButton }) {
+  const { signOut, session } = useAuth();
+  const router = useRouter();
+
+  async function handleSignOut() {
+    await signOut();
+    router.replace("/");
+  }
+
   return (
     <div
       className="page-header"
@@ -292,46 +300,54 @@ export function PageHeader({ title, subtitle, onMenuToggle, showMenuButton }) {
       }}
     >
       <div className="page-header-inner">
-        {showMenuButton && (
-          <button
-            type="button"
-            className="menu-button"
-            onClick={onMenuToggle}
-            aria-label="Open menu"
-          >
-            <span className="menu-button-icon" aria-hidden="true">
-              <span />
-              <span />
-              <span />
-            </span>
+        <div className="page-header-leading">
+          {showMenuButton && (
+            <button
+              type="button"
+              className="menu-button"
+              onClick={onMenuToggle}
+              aria-label="Open menu"
+            >
+              <span className="menu-button-icon" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </span>
+            </button>
+          )}
+          <div className="page-header-text">
+            <div
+              style={{
+                fontSize: 10,
+                fontWeight: 700,
+                color: T.gold,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                marginBottom: 4,
+              }}
+            >
+              Artful Aesthetic Medicine
+            </div>
+            <h1
+              style={{
+                margin: 0,
+                fontSize: 22,
+                fontWeight: 800,
+                color: T.text,
+                letterSpacing: "-0.025em",
+              }}
+            >
+              {title}
+            </h1>
+            <div style={{ fontSize: 12, color: T.textMuted, marginTop: 4 }}>{subtitle}</div>
+          </div>
+        </div>
+
+        {session && (
+          <button type="button" className="sign-out-button" onClick={handleSignOut}>
+            Sign out
           </button>
         )}
-        <div className="page-header-text">
-          <div
-            style={{
-              fontSize: 10,
-              fontWeight: 700,
-              color: T.gold,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              marginBottom: 4,
-            }}
-          >
-            Artful Aesthetic Medicine
-          </div>
-          <h1
-            style={{
-              margin: 0,
-              fontSize: 22,
-              fontWeight: 800,
-              color: T.text,
-              letterSpacing: "-0.025em",
-            }}
-          >
-            {title}
-          </h1>
-          <div style={{ fontSize: 12, color: T.textMuted, marginTop: 4 }}>{subtitle}</div>
-        </div>
       </div>
     </div>
   );
