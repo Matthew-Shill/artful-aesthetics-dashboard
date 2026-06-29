@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "Artful Aesthetic Medicine",
-  tagline: "Intentional & Ethical Artistry",
+  tagline: "Intentional Beauty. Artfully Crafted.",
+  heroHeadline: ["Intentional Beauty.", "Artfully Crafted."],
   logo: {
     /** Switch to "redesign" when ready to use the horizontal icon + text logo. */
     variant: "owner",
@@ -17,9 +18,9 @@ export const siteConfig = {
     icon: "/images/artful-logo-icon-transparent.png",
   },
   description:
-    "Discover the transformative experience at Artful Aesthetic Medicine, where beauty meets artistry. Located in Englewood, CO, we offer a comprehensive range of aesthetic services tailored to enhance your natural beauty.",
+    "Personalized aesthetic care in Englewood, CO — crafted with intention by Erica Eskeli.",
   url: "https://artfulaestheticmedicine.com",
-  bookingUrl: "https://artfulaestheticmedicine.com/book-now",
+  bookingUrl: "https://booking.mangomint.com/artfulaestheticmedicine",
   loginUrl: "/login",
   phone: "303.901.3381",
   phoneHref: "tel:+13039013381",
@@ -117,25 +118,18 @@ export const testimonials = [
   },
 ];
 
-export const bookingSteps = [
+export const trustCards = [
   {
-    title: "Book Your Appointment",
-    description:
-      "Find your service and book from that page. It will take you to our online booking system and get you scheduled!",
+    title: "Expert Care",
+    description: "Led by Erica Eskeli with over a decade in medical aesthetics.",
   },
   {
-    title: "Scheduled and Ready",
-    description:
-      "We will make sure to send you a reminder 48 hours before your scheduled appointment and another reminder 24 hours before.",
+    title: "Natural Results",
+    description: "Enhancements that look like you — never overdone.",
   },
   {
-    title: "Arrive to your Appointment",
-    description:
-      "We will let you know how to prepare for your appointment as well as instructions on where to park.",
-  },
-  {
-    title: "Receive Your Specialized Treatment",
-    description:
-      "After you arrive, fill out necessary paperwork (if not already signed beforehand) and we will talk you through the procedure, answer any questions, then proceed with your treatment. We will also discuss aftercare once completed.",
+    title: "Personalized Plan",
+    description: "Every treatment tailored to your goals and anatomy.",
   },
 ];
+

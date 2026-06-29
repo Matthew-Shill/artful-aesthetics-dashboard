@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Logo } from "./Logo";
+import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import styles from "./layout.module.css";
 
 export function Footer() {
@@ -11,8 +12,7 @@ export function Footer() {
           <div>
             <Logo inverted className={styles.footerLogo} />
             <p className={styles.footerText}>
-              Exceptional care and beautiful, natural results in Englewood, CO. All staff directed by{" "}
-              {siteConfig.director}.
+              Crafted aesthetic care in Englewood, CO. Directed by {siteConfig.director}.
             </p>
           </div>
 
@@ -39,7 +39,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className={styles.footerHeading}>Quick Links</p>
+            <p className={styles.footerHeading}>Explore</p>
             <Link href="/consultation" className={styles.footerLink}>
               Consultation
             </Link>
@@ -56,6 +56,12 @@ export function Footer() {
               Login
             </Link>
           </div>
+        </div>
+
+        <div className={styles.footerNewsletter}>
+          <p className={styles.footerHeading}>Newsletter</p>
+          <p className={styles.footerText}>Specials, tips, and studio updates.</p>
+          <NewsletterForm />
         </div>
 
         <div className={styles.footerBottom}>

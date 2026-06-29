@@ -4,13 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
+import { CategoryIcon, categorySlugFromHref } from "@/components/icons/CategoryIcons";
 import { Logo } from "./Logo";
 import styles from "./layout.module.css";
 
-const primaryLinks = [
-  { label: "Home", href: "/" },
+const secondaryNavLinks = [
   { label: "Consultation", href: "/consultation" },
   { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const serviceLinks = siteConfig.nav.filter((item) => item.children);
@@ -48,11 +49,9 @@ export function Header() {
           <Logo />
 
           <nav className={styles.nav} aria-label="Main navigation">
-            {primaryLinks.slice(0, 1).map((item) => (
-              <Link key={item.href} href={item.href} className={styles.navLink}>
-                {item.label}
-              </Link>
-            ))}
+            <Link href="/" className={styles.navLink}>
+              Home
+            </Link>
 
             <div
               ref={megaRef}
@@ -75,36 +74,45 @@ export function Header() {
 
               <div className={styles.megaPanel}>
                 <div className={styles.megaGrid}>
-                  {serviceLinks.map((category) => (
-                    <div key={category.href} className={styles.megaColumn}>
-                      <Link href={category.href} className={styles.megaCategory}>
-                        {category.label}
-                      </Link>
-                      <ul className={styles.megaList}>
-                        {category.children.slice(0, 4).map((child) => (
-                          <li key={child.href}>
-                            <Link href={child.href} className={styles.megaItemLink}>
-                              {child.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                      {category.children.length > 4 && (
-                        <Link href={category.href} className={styles.megaViewAll}>
-                          View all →
+                  {serviceLinks.map((category) => {
+                    const slug = categorySlugFromHref(category.href);
+                    return (
+                      <div key={category.href} className={styles.megaColumn}>
+                        <Link href={category.href} className={styles.megaCategory}>
+                          {slug && (
+                            <span className={styles.megaCategoryIcon}>
+                              <CategoryIcon slug={slug} width={20} height={20} />
+                            </span>
+                          )}
+                          {category.label}
                         </Link>
-                      )}
-                    </div>
+                        <ul className={styles.megaList}>
+                          {category.children.slice(0, 3).map((child) => (
+                            <li key={child.href}>
+                              <Link href={child.href} className={styles.megaItemLink}>
+                                {child.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                        {category.children.length > 3 && (
+                          <Link href={category.href} className={styles.megaViewAll}>
+                            View all →
+                          </Link>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className={styles.megaFooter}>
+                  {secondaryNavLinks.map((link) => (
+                    <Link key={link.href} href={link.href} className={styles.megaFooterLink}>
+                      {link.label}
+                    </Link>
                   ))}
                 </div>
               </div>
             </div>
-
-            {primaryLinks.slice(1).map((item) => (
-              <Link key={item.href} href={item.href} className={styles.navLink}>
-                {item.label}
-              </Link>
-            ))}
           </nav>
 
           <div className={styles.headerActions}>
@@ -112,7 +120,7 @@ export function Header() {
               Login
             </Link>
             <Button href={siteConfig.bookingUrl} external variant="primary" className={styles.headerBookBtn}>
-              Book Now
+              Book
             </Button>
             <button
               type="button"
@@ -141,46 +149,61 @@ export function Header() {
           </button>
         </div>
 
+        <Button
+          href={siteConfig.bookingUrl}
+          external
+          variant="primary"
+          className={styles.mobileBookBtnTop}
+          onClick={() => setMobileOpen(false)}
+        >
+          Book Appointment
+        </Button>
+
         <div className={styles.mobilePrimaryLinks}>
           <Link href="/" className={styles.mobilePrimaryLink} onClick={() => setMobileOpen(false)}>
             Home
           </Link>
-          <Link href="/consultation" className={styles.mobilePrimaryLink} onClick={() => setMobileOpen(false)}>
-            Consultation
-          </Link>
-          <Link href="/blog" className={styles.mobilePrimaryLink} onClick={() => setMobileOpen(false)}>
-            Blog
-          </Link>
-          <Link href="/contact" className={styles.mobilePrimaryLink} onClick={() => setMobileOpen(false)}>
-            Contact
-          </Link>
+          {secondaryNavLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={styles.mobilePrimaryLink}
+              onClick={() => setMobileOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
           <Link href={siteConfig.loginUrl} className={styles.mobilePrimaryLink} onClick={() => setMobileOpen(false)}>
             Login
           </Link>
         </div>
 
         <p className={styles.mobileNavSectionTitle}>Services</p>
-        {serviceLinks.map((item) => (
-          <div key={item.label} className={styles.mobileNavSection}>
-            <Link href={item.href} className={styles.mobileNavSectionTitle} onClick={() => setMobileOpen(false)}>
-              {item.label}
-            </Link>
-            {item.children?.map((child) => (
-              <Link
-                key={child.href}
-                href={child.href}
-                className={styles.mobileNavLink}
-                onClick={() => setMobileOpen(false)}
-              >
-                {child.label}
+        {serviceLinks.map((item) => {
+          const slug = categorySlugFromHref(item.href);
+          return (
+            <div key={item.label} className={styles.mobileNavSection}>
+              <Link href={item.href} className={styles.mobileNavCategoryLink} onClick={() => setMobileOpen(false)}>
+                {slug && (
+                  <span className={styles.mobileNavCategoryIcon}>
+                    <CategoryIcon slug={slug} width={18} height={18} />
+                  </span>
+                )}
+                {item.label}
               </Link>
-            ))}
-          </div>
-        ))}
-
-        <Button href={siteConfig.bookingUrl} external variant="primary" className={styles.mobileBookBtn}>
-          Book Now
-        </Button>
+              {item.children?.map((child) => (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  className={styles.mobileNavLink}
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {child.label}
+                </Link>
+              ))}
+            </div>
+          );
+        })}
       </div>
     </>
   );

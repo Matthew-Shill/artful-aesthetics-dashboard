@@ -2,39 +2,51 @@ export const serviceCategories = [
   {
     slug: "aesthetic-injectables",
     title: "Aesthetic Injectables",
-    description:
-      "Precision injectable treatments to enhance your natural features with artistry and science.",
+    shortTitle: "Injectables",
+    tagline: "Refine, restore, enhance",
+    description: "Botox, fillers, lip enhancement, threads, and more.",
   },
   {
     slug: "skin",
     title: "Skin",
-    description:
-      "Advanced skin rejuvenation treatments for a brighter, tighter, and more youthful glow.",
+    shortTitle: "Skin",
+    tagline: "Radiance, renewed",
+    description: "Microneedling, IPL, plasma pen, CO2, and glow treatments.",
   },
   {
     slug: "weight-loss",
     title: "Weight Loss",
-    description: "Medically supervised weight loss solutions tailored to your wellness goals.",
+    shortTitle: "Weight Loss",
+    tagline: "Guided wellness",
+    description: "Physician-supervised injection programs.",
   },
   {
     slug: "laser-hair-removal",
     title: "Laser Hair Removal",
-    description: "Long-lasting hair reduction with advanced laser technology.",
+    shortTitle: "Laser Hair",
+    tagline: "Smooth, lasting",
+    description: "Long-lasting hair reduction for face and body.",
   },
   {
     slug: "wellness",
     title: "Wellness",
-    description: "IV therapy and wellness boosters to keep you healthy, happy, and glowing.",
+    shortTitle: "Wellness",
+    tagline: "Vitality from within",
+    description: "IV therapy, NAD+, B12, glutathione, and beauty boosters.",
   },
   {
     slug: "body-contouring",
     title: "Body Contouring",
-    description: "Non-invasive body sculpting to strengthen and tone your physique.",
+    shortTitle: "Body",
+    tagline: "Sculpt and strengthen",
+    description: "Non-invasive muscle toning with CoolTone.",
   },
   {
     slug: "microblading",
     title: "Microblading by Erica",
-    description: "Expert microblading for naturally beautiful, defined brows.",
+    shortTitle: "Brows",
+    tagline: "Brows, artfully shaped",
+    description: "Natural hair-stroke brows, designed and applied by Erica.",
   },
 ];
 
@@ -376,6 +388,18 @@ export function getCategory(slug) {
 
 export function getServicesByCategory(categorySlug) {
   return services.filter((s) => s.category === categorySlug);
+}
+
+export function getDepartmentMenu() {
+  return serviceCategories.map((category) => {
+    const treatments = getServicesByCategory(category.slug);
+    return {
+      ...category,
+      treatments,
+      highlights: treatments.slice(0, 3).map((s) => s.title),
+      treatmentCount: treatments.length,
+    };
+  });
 }
 
 export function getService(categorySlug, serviceSlug) {

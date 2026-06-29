@@ -22,7 +22,7 @@
   composes: btn;
   background: var(--gold);
   color: var(--surface);
-  box-shadow: 0 4px 20px rgba(201, 169, 110, 0.35);
+  box-shadow: 0 4px 20px rgba(166, 99, 75, 0.35);
 }
 
 .btnPrimary:hover {
@@ -57,7 +57,7 @@
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--gold-dark);
   margin-bottom: 0.75rem;
@@ -69,11 +69,16 @@
 }
 
 .sectionHeadingSubtitle {
-  font-size: 1.0625rem;
+  font-size: 1rem;
   color: var(--text-mid);
-  max-width: 52ch;
+  max-width: 42ch;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.65;
+}
+
+.sectionHeadingLeft .sectionHeadingSubtitle {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .hero {
@@ -112,7 +117,7 @@
   color: var(--gold);
   margin: 0 0 1.75rem;
   padding-bottom: 0.875rem;
-  border-bottom: 1px solid rgba(201, 169, 110, 0.35);
+  border-bottom: 1px solid rgba(166, 99, 75, 0.35);
 }
 
 .heroTitle {
@@ -192,7 +197,7 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 18% 50%, rgba(201, 169, 110, 0.12) 0%, transparent 42%),
+    radial-gradient(circle at 18% 50%, rgba(166, 99, 75, 0.14) 0%, transparent 42%),
     linear-gradient(135deg, var(--sidebar) 0%, var(--charcoal) 55%, #3a322a 100%);
 }
 
@@ -215,9 +220,9 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(26, 22, 18, 0.9) 0%,
-    rgba(26, 22, 18, 0.72) 42%,
-    rgba(26, 22, 18, 0.45) 100%
+    rgba(20, 16, 14, 0.9) 0%,
+    rgba(20, 16, 14, 0.72) 42%,
+    rgba(20, 16, 14, 0.45) 100%
   );
 }
 
@@ -256,9 +261,9 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(26, 22, 18, 0.92) 0%,
-    rgba(26, 22, 18, 0.78) 45%,
-    rgba(26, 22, 18, 0.35) 100%
+    rgba(20, 16, 14, 0.92) 0%,
+    rgba(20, 16, 14, 0.78) 45%,
+    rgba(20, 16, 14, 0.35) 100%
   );
 }
 
@@ -297,7 +302,12 @@
 
 .serviceCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(26, 22, 18, 0.08);
+  box-shadow: 0 12px 40px rgba(20, 16, 14, 0.1);
+}
+
+.serviceCard:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
 }
 
 .serviceCardImage {
@@ -305,6 +315,42 @@
   aspect-ratio: 16 / 10;
   background: linear-gradient(135deg, var(--gold-light), var(--sage-light));
   overflow: hidden;
+}
+
+.serviceCardImage img {
+  transition: transform 0.4s ease;
+}
+
+.serviceCard:hover .serviceCardImage img,
+.serviceCard:focus-visible .serviceCardImage img {
+  transform: scale(1.05);
+}
+
+.serviceCardOverlay:hover .serviceCardHoverOverlay,
+.serviceCardOverlay:focus-visible .serviceCardHoverOverlay {
+  opacity: 1;
+}
+
+.serviceCardHoverOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 16, 14, 0.45);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.serviceCardHoverChip {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--surface);
+  background: var(--gold);
+  padding: 0.4rem 0.875rem;
+  border-radius: 999px;
 }
 
 .serviceCardImageFallback {
@@ -551,4 +597,734 @@
   composes: formMessage;
   background: #fdf0ee;
   color: var(--rose);
+}
+
+/* Hero scroll */
+.heroScroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.heroScroll:hover {
+  color: var(--gold);
+}
+
+.heroScrollText {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.heroScrollLine {
+  width: 1px;
+  height: 2.5rem;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scaleY(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* Treatment menu (What We Offer) */
+.deptQuickNav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: -1.5rem 0 2.5rem;
+}
+
+.deptQuickNavLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-mid);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.deptQuickNavLink:hover,
+.deptQuickNavLink:focus-visible {
+  color: var(--gold-dark);
+  border-color: var(--gold);
+  background: var(--gold-light);
+  outline: none;
+}
+
+.treatmentMenu {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.deptCard {
+  display: grid;
+  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--surface);
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+  transition: box-shadow 0.25s ease;
+}
+
+.deptCard:hover {
+  box-shadow: 0 12px 40px rgba(20, 16, 14, 0.08);
+}
+
+.deptCardMedia {
+  position: relative;
+  display: block;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.deptCardMedia img {
+  transition: transform 0.4s ease;
+}
+
+.deptCard:hover .deptCardMedia img {
+  transform: scale(1.04);
+}
+
+.deptCardCount {
+  position: absolute;
+  top: 0.875rem;
+  left: 0.875rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--surface);
+  background: rgba(20, 16, 14, 0.72);
+  backdrop-filter: blur(6px);
+}
+
+.deptCardBody {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.75rem;
+  gap: 1.25rem;
+}
+
+.deptCardHeader {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.deptCardIcon {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--gold-light);
+  color: var(--gold-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deptCardEyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+.deptCardTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.375rem;
+  line-height: 1.2;
+}
+
+.deptCardTitle a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.deptCardTitle a:hover {
+  color: var(--gold-dark);
+}
+
+.deptCardDesc {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-mid);
+  line-height: 1.55;
+  max-width: 48ch;
+}
+
+.deptCardTreatmentsLabel {
+  margin: 0 0 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.deptCardTreatmentList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.deptCardTreatmentList li {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.deptCardTreatmentMore {
+  color: var(--gold-dark) !important;
+  background: var(--gold-light) !important;
+  border-color: transparent !important;
+}
+
+.deptCardCta {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+
+.deptCardCta:hover {
+  color: var(--gold);
+}
+
+.deptHelpText {
+  margin: 2.5rem 0 0;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--text-mid);
+}
+
+.deptHelpText a {
+  color: var(--gold-dark);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.deptHelpText a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .deptCard {
+    grid-template-columns: 1fr;
+  }
+
+  .deptCardMedia {
+    aspect-ratio: 16 / 9;
+    min-height: auto;
+  }
+
+  .deptQuickNav {
+    justify-content: center;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .deptQuickNavLink {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Department tiles (legacy) */
+.departmentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.departmentTile {
+  display: block;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeUp 0.6s ease both;
+}
+
+.departmentTile:nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.departmentTile:nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.departmentTile:nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.departmentTile:nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.departmentTile:nth-child(6) {
+  animation-delay: 0.4s;
+}
+
+.departmentTile:nth-child(7) {
+  animation-delay: 0.48s;
+}
+
+.departmentTile:hover,
+.departmentTile:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(20, 16, 14, 0.12);
+  outline: none;
+}
+
+.departmentTile:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.departmentTileImage {
+  position: relative;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+}
+
+.departmentTileImage img {
+  transition: transform 0.45s ease;
+}
+
+.departmentTile:hover .departmentTileImage img,
+.departmentTile:focus-visible .departmentTileImage img {
+  transform: scale(1.06);
+}
+
+.departmentTileOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(20, 16, 14, 0.75) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  gap: 0.75rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.departmentTile:hover .departmentTileOverlay,
+.departmentTile:focus-visible .departmentTileOverlay {
+  opacity: 1;
+}
+
+.departmentTileTagline {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  font-family: var(--font-serif);
+}
+
+.departmentTileChip {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--surface);
+  background: var(--gold);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+}
+
+.departmentTileFooter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+.departmentTileIcon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--gold-light);
+  color: var(--gold-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.departmentTileTitle {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Erica / about block */
+.aboutCopy {
+  max-width: 34rem;
+}
+
+.aboutTitle {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin: 0 0 1.25rem;
+  line-height: 1.15;
+}
+
+.aboutText {
+  margin: 0 0 1.75rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--text-mid);
+  max-width: 38ch;
+}
+
+/* Storefront CTA */
+.storefrontCta {
+  position: relative;
+  background: var(--sidebar);
+  color: var(--surface);
+  padding: clamp(3.5rem, 7vw, 5rem) 0;
+  overflow: hidden;
+}
+
+.storefrontCtaMotif {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  color: var(--gold);
+  pointer-events: none;
+}
+
+.storefrontCtaInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.storefrontCtaQuote {
+  margin: 0;
+}
+
+.storefrontCtaQuote p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+  font-style: italic;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.storefrontCtaQuote footer {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.storefrontCtaAction {
+  text-align: center;
+}
+
+.storefrontCtaTitle {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.storefrontCtaMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.storefrontCtaMeta a {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.storefrontCtaMeta a:hover {
+  color: var(--surface);
+}
+
+/* Benefit grid */
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.benefitIcon {
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.benefitLabel {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  line-height: 1.4;
+}
+
+/* Trust cards */
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.trustCard {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.trustCardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--gold-light);
+  color: var(--gold-dark);
+  margin-bottom: 1rem;
+}
+
+.trustCardTitle {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.trustCardDesc {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Accordion */
+.accordion {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.accordionItem {
+  border-bottom: 1px solid var(--border);
+}
+
+.accordionTrigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: left;
+}
+
+.accordionTrigger:hover,
+.accordionTrigger:focus-visible {
+  color: var(--gold-dark);
+  outline: none;
+}
+
+.accordionTrigger:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.accordionIcon {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.accordionPanel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.accordionPanelOpen {
+  max-height: 200px;
+}
+
+.accordionPanel p {
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.25rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+/* Sticky book bar */
+.stickyBookBar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.stickyBookBtn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.875rem 1.5rem;
+  background: var(--gold);
+  color: var(--surface);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(166, 99, 75, 0.3);
+}
+
+.stickyBookBtn:hover {
+  background: var(--gold-dark);
+}
+
+@media (max-width: 768px) {
+  .departmentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .departmentTileOverlay {
+    opacity: 1;
+    background: linear-gradient(180deg, transparent 50%, rgba(20, 16, 14, 0.65) 100%);
+  }
+
+  .departmentTileChip {
+    display: none;
+  }
+
+  .storefrontCtaInner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .stickyBookBar {
+    display: block;
+  }
+
+  body:has(.stickyBookBar) {
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .departmentGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.bookingCtaCompact {
+  padding: 2.5rem 1.5rem;
+}
+
+.bookingCtaCompact .bookingCtaText {
+  margin-bottom: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .serviceCardImage img,
+  .departmentTileImage img,
+  .departmentTile {
+    transition: none;
+    animation: none;
+  }
+
+  .heroScrollLine {
+    animation: none;
+  }
 }

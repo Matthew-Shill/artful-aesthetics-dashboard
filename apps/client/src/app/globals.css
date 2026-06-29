@@ -1,18 +1,18 @@
 :root {
-  --bg: #f5f2ee;
+  --bg: #f2ede6;
   --surface: #ffffff;
-  --sidebar: #1a1612;
-  --gold: #c9a96e;
-  --gold-light: #faf3e8;
-  --gold-dark: #9a7840;
-  --sage: #7a9e8e;
-  --sage-light: #ebf3f0;
+  --sidebar: #14100e;
+  --gold: #a6634b;
+  --gold-light: #f5ebe3;
+  --gold-dark: #7d4f3c;
+  --sage: #5c6b62;
+  --sage-light: #e8ece9;
   --rose: #c0544a;
-  --text: #1a1612;
+  --text: #14100e;
   --text-mid: #5c4f3f;
   --text-muted: #9c8c7c;
-  --border: #e8e2da;
-  --charcoal: #2e2620;
+  --border: #ddd5cb;
+  --charcoal: #2a221c;
   --font-serif: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --max-width: 1200px;
@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
 }
 
 body {

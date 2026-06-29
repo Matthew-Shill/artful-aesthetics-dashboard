@@ -13,17 +13,21 @@ export const images = {
     alt: "Erica Eskeli, Owner & Aesthetic Injector at Artful Aesthetic Medicine",
   },
   categories: {
+    /** Botox / facial injection — Unsplash (qehqLHZ9toc) */
     "aesthetic-injectables":
-      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1746708810803-722593e53772?auto=format&fit=crop&w=800&q=80",
     skin: "https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80",
+    /** Active woman — weight management / wellness journey */
     "weight-loss":
-      "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
+    /** Laser device on patient — Unsplash (nmN0MAHoFjQ) */
     "laser-hair-removal":
-      "https://images.unsplash.com/photo-1780541027382-cf422369bdaa?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1746806942799-b4db209e9a6b?auto=format&fit=crop&w=800&q=80",
     wellness:
       "https://images.unsplash.com/photo-1763310225009-50214e3c99d9?auto=format&fit=crop&w=800&q=80",
+    /** Toned physique — body sculpting / CoolTone */
     "body-contouring":
-      "https://images.unsplash.com/photo-1780545311196-f8b507b08b94?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1646909876562-9a00dab98e65?auto=format&fit=crop&w=800&q=80",
     microblading: "/images/erica-eskeli.png",
   },
   blog: {

@@ -4,8 +4,10 @@ import {
   getCategory,
   getServicesByCategory,
 } from "@/content/services";
+import { siteConfig } from "@/config/site";
 import { getCategoryImage, getEricaImageAlt } from "@/config/images";
-import { Hero, SectionHeading, ServiceCard } from "@/components/ui";
+import { Hero, SectionHeading, ServiceCard, StickyBookBar } from "@/components/ui";
+import { CategoryIcon } from "@/components/icons/CategoryIcons";
 import styles from "@/components/ui/ui.module.css";
 
 export async function generateStaticParams() {
@@ -41,28 +43,47 @@ export default async function CategoryPage({ params }) {
         eyebrow="Services"
         title={category.title}
         subtitle={category.description}
-        primaryCta={{ label: "Book Now", href: "/consultation" }}
+        primaryCta={{ label: "Book Appointment", href: siteConfig.bookingUrl }}
         image={{ src: categoryImage, alt: categoryImageAlt }}
         compact
       />
 
       <section className="section section--surface">
         <div className="container">
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "2.5rem" }}>
+            <span
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "3rem",
+                height: "3rem",
+                borderRadius: "50%",
+                background: "var(--gold-light)",
+                color: "var(--gold-dark)",
+              }}
+            >
+              <CategoryIcon slug={categorySlug} />
+            </span>
+          </div>
           <SectionHeading title={`${category.title} Treatments`} />
           <div className={styles.serviceGrid}>
             {categoryServices.map((service) => (
               <ServiceCard
                 key={service.slug}
                 title={service.title}
-                description={service.description}
+                description={service.tagline}
                 href={`/services/${categorySlug}/${service.slug}`}
                 imageSrc={categoryImage}
                 imageAlt={isMicroblading ? getEricaImageAlt("microblading") : service.title}
+                variant="overlay"
               />
             ))}
           </div>
         </div>
       </section>
+
+      <StickyBookBar bookingUrl={siteConfig.bookingUrl} />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { getCategoryImage, getServiceImage, getEricaImageAlt } from "@/config/images";
-import { Hero, BookingCTA, SectionHeading } from "@/components/ui";
+import { Hero, BookingCTA, SectionHeading, BenefitGrid, Accordion, StickyBookBar } from "@/components/ui";
 
 export function ServicePageTemplate({ service, category }) {
   const isMicroblading = service.category === "microblading";
@@ -23,8 +23,8 @@ export function ServicePageTemplate({ service, category }) {
 
       <section className="section section--surface">
         <div className="container">
-          <div className="prose" style={{ maxWidth: "720px", margin: "0 auto" }}>
-            <p style={{ fontSize: "1.125rem", lineHeight: 1.85 }}>{service.description}</p>
+          <div className="prose" style={{ maxWidth: "560px", margin: "0 auto", textAlign: "center" }}>
+            <p style={{ fontSize: "1.0625rem", lineHeight: 1.75, margin: 0 }}>{service.description}</p>
           </div>
         </div>
       </section>
@@ -32,12 +32,8 @@ export function ServicePageTemplate({ service, category }) {
       {service.benefits?.length > 0 && (
         <section className="section">
           <div className="container">
-            <SectionHeading title="Benefits" subtitle="What you can expect from this treatment" />
-            <ul style={{ maxWidth: "560px", margin: "0 auto", lineHeight: 2, color: "var(--text-mid)" }}>
-              {service.benefits.map((b) => (
-                <li key={b}>{b}</li>
-              ))}
-            </ul>
+            <SectionHeading title="Benefits" />
+            <BenefitGrid benefits={service.benefits} />
           </div>
         </section>
       )}
@@ -46,27 +42,18 @@ export function ServicePageTemplate({ service, category }) {
         <section className="section section--surface">
           <div className="container">
             <SectionHeading title="FAQ" />
-            <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-              {service.faq.map((item) => (
-                <div key={item.q} style={{ marginBottom: "2rem" }}>
-                  <h3 style={{ fontSize: "1.125rem", marginBottom: "0.5rem" }}>{item.q}</h3>
-                  <p style={{ color: "var(--text-mid)", margin: 0 }}>{item.a}</p>
-                </div>
-              ))}
-            </div>
+            <Accordion items={service.faq} />
           </div>
         </section>
       )}
 
       <section className="section">
         <div className="container">
-          <BookingCTA
-            title="Ready to get started?"
-            text="Book your appointment and experience intentional, ethical artistry at Artful Aesthetic Medicine."
-            bookingUrl={siteConfig.bookingUrl}
-          />
+          <BookingCTA title="Ready to get started?" bookingUrl={siteConfig.bookingUrl} compact />
         </div>
       </section>
+
+      <StickyBookBar bookingUrl={siteConfig.bookingUrl} />
     </>
   );
 }

@@ -8,7 +8,7 @@ export const metadata = {
     template: "%s | Artful Aesthetic Medicine",
   },
   description:
-    "Intentional & ethical artistry in aesthetic medicine. Botox, fillers, skin treatments, wellness IV therapy and more in Englewood, Colorado.",
+    "Intentional aesthetic care in Englewood, Colorado. Botox, fillers, skin treatments, wellness IV therapy and more.",
   openGraph: {
     siteName: "Artful Aesthetic Medicine",
     locale: "en_US",

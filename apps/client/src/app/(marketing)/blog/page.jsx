@@ -1,4 +1,5 @@
-import { Hero, SectionHeading, BlogCard } from "@/components/ui";
+import { siteConfig } from "@/config/site";
+import { Hero, BlogCard } from "@/components/ui";
 import { getBlogImage } from "@/config/images";
 import { getAllPosts } from "@/lib/blog";
 import styles from "@/components/ui/ui.module.css";
@@ -17,7 +18,7 @@ export default function BlogPage() {
         eyebrow="The Artful Blog"
         title="News & Insights"
         subtitle="Expert perspectives on aesthetic medicine, skincare, and wellness."
-        primaryCta={{ label: "Book a Consultation", href: "/consultation" }}
+        primaryCta={{ label: "Book Appointment", href: siteConfig.bookingUrl }}
         compact
       />
 
