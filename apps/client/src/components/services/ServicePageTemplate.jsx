@@ -6,7 +6,6 @@ import {
   Hero,
   BookingCTA,
   SectionHeading,
-  BenefitGrid,
   Accordion,
   StickyBookBar,
   MediaImage,
@@ -107,15 +106,6 @@ export function ServicePageTemplate({ service, category }) {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-      )}
-
-      {service.benefits?.length > 0 && (
-        <section className="section">
-          <div className="container">
-            <SectionHeading title="Benefits" />
-            <BenefitGrid benefits={service.benefits} />
           </div>
         </section>
       )}

@@ -79,16 +79,10 @@ export const services = [
     seoTitle: "Non-Surgical Nose Job in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Reshape your nose without surgery. Dermal filler nose contouring by Erica Eskeli in Englewood, CO — instant results, no downtime. Book a consultation.",
-    h1: "Non-Surgical Nose Job in Englewood, CO",
+    h1: "Non-Surgical Nose Job",
     tagline: "Refine your profile without surgery",
     description:
       "Dermal filler used to reshape and refine the nose without surgery. Smooths dorsal bumps, lifts a drooping tip, and corrects asymmetry for a straighter, more balanced profile. Your nasal structure and facial proportions will be evaluated to determine whether filler can achieve your goals; this treatment reshapes and adds subtle structure but cannot reduce the size of the nose.",
-    benefits: [
-      "Instant visible results",
-      "No surgical recovery",
-      "Customized to your facial anatomy",
-      "Performed by an experienced injector",
-    ],
     faq: [
       {
         q: "How long does it last?",
@@ -115,16 +109,10 @@ export const services = [
     seoTitle: "Botox & Neurotoxin Treatments in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Smooth fine lines and wrinkles with expert neurotoxin treatments (Botox, Dysport) in Englewood, CO. Personalized dosing by Erica Eskeli. Book today.",
-    h1: "Neurotoxin Treatments (Botox & Dysport) in Englewood, CO",
+    h1: "Neurotoxin Treatments (Botox & Dysport)",
     tagline: "Smooth lines, preserve expression",
     description:
       "Neurotoxins relax the muscles that cause expression lines while preserving natural movement. Target areas include forehead lines, glabella, crow's feet, and a full range of advanced areas including lip flips, masseter slimming, neck bands, and traps.\n\nThis is also used for TMJ and hyperhidrosis.",
-    benefits: [
-      "Preventative and corrective options",
-      "Quick 15–20 minute appointments",
-      "Natural-looking results",
-      "Trusted products including Botox",
-    ],
     faq: [
       {
         q: "How soon do I see results?",
@@ -151,16 +139,10 @@ export const services = [
     seoTitle: "Filler Dissolver in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Correct or reverse dermal filler safely with hyaluronidase dissolving treatments in Englewood, CO. Expert correction by Erica Eskeli.",
-    h1: "Filler Dissolver Treatment in Englewood, CO",
+    h1: "Filler Dissolver Treatment",
     tagline: "Safely reverse unwanted filler results",
     description:
       "Hyaluronidase injections are used to break down hyaluronic acid filler. It corrects lumps, asymmetry, migration, or an overfilled look from previous treatments.",
-    benefits: [
-      "Correct asymmetry or overfilling",
-      "Performed by skilled injectors",
-      "Quick in-office procedure",
-      "Restore your natural appearance",
-    ],
     faq: [
       {
         q: "Is dissolving painful?",
@@ -187,16 +169,10 @@ export const services = [
     seoTitle: "Dermal Filler in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Restore volume and smooth contours with dermal filler in Englewood, CO. Cheeks, jawline, under-eyes, and more — customized by Erica Eskeli.",
-    h1: "Dermal Filler Treatments in Englewood, CO",
+    h1: "Dermal Filler Treatments",
     tagline: "Restore volume, enhance contours",
     description:
       "Hyaluronic acid filler is used to restore volume lost to aging, add definition, or balance facial proportions. Treats cheeks, jawline, chin, temples, under-eyes, and nasolabial folds for natural-looking definition.",
-    benefits: [
-      "Immediate results",
-      "Customized treatment plans",
-      "Natural enhancement philosophy",
-      "Multiple treatment areas available",
-    ],
     faq: [
       {
         q: "Which areas can be treated?",
@@ -223,16 +199,10 @@ export const services = [
     seoTitle: "PDO & PLLA Thread Lift in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Lift and tighten skin without surgery using PDO/PLLA thread treatments in Englewood, CO. Stimulate collagen naturally with Erica Eskeli.",
-    h1: "PLLA & PDO Thread Lift in Englewood, CO",
+    h1: "PLLA & PDO Thread Lift",
     tagline: "Lift and tighten without surgery",
     description:
       "Dissolvable threads that lift skin and stimulate collagen production. Treats jowls, brow lift, and mild-to-moderate facial laxity without surgery.\n\nPDO threads provide an immediate lifting effect that softens over 6-12 months as the threads dissolve. PLLA threads work more subtly, with collagen-driven improvement building over 3-6 months and lasting up to 18 months or longer.",
-    benefits: [
-      "Non-surgical lifting",
-      "Collagen stimulation",
-      "Long-lasting results",
-      "Minimal recovery time",
-    ],
     faq: [
       {
         q: "How is this different from a facelift?",
@@ -259,16 +229,10 @@ export const services = [
     seoTitle: "Lip Filler in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Achieve natural, balanced lip enhancement with expert lip filler in Englewood, CO. Customized shape and volume by Erica Eskeli. Book now.",
-    h1: "Lip Filler in Englewood, CO",
+    h1: "Lip Filler",
     tagline: "Beautiful, balanced lips",
     description:
       "Hyaluronic acid filler customized to enhance lip volume, shape, and symmetry. Balances proportion while keeping results looking natural.",
-    benefits: [
-      "Customized lip shape and volume",
-      "Natural-looking results",
-      "Premium filler products",
-      "Expert injection technique",
-    ],
     faq: [
       {
         q: "How much filler do I need for natural results?",
@@ -295,16 +259,10 @@ export const services = [
     seoTitle: "Plasma Pen Treatment in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Tighten and rejuvenate skin without surgery using plasma pen fibroblast treatment in Englewood, CO. Skilled care from Erica Eskeli.",
-    h1: "Plasma Pen (Fibroblast) Treatment in Englewood, CO",
+    h1: "Plasma Pen (Fibroblast) Treatment",
     tagline: "Tighten and rejuvenate skin",
     description:
       "Fibroblast therapy that tightens skin using controlled micro-arcs. Treats eyelid laxity, fine lines around the mouth, and mild skin laxity without surgery.",
-    benefits: [
-      "Non-surgical skin tightening",
-      "Targets specific areas precisely",
-      "Long-lasting collagen boost",
-      "Minimal invasiveness",
-    ],
     faq: [
       {
         q: "Is there downtime?",
@@ -331,16 +289,10 @@ export const services = [
     seoTitle: "Microneedling in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Improve skin texture, tone, and scarring with professional microneedling in Englewood, CO. Collagen-boosting treatments by Erica Eskeli.",
-    h1: "Microneedling in Englewood, CO",
+    h1: "Microneedling",
     tagline: "Stimulate your skin's renewal",
     description:
       "Collagen-induction therapy using fine needles to renew skin from within. Promoting the body's natural collagen and elastin production.\n\nTreats acne scarring, enlarged pores, fine lines, and uneven texture.",
-    benefits: [
-      "Improves scars and texture",
-      "Minimal downtime",
-      "Safe for most skin types",
-      "Cumulative results over sessions",
-    ],
     faq: [
       {
         q: "How many sessions will I need?",
@@ -367,16 +319,10 @@ export const services = [
     seoTitle: "IPL Photofacial in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Even out skin tone and reduce sun damage with IPL photofacial treatments in Englewood, CO. Book your consultation with Erica Eskeli.",
-    h1: "IPL Photofacial Treatment in Englewood, CO",
+    h1: "IPL Photofacial Treatment",
     tagline: "Even tone, reduce redness",
     description:
       "IPL (Intense Pulsed Light) treatment is targeted light therapy that corrects pigment and vascular concerns. Targets and treats sun spots, redness, rosacea, and broken capillaries for a more even tone.",
-    benefits: [
-      "Treats sun spots and redness",
-      "Non-invasive",
-      "Quick sessions",
-      "Progressive improvement",
-    ],
     faq: [
       {
         q: "How many treatments are needed?",
@@ -403,16 +349,10 @@ export const services = [
     seoTitle: "Glow Facial Treatment in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Refresh and brighten your complexion with a custom glow facial treatment in Englewood, CO. Radiant skin starts here with Erica Eskeli.",
-    h1: "Glow Treatment in Englewood, CO",
+    h1: "Glow Treatment",
     tagline: "Radiance from within",
     description:
       "A customized hydrating and brightening facial with zero downtime. Refreshes complexion for everyday radiance or pre-event glow. Ideal before a special event or as a regular part of a skincare routine.",
-    benefits: [
-      "Instant radiance boost",
-      "Customized to your skin",
-      "No significant downtime",
-      "Perfect before events",
-    ],
     faq: [
       {
         q: "How soon before an event should I book this?",
@@ -435,16 +375,10 @@ export const services = [
     seoTitle: "CO2 Laser Resurfacing in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Dramatically improve skin texture, scars, and wrinkles with CO2 ablative laser resurfacing in Englewood, CO. Expert care by Erica Eskeli.",
-    h1: "CO2 Ablative Laser Treatment in Englewood, CO",
+    h1: "CO2 Ablative Laser Treatment",
     tagline: "Deep skin resurfacing",
     description:
       "Advanced laser resurfacing that removes damaged surface skin to reveal smoother, more even-toned skin beneath. Treats deep wrinkles, significant sun damage, and textural scarring.\n\nCO2 laser works by removing the outermost layers of damaged skin, prompting the growth of fresh, smoother, more evenly toned skin beneath.",
-    benefits: [
-      "Dramatic rejuvenation results",
-      "Treats deep wrinkles and scars",
-      "Long-lasting outcomes",
-      "Performed with expert care",
-    ],
     faq: [
       {
         q: "How much downtime is required?",
@@ -471,16 +405,10 @@ export const services = [
     seoTitle: "Weight Loss Injections in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Medically supervised weight loss injections in Englewood, CO. Personalized plans and ongoing support led by Erica Eskeli's team.",
-    h1: "Medical Weight Loss Injections in Englewood, CO",
+    h1: "Medical Weight Loss Injections",
     tagline: "Medically guided weight management",
     description:
       "Medically supervised weight loss program tailored to individual health goals. Includes consultation, personalized plan, and ongoing monitoring under physician oversight.",
-    benefits: [
-      "Medically supervised program",
-      "Personalized dosing plans",
-      "Ongoing provider support",
-      "Integrated wellness approach",
-    ],
     faq: [
       {
         q: "Am I a candidate?",
@@ -507,16 +435,10 @@ export const services = [
     seoTitle: "Laser Hair Removal in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Smooth, long-lasting results with professional laser hair removal in Englewood, CO. Safe for most skin types. Book your consultation today.",
-    h1: "Laser Hair Removal in Englewood, CO",
+    h1: "Laser Hair Removal",
     tagline: "Smooth skin, lasting results",
     description:
       "Laser hair reduction targets follicles at the root for long-term smoothness. Treats face, underarms, legs, bikini area, and back.",
-    benefits: [
-      "Safe for multiple skin types",
-      "Long-lasting hair reduction",
-      "Treats face and body",
-      "Comfortable treatment sessions",
-    ],
     faq: [
       {
         q: "How many sessions are needed?",
@@ -543,16 +465,10 @@ export const services = [
     seoTitle: "NAD+ IV Therapy in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Support energy, recovery, and cellular health with NAD+ IV therapy in Englewood, CO. Personalized wellness treatments at Artful.",
-    h1: "NAD+ Booster IV Therapy in Englewood, CO",
+    h1: "NAD+ Booster IV Therapy",
     tagline: "Cellular energy and vitality",
     description:
       "IV therapy delivering NAD+ directly into the bloodstream. Supports energy, mental clarity, and cellular health.",
-    benefits: [
-      "Boosts cellular energy",
-      "Supports anti-aging pathways",
-      "Quick in-office treatment",
-      "Part of comprehensive wellness",
-    ],
     faq: [
       {
         q: "How long does an infusion take?",
@@ -575,16 +491,10 @@ export const services = [
     seoTitle: "Glutathione IV Therapy in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Support skin brightness and antioxidant health with glutathione IV therapy in Englewood, CO. Book your wellness session with Artful.",
-    h1: "Glutathione IV Therapy in Englewood, CO",
+    h1: "Glutathione IV Therapy",
     tagline: "Master antioxidant support",
     description:
       "Antioxidant IV/injection therapy supporting detoxification and cellular protection. Commonly used for its association with skin brightness.",
-    benefits: [
-      "Powerful antioxidant effects",
-      "Supports skin brightening",
-      "Boosts immune function",
-      "Administered by trained staff",
-    ],
     faq: [
       {
         q: "How soon will I notice results?",
@@ -607,16 +517,10 @@ export const services = [
     seoTitle: "Biotin Injections in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Support healthy hair, skin, and nails with biotin injections in Englewood, CO. Quick, convenient wellness shots at Artful Aesthetic Medicine.",
-    h1: "Biotin Injections in Englewood, CO",
+    h1: "Biotin Injections",
     tagline: "Support hair, skin, and nails",
     description:
       "Quick injection supporting healthy hair, skin, and nails. A fast, direct-absorption alternative to oral biotin.",
-    benefits: [
-      "Supports hair and nail health",
-      "Quick injection",
-      "Complements aesthetic treatments",
-      "Wellness-focused care",
-    ],
     faq: [
       {
         q: "How often should I get a biotin shot?",
@@ -639,16 +543,10 @@ export const services = [
     seoTitle: "B12 Injections in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Boost energy and metabolism with quick B12 injections in Englewood, CO. Convenient wellness shots available at Artful Aesthetic Medicine.",
-    h1: "B12 Injections in Englewood, CO",
+    h1: "B12 Injections",
     tagline: "Energy and metabolism support",
     description:
       "Fast injection supporting energy and metabolism. Ideal for those with lower dietary B12 absorption.",
-    benefits: [
-      "Boosts energy levels",
-      "Supports metabolism",
-      "Quick in-office visit",
-      "Regular maintenance available",
-    ],
     faq: [
       {
         q: "How often can I get a B12 shot?",
@@ -671,16 +569,10 @@ export const services = [
     seoTitle: "Beauty Bag IV Therapy in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Custom IV vitamin therapy for hydration, energy, and glow in Englewood, CO. Choose from curated IV blends at Artful Aesthetic Medicine.",
-    h1: "Beauty Bag IV Therapy in Englewood, CO",
+    h1: "Beauty Bag IV Therapy",
     tagline: "Beauty nutrients delivered directly",
     description:
       "A curated IV vitamin blend formulated around skin, hair, and hydration support. Refreshes from within for everyday glow or as part of your wellness routine.",
-    benefits: [
-      "Direct nutrient absorption",
-      "Customized beauty blend",
-      "Relaxing in-office experience",
-      "Visible glow enhancement",
-    ],
     faq: [
       {
         q: "How long does an IV session take?",
@@ -703,16 +595,10 @@ export const services = [
     seoTitle: "IV Therapy in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Custom IV vitamin therapy for hydration, energy, and glow in Englewood, CO. Choose from curated IV blends at Artful Aesthetic Medicine.",
-    h1: "IV Therapy in Englewood, CO",
+    h1: "IV Therapy",
     tagline: "Personalized IV wellness",
     description:
       "Curated IV vitamin blends for hydration, energy, and glow. Personalized protocols designed to address your unique wellness and aesthetic goals.",
-    benefits: [
-      "Fully customized formulas",
-      "Expert provider oversight",
-      "Hydration and nutrient support",
-      "Complements aesthetic treatments",
-    ],
     faq: [
       {
         q: "How long does an IV session take?",
@@ -735,16 +621,10 @@ export const services = [
     seoTitle: "CoolTone Body Contouring in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Build muscle tone and definition with CoolTone body contouring in Englewood, CO. Non-invasive treatments by Artful Aesthetic Medicine.",
-    h1: "CoolTone Muscle Toning in Englewood, CO",
+    h1: "CoolTone Muscle Toning",
     tagline: "Strengthen and define muscles",
     description:
       "Magnetic muscle stimulation that builds tone and definition beyond voluntary exercise. Treats abdomen, glutes, and thighs. It strengthens muscle rather than reducing fat.",
-    benefits: [
-      "Non-invasive muscle toning",
-      "No downtime required",
-      "FDA-cleared technology",
-      "Complements fitness routines",
-    ],
     faq: [
       {
         q: "Is CoolTone the same as CoolSculpting?",
@@ -771,16 +651,10 @@ export const services = [
     seoTitle: "Microblading in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
       "Natural, defined brows with expert microblading in Englewood, CO. Precision technique by Erica Eskeli. Book your consultation today.",
-    h1: "Microblading in Englewood, CO",
+    h1: "Microblading",
     tagline: "Perfectly shaped brows by Erica",
     description:
       "Semi-permanent hair-stroke technique for fuller, more defined brows. Custom-mapped to facial structure for a natural result.",
-    benefits: [
-      "Natural hair-stroke technique",
-      "Custom brow design",
-      "Long-lasting results",
-      "Performed by Erica Eskeli",
-    ],
     faq: [
       {
         q: "How long does microblading last?",

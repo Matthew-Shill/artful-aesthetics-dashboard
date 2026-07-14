@@ -7,7 +7,6 @@ import {
   ExpertCareIcon,
   NaturalResultsIcon,
   PersonalizedPlanIcon,
-  BenefitCheckIcon,
 } from "../icons/TrustIcons";
 
 export { MediaImage };
@@ -242,23 +241,6 @@ export function ServiceCard({ title, description, href, imageSrc, imageAlt, cate
         <span className={styles.serviceCardLink}>Explore →</span>
       </div>
     </Link>
-  );
-}
-
-export function BenefitGrid({ benefits }) {
-  if (!benefits?.length) return null;
-
-  return (
-    <div className={styles.benefitGrid}>
-      {benefits.map((benefit) => (
-        <div key={benefit} className={styles.benefitItem}>
-          <span className={styles.benefitIcon}>
-            <BenefitCheckIcon />
-          </span>
-          <span className={styles.benefitLabel}>{benefit}</span>
-        </div>
-      ))}
-    </div>
   );
 }
 
