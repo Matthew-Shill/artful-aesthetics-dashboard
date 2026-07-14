@@ -1,18 +1,48 @@
 import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
+import { siteConfig } from "@/config/site";
 
 export const metadata = {
-  metadataBase: new URL("https://artfulaestheticmedicine.com"),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: "Artful Aesthetic Medicine | Englewood, CO",
     template: "%s | Artful Aesthetic Medicine",
   },
-  description:
-    "Intentional aesthetic care in Englewood, Colorado. Botox, fillers, skin treatments, wellness IV therapy and more.",
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  authors: [{ name: siteConfig.founder.name }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  applicationName: siteConfig.name,
+  category: "health",
+  alternates: {
+    canonical: siteConfig.url,
+  },
   openGraph: {
-    siteName: "Artful Aesthetic Medicine",
+    title: "Artful Aesthetic Medicine | Englewood, CO",
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} — ${siteConfig.tagline}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Artful Aesthetic Medicine | Englewood, CO",
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

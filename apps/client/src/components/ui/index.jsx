@@ -144,7 +144,7 @@ export function TreatmentDepartments({ departments }) {
             {dept.imageSrc ? (
               <MediaImage
                 src={dept.imageSrc}
-                alt={dept.imageAlt || dept.title}
+                alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"
               />
@@ -158,11 +158,10 @@ export function TreatmentDepartments({ departments }) {
 
           <div className={styles.deptCardBody}>
             <div className={styles.deptCardHeader}>
-              <span className={styles.deptCardIcon}>
+              <span className={styles.deptCardIcon} aria-hidden="true">
                 <CategoryIcon slug={dept.slug} />
               </span>
               <div>
-                <p className={styles.deptCardEyebrow}>{dept.tagline}</p>
                 <h3 className={styles.deptCardTitle}>
                   <Link href={`/services/${dept.slug}`}>{dept.title}</Link>
                 </h3>
@@ -172,22 +171,24 @@ export function TreatmentDepartments({ departments }) {
 
             <div className={styles.deptCardTreatments}>
               <p className={styles.deptCardTreatmentsLabel}>
-                {dept.treatmentCount === 1 ? "Treatment" : "Popular treatments"}
+                {dept.treatmentCount === 1 ? "Jump to treatment" : "Jump to a treatment"}
               </p>
               <ul className={styles.deptCardTreatmentList}>
-                {dept.highlights.map((name) => (
-                  <li key={name}>{name}</li>
-                ))}
-                {dept.treatmentCount > dept.highlights.length && (
-                  <li className={styles.deptCardTreatmentMore}>
-                    +{dept.treatmentCount - dept.highlights.length} more
+                {dept.treatments.map((treatment) => (
+                  <li key={treatment.slug}>
+                    <Link
+                      href={`/services/${treatment.category}/${treatment.slug}`}
+                      className={styles.deptCardTreatmentLink}
+                    >
+                      {treatment.title}
+                    </Link>
                   </li>
-                )}
+                ))}
               </ul>
             </div>
 
             <Link href={`/services/${dept.slug}`} className={styles.deptCardCta}>
-              View all treatments →
+              Browse {dept.shortTitle || dept.title} overview →
             </Link>
           </div>
         </article>

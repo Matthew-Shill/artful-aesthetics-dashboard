@@ -4,13 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
-import { CategoryIcon, categorySlugFromHref } from "@/components/icons/CategoryIcons";
 import { Logo } from "./Logo";
 import styles from "./layout.module.css";
 
 const secondaryNavLinks = [
   { label: "Consultation", href: "/consultation" },
-  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -74,39 +72,39 @@ export function Header() {
 
               <div className={styles.megaPanel}>
                 <div className={styles.megaGrid}>
-                  {serviceLinks.map((category) => {
-                    const slug = categorySlugFromHref(category.href);
-                    return (
-                      <div key={category.href} className={styles.megaColumn}>
-                        <Link href={category.href} className={styles.megaCategory}>
-                          {slug && (
-                            <span className={styles.megaCategoryIcon}>
-                              <CategoryIcon slug={slug} width={20} height={20} />
-                            </span>
-                          )}
-                          {category.label}
-                        </Link>
-                        <ul className={styles.megaList}>
-                          {category.children.slice(0, 3).map((child) => (
-                            <li key={child.href}>
-                              <Link href={child.href} className={styles.megaItemLink}>
-                                {child.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                        {category.children.length > 3 && (
-                          <Link href={category.href} className={styles.megaViewAll}>
-                            View all →
-                          </Link>
-                        )}
-                      </div>
-                    );
-                  })}
+                  {serviceLinks.map((category) => (
+                    <div key={category.href} className={styles.megaColumn}>
+                      <Link
+                        href={category.href}
+                        className={styles.megaCategory}
+                        onClick={() => setServicesOpen(false)}
+                      >
+                        {category.label}
+                      </Link>
+                      <ul className={styles.megaList}>
+                        {category.children.map((child) => (
+                          <li key={child.href}>
+                            <Link
+                              href={child.href}
+                              className={styles.megaItemLink}
+                              onClick={() => setServicesOpen(false)}
+                            >
+                              {child.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
                 <div className={styles.megaFooter}>
                   {secondaryNavLinks.map((link) => (
-                    <Link key={link.href} href={link.href} className={styles.megaFooterLink}>
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={styles.megaFooterLink}
+                      onClick={() => setServicesOpen(false)}
+                    >
                       {link.label}
                     </Link>
                   ))}
@@ -179,31 +177,23 @@ export function Header() {
         </div>
 
         <p className={styles.mobileNavSectionTitle}>Services</p>
-        {serviceLinks.map((item) => {
-          const slug = categorySlugFromHref(item.href);
-          return (
-            <div key={item.label} className={styles.mobileNavSection}>
-              <Link href={item.href} className={styles.mobileNavCategoryLink} onClick={() => setMobileOpen(false)}>
-                {slug && (
-                  <span className={styles.mobileNavCategoryIcon}>
-                    <CategoryIcon slug={slug} width={18} height={18} />
-                  </span>
-                )}
-                {item.label}
+        {serviceLinks.map((item) => (
+          <div key={item.label} className={styles.mobileNavSection}>
+            <Link href={item.href} className={styles.mobileNavCategoryLink} onClick={() => setMobileOpen(false)}>
+              {item.label}
+            </Link>
+            {item.children?.map((child) => (
+              <Link
+                key={child.href}
+                href={child.href}
+                className={styles.mobileNavLink}
+                onClick={() => setMobileOpen(false)}
+              >
+                {child.label}
               </Link>
-              {item.children?.map((child) => (
-                <Link
-                  key={child.href}
-                  href={child.href}
-                  className={styles.mobileNavLink}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {child.label}
-                </Link>
-              ))}
-            </div>
-          );
-        })}
+            ))}
+          </div>
+        ))}
       </div>
     </>
   );

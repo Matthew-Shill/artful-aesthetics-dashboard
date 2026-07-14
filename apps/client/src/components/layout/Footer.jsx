@@ -43,9 +43,6 @@ export function Footer() {
             <Link href="/consultation" className={styles.footerLink}>
               Consultation
             </Link>
-            <Link href="/blog" className={styles.footerLink}>
-              Blog
-            </Link>
             <Link href="/contact" className={styles.footerLink}>
               Contact
             </Link>

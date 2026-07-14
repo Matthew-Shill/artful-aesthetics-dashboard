@@ -18,13 +18,34 @@ export const siteConfig = {
     icon: "/images/artful-logo-icon-transparent.png",
   },
   description:
-    "Personalized aesthetic care in Englewood, CO — crafted with intention by Erica Eskeli.",
+    "Personalized aesthetic care in Englewood, CO — crafted with intention by Erica Eskeli. Botox, fillers, skin treatments, IV therapy, and more.",
   url: "https://artfulaestheticmedicine.com",
+  /** Default Open Graph / social share image (landscape). */
+  ogImage:
+    "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&h=630&q=80",
   bookingUrl: "https://booking.mangomint.com/artfulaestheticmedicine",
   loginUrl: "/login",
   phone: "303.901.3381",
+  phoneE164: "+13039013381",
   phoneHref: "tel:+13039013381",
   email: "erica@artfulaestheticmedicine.com",
+  founder: {
+    name: "Erica Eskeli",
+    jobTitle: "Owner & Aesthetic Injector",
+    image: "/images/erica-eskeli.png",
+  },
+  keywords: [
+    "aesthetic medicine Englewood CO",
+    "med spa Englewood",
+    "Botox Englewood CO",
+    "dermal filler Englewood",
+    "lip filler Denver metro",
+    "microneedling Englewood",
+    "IV therapy Englewood CO",
+    "laser hair removal Englewood",
+    "microblading Englewood",
+    "Erica Eskeli",
+  ],
   address: {
     street: "811 Englewood Pkwy",
     city: "Englewood",
@@ -33,10 +54,21 @@ export const siteConfig = {
     full: "811 Englewood Pkwy, Englewood CO 80110",
     mapsUrl: "https://maps.google.com/?q=811+Englewood+Pkwy+Englewood+CO+80110",
   },
+  geo: {
+    latitude: 39.5807,
+    longitude: -104.987,
+  },
   hours: [
     { days: "Mon – Fri", time: "9am – 4pm" },
     { days: "Saturday", time: "Closed" },
     { days: "Sunday", time: "Closed" },
+  ],
+  openingHoursSpecification: [
+    { dayOfWeek: "Monday", opens: "09:00", closes: "16:00" },
+    { dayOfWeek: "Tuesday", opens: "09:00", closes: "16:00" },
+    { dayOfWeek: "Wednesday", opens: "09:00", closes: "16:00" },
+    { dayOfWeek: "Thursday", opens: "09:00", closes: "16:00" },
+    { dayOfWeek: "Friday", opens: "09:00", closes: "16:00" },
   ],
   director: "Dr. Jonathan Stewart Gallen",
   social: {},
@@ -106,7 +138,6 @@ export const siteConfig = {
       ],
     },
     { label: "Consultation", href: "/consultation" },
-    { label: "Blog", href: "/blog" },
   ],
 };
 

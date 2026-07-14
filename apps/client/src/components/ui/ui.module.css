@@ -647,16 +647,21 @@
 
 /* Treatment menu (What We Offer) */
 .deptQuickNav {
+  margin: -1.5rem 0 2.5rem;
+}
+
+.deptQuickNavTrack {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.5rem;
-  margin: -1.5rem 0 2.5rem;
 }
 
 .deptQuickNavLink {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 0.8125rem;
@@ -667,6 +672,9 @@
   border: 1px solid var(--border);
   transition: color 0.2s, border-color 0.2s, background 0.2s;
   scroll-margin-top: calc(var(--header-height) + 1rem);
+  white-space: nowrap;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .deptQuickNavLink:hover,
@@ -695,8 +703,14 @@
   transition: box-shadow 0.25s ease;
 }
 
-.deptCard:hover {
-  box-shadow: 0 12px 40px rgba(20, 16, 14, 0.08);
+@media (hover: hover) {
+  .deptCard:hover {
+    box-shadow: 0 12px 40px rgba(20, 16, 14, 0.08);
+  }
+
+  .deptCard:hover .deptCardMedia img {
+    transform: scale(1.04);
+  }
 }
 
 .deptCardMedia {
@@ -708,10 +722,6 @@
 
 .deptCardMedia img {
   transition: transform 0.4s ease;
-}
-
-.deptCard:hover .deptCardMedia img {
-  transform: scale(1.04);
 }
 
 .deptCardCount {
@@ -734,6 +744,7 @@
   flex-direction: column;
   padding: 1.5rem 1.75rem;
   gap: 1.25rem;
+  min-width: 0;
 }
 
 .deptCardHeader {
@@ -775,8 +786,10 @@
   transition: color 0.2s;
 }
 
-.deptCardTitle a:hover {
+.deptCardTitle a:hover,
+.deptCardTitle a:focus-visible {
   color: var(--gold-dark);
+  outline: none;
 }
 
 .deptCardDesc {
@@ -788,7 +801,7 @@
 }
 
 .deptCardTreatmentsLabel {
-  margin: 0 0 0.5rem;
+  margin: 0 0 0.65rem;
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -799,40 +812,62 @@
 .deptCardTreatmentList {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.deptCardTreatmentList li {
-  padding: 0.35rem 0.75rem;
+.deptCardTreatmentLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 999px;
   font-size: 0.8125rem;
   font-weight: 500;
-  color: var(--text-mid);
+  line-height: 1.25;
+  color: var(--text);
   background: var(--bg);
   border: 1px solid var(--border);
+  text-decoration: none;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.deptCardTreatmentMore {
-  color: var(--gold-dark) !important;
-  background: var(--gold-light) !important;
-  border-color: transparent !important;
+.deptCardTreatmentLink:hover,
+.deptCardTreatmentLink:focus-visible {
+  color: var(--gold-dark);
+  border-color: var(--gold);
+  background: var(--gold-light);
+  outline: none;
+}
+
+.deptCardTreatmentLink:active {
+  background: var(--gold-light);
+  border-color: var(--gold);
 }
 
 .deptCardCta {
   margin-top: auto;
   align-self: flex-start;
+  min-height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--gold-dark);
   letter-spacing: 0.02em;
+  text-decoration: none;
   transition: color 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.deptCardCta:hover {
+.deptCardCta:hover,
+.deptCardCta:focus-visible {
   color: var(--gold);
+  outline: none;
 }
 
 .deptHelpText {
@@ -854,24 +889,96 @@
 }
 
 @media (max-width: 768px) {
-  .deptCard {
-    grid-template-columns: 1fr;
-  }
-
-  .deptCardMedia {
-    aspect-ratio: 16 / 9;
-    min-height: auto;
-  }
-
   .deptQuickNav {
-    justify-content: center;
+    margin: -1rem -1rem 1.5rem;
+    position: sticky;
+    top: var(--header-height);
+    z-index: 5;
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .deptQuickNavTrack {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     gap: 0.4rem;
-    margin-bottom: 2rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    padding: 0.75rem 1rem;
+  }
+
+  .deptQuickNavTrack::-webkit-scrollbar {
+    display: none;
   }
 
   .deptQuickNavLink {
-    padding: 0.45rem 0.85rem;
-    font-size: 0.75rem;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.95rem;
+    font-size: 0.8125rem;
+  }
+
+  .treatmentMenu {
+    gap: 1.25rem;
+  }
+
+  .deptCard {
+    grid-template-columns: 1fr;
+    border-radius: 0.875rem;
+    scroll-margin-top: calc(var(--header-height) + 4.75rem);
+  }
+
+  .deptCardMedia {
+    aspect-ratio: 16 / 10;
+    min-height: unset;
+  }
+
+  .deptCardBody {
+    padding: 1.15rem 1.15rem 1.35rem;
+    gap: 1.1rem;
+  }
+
+  .deptCardHeader {
+    gap: 0.75rem;
+  }
+
+  .deptCardIcon {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .deptCardTitle {
+    font-size: 1.25rem;
+  }
+
+  .deptCardDesc {
+    font-size: 0.875rem;
+  }
+
+  .deptCardTreatmentList {
+    gap: 0.45rem;
+  }
+
+  .deptCardTreatmentLink {
+    min-height: 2.75rem;
+    padding: 0.55rem 0.95rem;
+    font-size: 0.875rem;
+  }
+
+  .deptCardCta {
+    min-height: 2.75rem;
+    padding-top: 0.15rem;
+  }
+
+  .deptHelpText {
+    margin-top: 2rem;
+    padding-inline: 0.25rem;
   }
 }
 

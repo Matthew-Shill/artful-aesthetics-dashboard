@@ -2,12 +2,15 @@ import { siteConfig } from "@/config/site";
 import { Hero, BlogCard } from "@/components/ui";
 import { getBlogImage } from "@/config/images";
 import { getAllPosts } from "@/lib/blog";
+import { buildPageMetadata } from "@/lib/seo";
 import styles from "@/components/ui/ui.module.css";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Blog",
-  description: "The Artful Blog — expert perspectives on aesthetic medicine, skincare, and wellness.",
-};
+  description:
+    "The Artful Blog — expert perspectives on Botox, fillers, skincare, and wellness from Artful Aesthetic Medicine in Englewood, CO.",
+  path: "/blog",
+});
 
 export default function BlogPage() {
   const posts = getAllPosts();

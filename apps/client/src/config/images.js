@@ -25,10 +25,10 @@ export const images = {
       "https://images.unsplash.com/photo-1746806942799-b4db209e9a6b?auto=format&fit=crop&w=800&q=80",
     wellness:
       "https://images.unsplash.com/photo-1763310225009-50214e3c99d9?auto=format&fit=crop&w=800&q=80",
-    /** CoolTone / body contouring result */
-    "body-contouring": "/images/treatments/body-contouring.jpg",
-    /** Microblading brows */
-    microblading: "/images/treatments/microblading.jpg",
+    /** Toned physique — body sculpting / CoolTone */
+    "body-contouring":
+      "https://images.unsplash.com/photo-1646909876562-9a00dab98e65?auto=format&fit=crop&w=800&q=80",
+    microblading: "/images/erica-eskeli.png",
   },
   blog: {
     default:
@@ -88,7 +88,7 @@ export function getBlogImage(category) {
 
 export function getEricaImageAlt(context = "profile") {
   if (context === "microblading") {
-    return "Microblading brow results at Artful Aesthetic Medicine";
+    return "Erica Eskeli performing microblading at Artful Aesthetic Medicine";
   }
   return images.erica.alt;
 }

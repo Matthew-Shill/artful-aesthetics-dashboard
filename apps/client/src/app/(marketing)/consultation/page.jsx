@@ -1,11 +1,14 @@
 import { siteConfig, trustCards } from "@/config/site";
 import { images } from "@/config/images";
+import { buildPageMetadata } from "@/lib/seo";
 import { Hero, BookingCTA, TrustCards } from "@/components/ui";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Consultation",
-  description: "Book a personalized aesthetic medicine consultation at Artful Aesthetic Medicine in Englewood, CO.",
-};
+  description:
+    "Book a personalized aesthetic medicine consultation in Englewood, CO. Meet with Erica Eskeli and craft a plan tailored to your goals.",
+  path: "/consultation",
+});
 
 export default function ConsultationPage() {
   return (

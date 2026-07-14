@@ -1,12 +1,15 @@
 import { siteConfig } from "@/config/site";
 import { images } from "@/config/images";
+import { buildPageMetadata } from "@/lib/seo";
 import { Hero, SectionHeading } from "@/components/ui";
 import { ContactForm } from "@/components/forms/ContactForm";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Contact",
-  description: "Contact Artful Aesthetic Medicine in Englewood, CO. Call, email, or send us a message.",
-};
+  description:
+    "Contact Artful Aesthetic Medicine in Englewood, CO. Call 303.901.3381, email, or send a message — we'd love to hear from you.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

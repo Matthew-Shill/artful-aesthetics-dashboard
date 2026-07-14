@@ -1,9 +1,12 @@
 import { Hero, SectionHeading } from "@/components/ui";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = buildPageMetadata({
   title: "Privacy Policy",
-  description: "Privacy policy for Artful Aesthetic Medicine.",
-};
+  description:
+    "Privacy policy for Artful Aesthetic Medicine — how we collect, use, and protect your personal information.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (

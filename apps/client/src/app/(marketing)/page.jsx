@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteConfig, testimonials } from "@/config/site";
 import { images, getCategoryImage, getEricaImageAlt } from "@/config/images";
 import { getDepartmentMenu } from "@/content/services";
+import { buildPageMetadata } from "@/lib/seo";
 import {
   Hero,
   SectionHeading,
@@ -10,6 +11,14 @@ import {
   MediaImage,
 } from "@/components/ui";
 import styles from "@/components/ui/ui.module.css";
+
+export const metadata = buildPageMetadata({
+  title: "Artful Aesthetic Medicine | Englewood, CO",
+  description: siteConfig.description,
+  path: "/",
+  absoluteTitle: true,
+  image: siteConfig.ogImage,
+});
 
 export default function HomePage() {
   const departments = getDepartmentMenu().map((dept) => ({
@@ -38,15 +47,17 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="The Studio"
             title="What We Offer"
-            subtitle="Seven departments — each with its own treatments. Pick one to explore and book."
+            subtitle="Seven departments. Tap any treatment to go straight there — or browse the full department."
           />
 
           <nav className={styles.deptQuickNav} aria-label="Jump to a department">
-            {departments.map((dept) => (
-              <a key={dept.slug} href={`#dept-${dept.slug}`} className={styles.deptQuickNavLink}>
-                {dept.shortTitle}
-              </a>
-            ))}
+            <div className={styles.deptQuickNavTrack}>
+              {departments.map((dept) => (
+                <a key={dept.slug} href={`#dept-${dept.slug}`} className={styles.deptQuickNavLink}>
+                  {dept.shortTitle}
+                </a>
+              ))}
+            </div>
           </nav>
 
           <TreatmentDepartments

@@ -1,10 +1,11 @@
 import { notFound } from "next/navigation";
 import {
-  serviceCategories,
   getCategory,
   getService,
   getAllServicePaths,
 } from "@/content/services";
+import { getServiceImage } from "@/config/images";
+import { buildPageMetadata } from "@/lib/seo";
 import { ServicePageTemplate } from "@/components/services/ServicePageTemplate";
 
 export async function generateStaticParams() {
@@ -15,10 +16,17 @@ export async function generateMetadata({ params }) {
   const { category: categorySlug, slug } = await params;
   const service = getService(categorySlug, slug);
   if (!service) return {};
-  return {
-    title: service.title,
-    description: service.description,
-  };
+
+  const description = service.seoDescription ||
+    (Array.isArray(service.description) ? service.description[0] : service.description);
+
+  return buildPageMetadata({
+    title: { absolute: service.seoTitle || `${service.title} | Artful Aesthetic Medicine` },
+    description,
+    path: `/services/${categorySlug}/${slug}`,
+    image: getServiceImage(categorySlug, slug),
+    absoluteTitle: true,
+  });
 }
 
 export default async function ServiceDetailPage({ params }) {

@@ -6,7 +6,10 @@ import {
 } from "@/content/services";
 import { siteConfig } from "@/config/site";
 import { getCategoryImage, getServiceImage, getEricaImageAlt } from "@/config/images";
+import { buildPageMetadata } from "@/lib/seo";
 import { Hero, SectionHeading, ServiceCard, StickyBookBar } from "@/components/ui";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getBreadcrumbSchema } from "@/components/seo/schema";
 import { CategoryIcon } from "@/components/icons/CategoryIcons";
 import styles from "@/components/ui/ui.module.css";
 
@@ -18,10 +21,14 @@ export async function generateMetadata({ params }) {
   const { category: categorySlug } = await params;
   const category = getCategory(categorySlug);
   if (!category) return {};
-  return {
-    title: category.title,
-    description: category.description,
-  };
+
+  return buildPageMetadata({
+    title: { absolute: category.seoTitle || `${category.title} | Artful Aesthetic Medicine` },
+    description: category.seoDescription || category.description,
+    path: `/services/${categorySlug}`,
+    image: getCategoryImage(categorySlug),
+    absoluteTitle: true,
+  });
 }
 
 export default async function CategoryPage({ params }) {
@@ -37,8 +44,15 @@ export default async function CategoryPage({ params }) {
     ? getEricaImageAlt("microblading")
     : `${category.title} treatments`;
 
+  const breadcrumb = getBreadcrumbSchema([
+    { name: "Home", path: "/" },
+    { name: category.title, path: `/services/${categorySlug}` },
+  ]);
+
   return (
     <>
+      {breadcrumb && <JsonLd data={breadcrumb} />}
+
       <Hero
         eyebrow="Services"
         title={category.title}
