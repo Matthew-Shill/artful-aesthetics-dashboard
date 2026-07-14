@@ -5,7 +5,7 @@ import {
   getServicesByCategory,
 } from "@/content/services";
 import { siteConfig } from "@/config/site";
-import { getCategoryImage, getEricaImageAlt } from "@/config/images";
+import { getCategoryImage, getServiceImage, getEricaImageAlt } from "@/config/images";
 import { Hero, SectionHeading, ServiceCard, StickyBookBar } from "@/components/ui";
 import { CategoryIcon } from "@/components/icons/CategoryIcons";
 import styles from "@/components/ui/ui.module.css";
@@ -68,17 +68,24 @@ export default async function CategoryPage({ params }) {
           </div>
           <SectionHeading title={`${category.title} Treatments`} />
           <div className={styles.serviceGrid}>
-            {categoryServices.map((service) => (
-              <ServiceCard
-                key={service.slug}
-                title={service.title}
-                description={service.tagline}
-                href={`/services/${categorySlug}/${service.slug}`}
-                imageSrc={categoryImage}
-                imageAlt={isMicroblading ? getEricaImageAlt("microblading") : service.title}
-                variant="overlay"
-              />
-            ))}
+            {categoryServices.map((service) => {
+              const imageSrc = getServiceImage(categorySlug, service.slug);
+              const imageAlt = isMicroblading
+                ? getEricaImageAlt("microblading")
+                : `${service.title} results`;
+
+              return (
+                <ServiceCard
+                  key={service.slug}
+                  title={service.title}
+                  description={service.tagline}
+                  href={`/services/${categorySlug}/${service.slug}`}
+                  imageSrc={imageSrc}
+                  imageAlt={imageAlt}
+                  variant="overlay"
+                />
+              );
+            })}
           </div>
         </div>
       </section>

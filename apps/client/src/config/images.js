@@ -1,5 +1,5 @@
 /**
- * Site imagery — stock photos (Unsplash) plus client photography.
+ * Site imagery — client photography plus stock photos (Unsplash).
  */
 export const images = {
   hero: {
@@ -13,7 +13,7 @@ export const images = {
     alt: "Erica Eskeli, Owner & Aesthetic Injector at Artful Aesthetic Medicine",
   },
   categories: {
-    /** Botox / facial injection — Unsplash (qehqLHZ9toc) */
+    /** Botox / facial injection — Unsplash (fallback for injectables without a dedicated result photo) */
     "aesthetic-injectables":
       "https://images.unsplash.com/photo-1746708810803-722593e53772?auto=format&fit=crop&w=800&q=80",
     skin: "https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80",
@@ -25,10 +25,10 @@ export const images = {
       "https://images.unsplash.com/photo-1746806942799-b4db209e9a6b?auto=format&fit=crop&w=800&q=80",
     wellness:
       "https://images.unsplash.com/photo-1763310225009-50214e3c99d9?auto=format&fit=crop&w=800&q=80",
-    /** Toned physique — body sculpting / CoolTone */
-    "body-contouring":
-      "https://images.unsplash.com/photo-1646909876562-9a00dab98e65?auto=format&fit=crop&w=800&q=80",
-    microblading: "/images/erica-eskeli.png",
+    /** CoolTone / body contouring result */
+    "body-contouring": "/images/treatments/body-contouring.jpg",
+    /** Microblading brows */
+    microblading: "/images/treatments/microblading.jpg",
   },
   blog: {
     default:
@@ -38,20 +38,46 @@ export const images = {
     wellness:
       "https://images.unsplash.com/photo-1763310225009-50214e3c99d9?auto=format&fit=crop&w=800&q=80",
   },
+  /**
+   * Per-service imagery. Values may be a path string or an array of paths
+   * (first image is the primary / hero cover).
+   */
   services: {
     default:
       "https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=1400&q=80",
-    microblading: "/images/erica-eskeli.png",
+    "non-surgical-nose-job": [
+      "/images/treatments/nose-job-1.jpg",
+      "/images/treatments/nose-job-2.jpg",
+    ],
+    "dermal-filler": [
+      "/images/treatments/dermal-filler-jaw-1.jpg",
+      "/images/treatments/dermal-filler-jaw-2.jpg",
+    ],
+    "lip-filler": "/images/treatments/lip-filler.jpg",
+    cooltone: "/images/treatments/body-contouring.jpg",
+    microblading: "/images/treatments/microblading.jpg",
   },
 };
+
+function normalizeServiceImages(entry) {
+  if (!entry) return [];
+  return Array.isArray(entry) ? entry.filter(Boolean) : [entry];
+}
 
 export function getCategoryImage(slug) {
   return images.categories[slug] || images.services.default;
 }
 
-export function getServiceImage(categorySlug) {
-  if (categorySlug === "microblading") return images.erica.src;
+/** Primary cover image for a service (falls back to category image). */
+export function getServiceImage(categorySlug, serviceSlug) {
+  const fromService = normalizeServiceImages(images.services[serviceSlug])[0];
+  if (fromService) return fromService;
   return getCategoryImage(categorySlug);
+}
+
+/** All result images for a service (empty if none configured). */
+export function getServiceGallery(serviceSlug) {
+  return normalizeServiceImages(images.services[serviceSlug]);
 }
 
 export function getBlogImage(category) {
@@ -62,7 +88,7 @@ export function getBlogImage(category) {
 
 export function getEricaImageAlt(context = "profile") {
   if (context === "microblading") {
-    return "Erica Eskeli performing microblading at Artful Aesthetic Medicine";
+    return "Microblading brow results at Artful Aesthetic Medicine";
   }
   return images.erica.alt;
 }

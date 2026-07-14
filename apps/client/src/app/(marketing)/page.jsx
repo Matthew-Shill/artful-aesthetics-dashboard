@@ -14,7 +14,7 @@ import styles from "@/components/ui/ui.module.css";
 export default function HomePage() {
   const departments = getDepartmentMenu().map((dept) => ({
     ...dept,
-    imageSrc: dept.slug === "microblading" ? images.erica.src : getCategoryImage(dept.slug),
+    imageSrc: getCategoryImage(dept.slug),
     imageAlt:
       dept.slug === "microblading"
         ? getEricaImageAlt("microblading")
