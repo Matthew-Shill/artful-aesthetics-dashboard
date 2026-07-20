@@ -14,7 +14,7 @@ const CATEGORY_ICONS = {
   "weight-loss": Scale,
   "laser-hair-removal": Zap,
   wellness: HeartPulse,
-  "body-contouring": Dumbbell,
+  "cellulite-treatment": Dumbbell,
   microblading: Brush,
 };
 

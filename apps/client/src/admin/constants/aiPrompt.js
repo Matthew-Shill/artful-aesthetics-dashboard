@@ -12,7 +12,7 @@ Lapse risk: 4 high-LTV clients flagged. Top: Claudette M. ($4,200 LTV, 92% churn
 Acquisition LTV: Referral $5,800 | Event $4,100 | Instagram $3,200 | Google $2,900 | Walk-in $1,800
 Hypothesis tests: SMS reminders vs rebooking (p<0.001, large effect, confirmed) | Bundle pricing vs spend (p=0.0003, confirmed) | Provider photos vs bookings (p=0.042, small, confirmed) | Follow-up email vs LTV (p=0.091, inconclusive)
 Inventory: Neurotoxins tracked by unit (Botox $5.20/unit cost, $14.00 retail, 73% margin). Filler tracked by ml with partial syringe logging. Open vials and syringes tracked with remaining volume per session. Waste log captures lot numbers, volume, and reason.
-Services offered: Neurotoxin (Botox, Dysport, Xeomin), Dermal Filler, Lip Filler, Non-Surgical Nose Job, PLLA PDO Threads, Dissolver, Plasma Pen, Microneedling, IPL, Glow Treatment, CO2 Ablative, Weight Loss Injections, Laser Hair Removal, NAD+, Glutathione, B12 Shots, Biotin, Beauty Bag IV, Artful IV Therapy, CoolTone, Microblading.
+Services offered: Neurotoxin (Botox, Dysport, Xeomin), Dermal Filler, Lip Filler, Non-Surgical Nose Job, PLLA PDO Threads, Dissolver, Plasma Pen, Microneedling, IPL, Glow Treatment, CO2 Ablative, Weight Loss Injections, Laser Hair Removal, NAD+, Glutathione, B12 Shots, Biotin, Beauty Bag IV, Artful IV Therapy, Aveli (cellulite treatment), Microblading.
 
 Be direct, specific, and professional. Reference exact numbers. Write in short paragraphs only — no bullet points, no lists, no markdown formatting of any kind. Under 150 words unless the question genuinely needs more depth.`;
 
