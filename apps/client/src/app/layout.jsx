@@ -50,8 +50,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/images/artful-logo-icon-transparent.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/images/artful-logo-icon-transparent.png" />
+        <link rel="icon" href="/images/artful-logo-favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/images/artful-logo-apple-touch.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

@@ -15,7 +15,8 @@ export const siteConfig = {
       icon: "/images/artful-logo-icon-transparent.png",
     },
     full: "/images/artful-logo-full.png",
-    icon: "/images/artful-logo-icon-transparent.png",
+    /** Tab / PWA icon — circular monogram from the owner logo. */
+    icon: "/images/artful-logo-favicon.png",
   },
   description:
     "Personalized aesthetic care in Englewood, CO — crafted with intention by Erica Eskeli. Botox, fillers, skin treatments, IV therapy, and more.",
