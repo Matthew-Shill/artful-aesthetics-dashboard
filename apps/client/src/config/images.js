@@ -25,9 +25,9 @@ export const images = {
       "https://images.unsplash.com/photo-1746806942799-b4db209e9a6b?auto=format&fit=crop&w=800&q=80",
     wellness:
       "https://images.unsplash.com/photo-1763310225009-50214e3c99d9?auto=format&fit=crop&w=800&q=80",
-    /** Body / cellulite treatment */
+    /** Hip / thigh — Aveli cellulite treatment area */
     "cellulite-treatment":
-      "https://images.unsplash.com/photo-1646909876562-9a00dab98e65?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1647832878669-b1c524dbc883?auto=format&fit=crop&w=800&q=80",
     microblading: "/images/erica-eskeli.png",
   },
   blog: {
@@ -55,7 +55,9 @@ export const images = {
     ],
     "lip-filler": "/images/treatments/lip-filler.jpg",
     "plla-pdo-threads": "/images/treatments/plla-pdo-threads.jpg",
-    aveli: "/images/treatments/body-contouring.jpg",
+    /** Hip / buttock / thigh — Aveli treatment area (not muscle toning) */
+    aveli:
+      "https://images.unsplash.com/photo-1647832878669-b1c524dbc883?auto=format&fit=crop&w=1400&q=80",
     microblading: "/images/treatments/microblading.jpg",
   },
 };
