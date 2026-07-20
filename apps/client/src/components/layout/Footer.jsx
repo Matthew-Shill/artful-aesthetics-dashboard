@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { Logo } from "./Logo";
-import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import styles from "./layout.module.css";
 
 export function Footer() {
@@ -53,12 +52,6 @@ export function Footer() {
               Login
             </Link>
           </div>
-        </div>
-
-        <div className={styles.footerNewsletter}>
-          <p className={styles.footerHeading}>Newsletter</p>
-          <p className={styles.footerText}>Specials, tips, and studio updates.</p>
-          <NewsletterForm />
         </div>
 
         <div className={styles.footerBottom}>

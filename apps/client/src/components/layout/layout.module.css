@@ -413,39 +413,6 @@
   color: var(--gold-dark);
 }
 
-.footerNewsletter {
-  max-width: 400px;
-  margin-bottom: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footerNewsletter .footerHeading {
-  margin-bottom: 0.5rem;
-}
-
-.footerNewsletter .footerText {
-  margin-bottom: 1rem;
-}
-
-.footerNewsletter .formLabel {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.footerNewsletter .formInput {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.footerNewsletter .formInput::placeholder {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.footerNewsletter .formInput:focus {
-  border-color: var(--gold);
-}
-
 .footer {
   background: var(--sidebar);
   color: rgba(255, 255, 255, 0.85);
