@@ -14,7 +14,7 @@ export const images = {
   },
   categories: {
     /** Botox / facial injection — Unsplash (fallback for injectables without a dedicated result photo) */
-    "aesthetic-injectables":
+    injectables:
       "https://images.unsplash.com/photo-1746708810803-722593e53772?auto=format&fit=crop&w=800&q=80",
     skin: "https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80",
     /** Active woman — weight management / wellness journey */
@@ -54,6 +54,7 @@ export const images = {
       "/images/treatments/dermal-filler-jaw-2.jpg",
     ],
     "lip-filler": "/images/treatments/lip-filler.jpg",
+    "plla-pdo-threads": "/images/treatments/plla-pdo-threads.jpg",
     cooltone: "/images/treatments/body-contouring.jpg",
     microblading: "/images/treatments/microblading.jpg",
   },

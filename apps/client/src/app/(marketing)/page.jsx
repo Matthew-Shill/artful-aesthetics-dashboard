@@ -44,11 +44,7 @@ export default function HomePage() {
 
       <section id="treatments" className="section section--surface">
         <div className="container">
-          <SectionHeading
-            eyebrow="The Studio"
-            title="What We Offer"
-            subtitle="Seven departments. Tap any treatment to go straight there — or browse the full department."
-          />
+          <SectionHeading eyebrow="The Studio" title="What We Offer" />
 
           <nav className={styles.deptQuickNav} aria-label="Jump to a department">
             <div className={styles.deptQuickNavTrack}>

@@ -1,13 +1,13 @@
 export const serviceCategories = [
   {
-    slug: "aesthetic-injectables",
-    title: "Aesthetic Injectables",
+    slug: "injectables",
+    title: "Injectables",
     shortTitle: "Injectables",
     tagline: "Refine, restore, enhance",
-    description: "Botox, fillers, lip enhancement, threads, and more.",
-    seoTitle: "Aesthetic Injectables in Englewood, CO | Artful Aesthetic Medicine",
+    description: "Neurotoxins, fillers, lip enhancement, threads, and more.",
+    seoTitle: "Injectables in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
-      "Botox, dermal fillers, lip filler, PDO threads, and non-surgical nose jobs in Englewood, CO. Natural results with Erica Eskeli at Artful Aesthetic Medicine.",
+      "Neurotoxin, dermal fillers, lip filler, PDO threads, and non-surgical nose jobs in Englewood, CO. Natural results with Erica Eskeli at Artful Aesthetic Medicine.",
   },
   {
     slug: "skin",
@@ -73,8 +73,9 @@ export const serviceCategories = [
 
 export const services = [
   {
-    category: "aesthetic-injectables",
+    category: "injectables",
     slug: "non-surgical-nose-job",
+    mangomintServiceId: 20,
     title: "Non-Surgical Nose Job",
     seoTitle: "Non-Surgical Nose Job in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -83,6 +84,10 @@ export const services = [
     tagline: "Refine your profile without surgery",
     description:
       "Dermal filler used to reshape and refine the nose without surgery. Smooths dorsal bumps, lifts a drooping tip, and corrects asymmetry for a straighter, more balanced profile. Your nasal structure and facial proportions will be evaluated to determine whether filler can achieve your goals; this treatment reshapes and adds subtle structure but cannot reduce the size of the nose.",
+    pricing: {
+      label: "$1,050",
+      unit: "per treatment",
+    },
     faq: [
       {
         q: "How long does it last?",
@@ -103,28 +108,38 @@ export const services = [
     ],
   },
   {
-    category: "aesthetic-injectables",
+    category: "injectables",
     slug: "neurotoxin-treatment",
+    mangomintServiceId: 21,
     title: "Neurotoxin Treatment",
-    seoTitle: "Botox & Neurotoxin Treatments in Englewood, CO | Artful Aesthetic Medicine",
+    seoTitle: "Neurotoxin Treatments in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
-      "Smooth fine lines and wrinkles with expert neurotoxin treatments (Botox, Dysport) in Englewood, CO. Personalized dosing by Erica Eskeli. Book today.",
-    h1: "Neurotoxin Treatments (Botox & Dysport)",
+      "Smooth fine lines and wrinkles with Letybo, Dysport, and Daxxify in Englewood, CO. Personalized dosing by Erica Eskeli. Book today.",
+    h1: "Neurotoxin Treatments",
     tagline: "Smooth lines, preserve expression",
     description:
-      "Neurotoxins relax the muscles that cause expression lines while preserving natural movement. Target areas include forehead lines, glabella, crow's feet, and a full range of advanced areas including lip flips, masseter slimming, neck bands, and traps.\n\nThis is also used for TMJ and hyperhidrosis.",
+      "Neurotoxins relax the muscles that cause expression lines while preserving natural movement. Target areas include forehead lines, glabella, crow's feet, and a full range of advanced areas including lip flips, masseter slimming, neck bands, and traps.\n\nThis is also used for TMJ and hyperhidrosis. We offer Letybo, Dysport, and Daxxify so you can choose the product and longevity that fits your goals.",
+    pricing: {
+      label: "From $7 / unit",
+      unit: "priced per unit",
+      items: [
+        { name: "Letybo", amount: "$7", unit: "per unit", note: "Lasts about 2 months" },
+        { name: "Dysport", amount: "$12", unit: "per unit", note: "Lasts about 3.5 months" },
+        { name: "Daxxify", amount: "$13", unit: "per unit", note: "Lasts about 4–5 months" },
+      ],
+    },
     faq: [
       {
         q: "How soon do I see results?",
         a: "Initial effects within 3-7 days, full results by 2 weeks.",
       },
       {
-        q: "Does Botox look natural?",
+        q: "Does neurotoxin look natural?",
         a: "With proper dosing and placement, yes, the goal is softened lines with natural movement.",
       },
       {
         q: "How often do I need treatment?",
-        a: "Most patients return every 3-4 months. Although this depends on activity level, product, and how your body metabolizes neurotoxin.",
+        a: "Most patients return every 2–5 months depending on the product, activity level, and how your body metabolizes neurotoxin. Letybo typically lasts about 2 months, Dysport about 3.5 months, and Daxxify about 4–5 months.",
       },
       {
         q: "Is it safe?",
@@ -133,8 +148,9 @@ export const services = [
     ],
   },
   {
-    category: "aesthetic-injectables",
+    category: "injectables",
     slug: "dissolver",
+    mangomintServiceId: 39,
     title: "Dissolver",
     seoTitle: "Filler Dissolver in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -163,8 +179,9 @@ export const services = [
     ],
   },
   {
-    category: "aesthetic-injectables",
+    category: "injectables",
     slug: "dermal-filler",
+    mangomintServiceId: 43,
     title: "Dermal Filler",
     seoTitle: "Dermal Filler in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -193,8 +210,9 @@ export const services = [
     ],
   },
   {
-    category: "aesthetic-injectables",
+    category: "injectables",
     slug: "plla-pdo-threads",
+    mangomintServiceId: 13,
     title: "PLLA PDO Threads",
     seoTitle: "PDO & PLLA Thread Lift in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -223,7 +241,7 @@ export const services = [
     ],
   },
   {
-    category: "aesthetic-injectables",
+    category: "injectables",
     slug: "lip-filler",
     title: "Lip Filler",
     seoTitle: "Lip Filler in Englewood, CO | Artful Aesthetic Medicine",
@@ -255,6 +273,7 @@ export const services = [
   {
     category: "skin",
     slug: "plasma-pen-treatment",
+    mangomintServiceId: 15,
     title: "Plasma Pen Treatment",
     seoTitle: "Plasma Pen Treatment in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -285,6 +304,7 @@ export const services = [
   {
     category: "skin",
     slug: "microneedling",
+    mangomintServiceId: 28,
     title: "Microneedling",
     seoTitle: "Microneedling in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -293,6 +313,13 @@ export const services = [
     tagline: "Stimulate your skin's renewal",
     description:
       "Collagen-induction therapy using fine needles to renew skin from within. Promoting the body's natural collagen and elastin production.\n\nTreats acne scarring, enlarged pores, fine lines, and uneven texture.",
+    pricing: {
+      label: "From $500",
+      items: [
+        { name: "Face", amount: "$500", unit: "per session" },
+        { name: "Face, neck & chest", amount: "$900", unit: "per session" },
+      ],
+    },
     faq: [
       {
         q: "How many sessions will I need?",
@@ -315,6 +342,7 @@ export const services = [
   {
     category: "skin",
     slug: "ipl-treatment",
+    mangomintServiceId: 34,
     title: "IPL Treatment",
     seoTitle: "IPL Photofacial in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -323,6 +351,10 @@ export const services = [
     tagline: "Even tone, reduce redness",
     description:
       "IPL (Intense Pulsed Light) treatment is targeted light therapy that corrects pigment and vascular concerns. Targets and treats sun spots, redness, rosacea, and broken capillaries for a more even tone.",
+    pricing: {
+      label: "$250",
+      unit: "per treatment",
+    },
     faq: [
       {
         q: "How many treatments are needed?",
@@ -345,6 +377,7 @@ export const services = [
   {
     category: "skin",
     slug: "glow-treatment",
+    mangomintServiceId: 38,
     title: "Glow Treatment",
     seoTitle: "Glow Facial Treatment in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -353,6 +386,10 @@ export const services = [
     tagline: "Radiance from within",
     description:
       "A customized hydrating and brightening facial with zero downtime. Refreshes complexion for everyday radiance or pre-event glow. Ideal before a special event or as a regular part of a skincare routine.",
+    pricing: {
+      label: "$250",
+      unit: "per treatment",
+    },
     faq: [
       {
         q: "How soon before an event should I book this?",
@@ -371,6 +408,7 @@ export const services = [
   {
     category: "skin",
     slug: "co2-ablative-treatment",
+    mangomintServiceId: 46,
     title: "CO2 Ablative Treatment",
     seoTitle: "CO2 Laser Resurfacing in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -379,6 +417,10 @@ export const services = [
     tagline: "Deep skin resurfacing",
     description:
       "Advanced laser resurfacing that removes damaged surface skin to reveal smoother, more even-toned skin beneath. Treats deep wrinkles, significant sun damage, and textural scarring.\n\nCO2 laser works by removing the outermost layers of damaged skin, prompting the growth of fresh, smoother, more evenly toned skin beneath.",
+    pricing: {
+      label: "$800",
+      unit: "per treatment",
+    },
     faq: [
       {
         q: "How much downtime is required?",
@@ -401,6 +443,7 @@ export const services = [
   {
     category: "weight-loss",
     slug: "weight-loss-injections",
+    mangomintShowOnlyScId: 5,
     title: "Weight Loss Injections",
     seoTitle: "Weight Loss Injections in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -409,6 +452,13 @@ export const services = [
     tagline: "Medically guided weight management",
     description:
       "Medically supervised weight loss program tailored to individual health goals. Includes consultation, personalized plan, and ongoing monitoring under physician oversight.",
+    pricing: {
+      label: "$99",
+      unit: "starter dose",
+      items: [
+        { name: "Starter dose", amount: "$99" },
+      ],
+    },
     faq: [
       {
         q: "Am I a candidate?",
@@ -461,6 +511,7 @@ export const services = [
   {
     category: "wellness",
     slug: "nad-booster",
+    mangomintServiceId: 22,
     title: "NAD+ Booster",
     seoTitle: "NAD+ IV Therapy in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -469,6 +520,10 @@ export const services = [
     tagline: "Cellular energy and vitality",
     description:
       "IV therapy delivering NAD+ directly into the bloodstream. Supports energy, mental clarity, and cellular health.",
+    pricing: {
+      label: "$60",
+      unit: "per session",
+    },
     faq: [
       {
         q: "How long does an infusion take?",
@@ -487,6 +542,7 @@ export const services = [
   {
     category: "wellness",
     slug: "glutathione-treatment",
+    mangomintServiceId: 37,
     title: "Glutathione Treatment",
     seoTitle: "Glutathione IV Therapy in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -495,6 +551,10 @@ export const services = [
     tagline: "Master antioxidant support",
     description:
       "Antioxidant IV/injection therapy supporting detoxification and cellular protection. Commonly used for its association with skin brightness.",
+    pricing: {
+      label: "$35",
+      unit: "per session",
+    },
     faq: [
       {
         q: "How soon will I notice results?",
@@ -513,6 +573,7 @@ export const services = [
   {
     category: "wellness",
     slug: "biotin",
+    mangomintServiceId: 51,
     title: "Biotin",
     seoTitle: "Biotin Injections in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -521,6 +582,10 @@ export const services = [
     tagline: "Support hair, skin, and nails",
     description:
       "Quick injection supporting healthy hair, skin, and nails. A fast, direct-absorption alternative to oral biotin.",
+    pricing: {
+      label: "$35",
+      unit: "per injection",
+    },
     faq: [
       {
         q: "How often should I get a biotin shot?",
@@ -539,6 +604,7 @@ export const services = [
   {
     category: "wellness",
     slug: "b12-shots",
+    mangomintServiceId: 55,
     title: "B12 Shots",
     seoTitle: "B12 Injections in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -547,6 +613,10 @@ export const services = [
     tagline: "Energy and metabolism support",
     description:
       "Fast injection supporting energy and metabolism. Ideal for those with lower dietary B12 absorption.",
+    pricing: {
+      label: "$25",
+      unit: "per injection",
+    },
     faq: [
       {
         q: "How often can I get a B12 shot?",
@@ -565,6 +635,7 @@ export const services = [
   {
     category: "wellness",
     slug: "beauty-bag-iv",
+    mangomintServiceId: 53,
     title: "Beauty Bag IV",
     seoTitle: "Beauty Bag IV Therapy in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -573,6 +644,10 @@ export const services = [
     tagline: "Beauty nutrients delivered directly",
     description:
       "A curated IV vitamin blend formulated around skin, hair, and hydration support. Refreshes from within for everyday glow or as part of your wellness routine.",
+    pricing: {
+      label: "$180",
+      unit: "per session",
+    },
     faq: [
       {
         q: "How long does an IV session take?",
@@ -591,6 +666,7 @@ export const services = [
   {
     category: "wellness",
     slug: "artful-iv-therapy",
+    mangomintServiceId: 57,
     title: "Artful IV Therapy",
     seoTitle: "IV Therapy in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -599,6 +675,10 @@ export const services = [
     tagline: "Personalized IV wellness",
     description:
       "Curated IV vitamin blends for hydration, energy, and glow. Personalized protocols designed to address your unique wellness and aesthetic goals.",
+    pricing: {
+      label: "$300",
+      unit: "per session",
+    },
     faq: [
       {
         q: "How long does an IV session take?",
@@ -617,6 +697,7 @@ export const services = [
   {
     category: "body-contouring",
     slug: "cooltone",
+    mangomintServiceId: 44,
     title: "CoolTone",
     seoTitle: "CoolTone Body Contouring in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -625,6 +706,10 @@ export const services = [
     tagline: "Strengthen and define muscles",
     description:
       "Magnetic muscle stimulation that builds tone and definition beyond voluntary exercise. Treats abdomen, glutes, and thighs. It strengthens muscle rather than reducing fat.",
+    pricing: {
+      label: "$300",
+      unit: "per session",
+    },
     faq: [
       {
         q: "Is CoolTone the same as CoolSculpting?",
@@ -647,6 +732,7 @@ export const services = [
   {
     category: "microblading",
     slug: "microblading",
+    mangomintShowOnlyScId: 10,
     title: "Microblading",
     seoTitle: "Microblading in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
@@ -655,6 +741,13 @@ export const services = [
     tagline: "Perfectly shaped brows by Erica",
     description:
       "Semi-permanent hair-stroke technique for fuller, more defined brows. Custom-mapped to facial structure for a natural result.",
+    pricing: {
+      label: "$700",
+      items: [
+        { name: "Microblading", amount: "$700" },
+        { name: "Touch-up", amount: "$400" },
+      ],
+    },
     faq: [
       {
         q: "How long does microblading last?",

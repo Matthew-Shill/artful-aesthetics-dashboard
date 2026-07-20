@@ -75,15 +75,15 @@ export const siteConfig = {
   nav: [
     { label: "Home", href: "/" },
     {
-      label: "Aesthetic Injectables",
-      href: "/services/aesthetic-injectables",
+      label: "Injectables",
+      href: "/services/injectables",
       children: [
-        { label: "Non-Surgical Nose Job", href: "/services/aesthetic-injectables/non-surgical-nose-job" },
-        { label: "Neurotoxin Treatment", href: "/services/aesthetic-injectables/neurotoxin-treatment" },
-        { label: "Dissolver", href: "/services/aesthetic-injectables/dissolver" },
-        { label: "Dermal Filler", href: "/services/aesthetic-injectables/dermal-filler" },
-        { label: "PLLA PDO Threads", href: "/services/aesthetic-injectables/plla-pdo-threads" },
-        { label: "Lip Filler", href: "/services/aesthetic-injectables/lip-filler" },
+        { label: "Non-Surgical Nose Job", href: "/services/injectables/non-surgical-nose-job" },
+        { label: "Neurotoxin Treatment", href: "/services/injectables/neurotoxin-treatment" },
+        { label: "Dissolver", href: "/services/injectables/dissolver" },
+        { label: "Dermal Filler", href: "/services/injectables/dermal-filler" },
+        { label: "PLLA PDO Threads", href: "/services/injectables/plla-pdo-threads" },
+        { label: "Lip Filler", href: "/services/injectables/lip-filler" },
       ],
     },
     {
@@ -140,6 +140,19 @@ export const siteConfig = {
     { label: "Consultation", href: "/consultation" },
   ],
 };
+
+
+/** Deep-link to Mangomint for a treatment when service / category IDs are known. */
+export function getServiceBookingUrl(service) {
+  const base = siteConfig.bookingUrl;
+  if (service?.mangomintServiceId != null) {
+    return `${base}?serviceId=${service.mangomintServiceId}`;
+  }
+  if (service?.mangomintShowOnlyScId != null) {
+    return `${base}?showOnlyScId=${service.mangomintShowOnlyScId}`;
+  }
+  return base;
+}
 
 export const testimonials = [
   {

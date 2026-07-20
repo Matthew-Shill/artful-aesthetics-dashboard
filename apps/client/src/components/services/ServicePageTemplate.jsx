@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
+import { getServiceBookingUrl } from "@/config/site";
 import { getServiceImage, getServiceGallery } from "@/config/images";
 import { getRelatedServices } from "@/content/services";
 import {
   Hero,
-  BookingCTA,
+  MangomintEmbed,
   SectionHeading,
   Accordion,
   StickyBookBar,
@@ -12,6 +12,7 @@ import {
 } from "@/components/ui";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getServiceSchema, getFaqPageSchema, getBreadcrumbSchema } from "@/components/seo/schema";
+import styles from "@/components/ui/ui.module.css";
 
 function descriptionParagraphs(description) {
   if (Array.isArray(description)) return description.filter(Boolean);
@@ -23,6 +24,44 @@ function treatmentAlt(title) {
   return `${title} at Artful Aesthetic Medicine, Englewood CO.`;
 }
 
+function ServicePricing({ pricing }) {
+  if (!pricing?.label && !pricing?.items?.length) return null;
+
+  const hasItems = pricing.items?.length > 0;
+
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHeading title="Pricing" />
+        <div className={styles.pricingBlock}>
+          {!hasItems && (
+            <p className={styles.pricingSimple}>
+              <span className={styles.pricingAmount}>{pricing.label}</span>
+              {pricing.unit && <span className={styles.pricingUnit}>{pricing.unit}</span>}
+            </p>
+          )}
+          {hasItems && (
+            <ul className={styles.pricingList}>
+              {pricing.items.map((item) => (
+                <li key={item.name} className={styles.pricingItem}>
+                  <div className={styles.pricingItemMain}>
+                    <span className={styles.pricingItemName}>{item.name}</span>
+                    <span className={styles.pricingItemAmount}>
+                      {item.amount}
+                      {item.unit ? <span className={styles.pricingUnit}> {item.unit}</span> : null}
+                    </span>
+                  </div>
+                  {item.note && <p className={styles.pricingItemNote}>{item.note}</p>}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function ServicePageTemplate({ service, category }) {
   const imageSrc = getServiceImage(service.category, service.slug);
   const gallery = getServiceGallery(service.slug);
@@ -30,6 +69,7 @@ export function ServicePageTemplate({ service, category }) {
   const imageAlt = treatmentAlt(service.title);
   const paragraphs = descriptionParagraphs(service.description);
   const related = getRelatedServices(service, 2);
+  const bookingUrl = getServiceBookingUrl(service);
   const faqSchema = getFaqPageSchema(service.faq);
   const breadcrumb = getBreadcrumbSchema([
     { name: "Home", path: "/" },
@@ -47,7 +87,7 @@ export function ServicePageTemplate({ service, category }) {
         eyebrow={category.title}
         title={service.h1 || service.title}
         subtitle={service.tagline}
-        primaryCta={{ label: "Book This Treatment", href: siteConfig.bookingUrl }}
+        primaryCta={{ label: "Book This Treatment", href: "#book" }}
         secondaryCta={{ label: `All ${category.title}`, href: `/services/${service.category}` }}
         image={{ src: imageSrc, alt: imageAlt }}
         compact
@@ -73,6 +113,8 @@ export function ServicePageTemplate({ service, category }) {
           </div>
         </section>
       )}
+
+      <ServicePricing pricing={service.pricing} />
 
       {showResultsGallery && (
         <section className="section">
@@ -172,13 +214,13 @@ export function ServicePageTemplate({ service, category }) {
         </section>
       )}
 
-      <section className="section">
+      <section className="section" id="book">
         <div className="container">
-          <BookingCTA title="Ready to get started?" bookingUrl={siteConfig.bookingUrl} compact />
+          <MangomintEmbed bookingUrl={bookingUrl} title="Schedule your treatment" />
         </div>
       </section>
 
-      <StickyBookBar bookingUrl={siteConfig.bookingUrl} />
+      <StickyBookBar bookingUrl="#book" />
     </>
   );
 }

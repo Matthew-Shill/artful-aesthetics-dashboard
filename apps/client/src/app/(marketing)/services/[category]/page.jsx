@@ -96,6 +96,7 @@ export default async function CategoryPage({ params }) {
                   href={`/services/${categorySlug}/${service.slug}`}
                   imageSrc={imageSrc}
                   imageAlt={imageAlt}
+                  price={service.pricing?.label}
                   variant="overlay"
                 />
               );

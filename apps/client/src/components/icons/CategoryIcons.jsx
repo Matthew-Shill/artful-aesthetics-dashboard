@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 const CATEGORY_ICONS = {
-  "aesthetic-injectables": Syringe,
+  injectables: Syringe,
   skin: Sparkles,
   "weight-loss": Scale,
   "laser-hair-removal": Zap,

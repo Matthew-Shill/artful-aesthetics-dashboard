@@ -384,11 +384,98 @@
   flex: 1;
 }
 
+.serviceCardPrice {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  margin: -0.5rem 0 1.25rem;
+  letter-spacing: 0.01em;
+}
+
 .serviceCardLink {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--gold-dark);
   letter-spacing: 0.03em;
+}
+
+.pricingBlock {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pricingSimple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.pricingAmount {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.pricingUnit {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  font-weight: 500;
+}
+
+.pricingList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  text-align: left;
+}
+
+.pricingItem {
+  padding: 1.125rem 0;
+  border-bottom: 1px solid var(--border, rgba(0, 0, 0, 0.08));
+}
+
+.pricingItem:first-child {
+  padding-top: 0;
+}
+
+.pricingItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pricingItemMain {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pricingItemName {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.pricingItemAmount {
+  font-family: var(--font-serif);
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.pricingItemNote {
+  margin: 0.35rem 0 0;
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  line-height: 1.5;
 }
 
 .serviceGrid {
@@ -1411,6 +1498,50 @@
 
 .bookingCtaCompact .bookingCtaText {
   margin-bottom: 1.5rem;
+}
+
+.mangomintEmbed {
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.mangomintEmbedHeader {
+  margin-bottom: 1.5rem;
+}
+
+.mangomintEmbedTitle {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin: 0 0 0.5rem;
+}
+
+.mangomintEmbedSubtitle {
+  margin: 0 auto;
+  max-width: 42ch;
+  color: var(--text-mid);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.mangomintEmbedFrame {
+  width: 100%;
+  height: min(900px, 85vh);
+  min-height: 640px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-md, 12px);
+  border: 1px solid var(--border, rgba(0, 0, 0, 0.08));
+  background: var(--surface, #fff);
+}
+
+.mangomintEmbedIframe {
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  border: 0;
+  background: transparent;
 }
 
 @media (prefers-reduced-motion: reduce) {

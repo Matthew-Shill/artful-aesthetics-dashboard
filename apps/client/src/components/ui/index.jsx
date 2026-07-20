@@ -13,6 +13,7 @@ export { MediaImage };
 export { Button } from "./Button";
 export { Accordion } from "./Accordion";
 export { StickyBookBar } from "./StickyBookBar";
+export { MangomintEmbed } from "./MangomintEmbed";
 
 export function SectionHeading({ eyebrow, title, subtitle, align = "center" }) {
   return (
@@ -157,14 +158,10 @@ export function TreatmentDepartments({ departments }) {
 
           <div className={styles.deptCardBody}>
             <div className={styles.deptCardHeader}>
-              <span className={styles.deptCardIcon} aria-hidden="true">
-                <CategoryIcon slug={dept.slug} />
-              </span>
               <div>
                 <h3 className={styles.deptCardTitle}>
                   <Link href={`/services/${dept.slug}`}>{dept.title}</Link>
                 </h3>
-                <p className={styles.deptCardDesc}>{dept.description}</p>
               </div>
             </div>
 
@@ -220,7 +217,7 @@ export function DepartmentTile({ slug, title, tagline, href, imageSrc, imageAlt 
   );
 }
 
-export function ServiceCard({ title, description, href, imageSrc, imageAlt, categoryTitle, variant = "default" }) {
+export function ServiceCard({ title, description, href, imageSrc, imageAlt, categoryTitle, price, variant = "default" }) {
   return (
     <Link href={href} className={`${styles.serviceCard} ${variant === "overlay" ? styles.serviceCardOverlay : ""}`}>
       <div className={styles.serviceCardImage}>
@@ -238,6 +235,7 @@ export function ServiceCard({ title, description, href, imageSrc, imageAlt, cate
       <div className={styles.serviceCardBody}>
         <h3 className={styles.serviceCardTitle}>{title}</h3>
         {description && <p className={styles.serviceCardDesc}>{description}</p>}
+        {price && <p className={styles.serviceCardPrice}>{price}</p>}
         <span className={styles.serviceCardLink}>Explore →</span>
       </div>
     </Link>

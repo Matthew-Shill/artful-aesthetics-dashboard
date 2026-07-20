@@ -74,11 +74,17 @@ export function getMedicalBusinessSchema() {
   };
 }
 
+function parsePriceAmount(label) {
+  if (!label) return null;
+  const match = String(label).replace(/,/g, "").match(/(\d+(?:\.\d+)?)/);
+  return match ? match[1] : null;
+}
+
 export function getServiceSchema(service) {
   const description = service.seoDescription
     || (Array.isArray(service.description) ? service.description.join(" ") : service.description);
 
-  return {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.h1 || service.title,
@@ -96,6 +102,34 @@ export function getServiceSchema(service) {
       },
     },
   };
+
+  const pricedItems = service.pricing?.items?.length
+    ? service.pricing.items
+    : service.pricing?.label
+      ? [{ name: service.title, amount: service.pricing.label }]
+      : [];
+
+  const offers = pricedItems
+    .map((item) => {
+      const price = parsePriceAmount(item.amount);
+      if (!price) return null;
+      return {
+        "@type": "Offer",
+        name: item.name,
+        price,
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+      };
+    })
+    .filter(Boolean);
+
+  if (offers.length === 1) {
+    schema.offers = offers[0];
+  } else if (offers.length > 1) {
+    schema.offers = offers;
+  }
+
+  return schema;
 }
 
 export function getFaqPageSchema(faq) {
