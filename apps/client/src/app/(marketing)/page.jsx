@@ -1,3 +1,4 @@
+// TODO: consider dedicated /denver landing page once GBP is live
 import Link from "next/link";
 import { siteConfig, testimonials } from "@/config/site";
 import { images, getCategoryImage, getEricaImageAlt } from "@/config/images";
@@ -13,8 +14,9 @@ import {
 import styles from "@/components/ui/ui.module.css";
 
 export const metadata = buildPageMetadata({
-  title: "Artful Aesthetic Medicine | Englewood, CO",
-  description: siteConfig.description,
+  title: "Artful Aesthetic Medicine | Englewood, CO | Serving Denver Metro",
+  description:
+    "Personalized aesthetic care in Englewood, CO, serving the Denver metro. Botox, fillers, skin treatments, IV therapy, and more by Erica Eskeli.",
   path: "/",
   absoluteTitle: true,
   image: siteConfig.ogImage,
@@ -35,7 +37,7 @@ export default function HomePage() {
       <Hero
         eyebrow="Englewood, Colorado"
         titleLines={siteConfig.heroHeadline}
-        subtitle="Personalized aesthetic care, led by Erica Eskeli."
+        subtitle="Aesthetic medicine in Englewood, CO, serving the Denver metro area."
         primaryCta={{ label: "Book Appointment", href: siteConfig.bookingUrl }}
         secondaryCta={{ label: "Explore Treatments", href: "#treatments" }}
         image={images.hero}
@@ -63,6 +65,7 @@ export default function HomePage() {
           <p className={styles.deptHelpText}>
             Not sure where to start?{" "}
             <Link href="/consultation">Book a consultation</Link> and we&apos;ll guide you.
+            Conveniently located in Englewood, we welcome patients from across the Denver metro area.
           </p>
         </div>
       </section>

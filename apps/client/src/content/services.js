@@ -112,13 +112,13 @@ export const services = [
     slug: "neurotoxin-treatment",
     mangomintServiceId: 21,
     title: "Neurotoxin Treatment",
-    seoTitle: "Neurotoxin Treatments in Englewood, CO | Artful Aesthetic Medicine",
+    seoTitle: "Botox & Neurotoxin in Englewood, CO | Serving Denver Metro | Artful Aesthetic Medicine",
     seoDescription:
-      "Smooth fine lines and wrinkles with Letybo, Dysport, and Daxxify in Englewood, CO. Personalized dosing by Erica Eskeli. Book today.",
+      "Smooth fine lines with Botox, Letybo, Dysport, and Daxxify in Englewood, CO, serving the Denver metro. Personalized dosing by Erica Eskeli.",
     h1: "Neurotoxin Treatments",
     tagline: "Smooth lines, preserve expression",
     description:
-      "Neurotoxins relax the muscles that cause expression lines while preserving natural movement. Target areas include forehead lines, glabella, crow's feet, and a full range of advanced areas including lip flips, masseter slimming, neck bands, and traps.\n\nThis is also used for TMJ and hyperhidrosis. We offer Letybo, Dysport, and Daxxify so you can choose the product and longevity that fits your goals.",
+      "Neurotoxins relax the muscles that cause expression lines while preserving natural movement. Target areas include forehead lines, glabella, crow's feet, and a full range of advanced areas including lip flips, masseter slimming, neck bands, and traps.\n\nThis is also used for TMJ and hyperhidrosis. We offer Letybo, Dysport, and Daxxify so you can choose the product and longevity that fits your goals.\n\nPatients from Englewood and throughout the Denver metro area visit Artful Aesthetic Medicine for carefully dosed neurotoxin treatments.",
     pricing: {
       label: "From $7 / unit",
       unit: "priced per unit",
@@ -183,13 +183,13 @@ export const services = [
     slug: "dermal-filler",
     mangomintServiceId: 43,
     title: "Dermal Filler",
-    seoTitle: "Dermal Filler in Englewood, CO | Artful Aesthetic Medicine",
+    seoTitle: "Dermal Filler in Englewood, CO | Serving Denver Metro | Artful Aesthetic Medicine",
     seoDescription:
-      "Restore volume and smooth contours with dermal filler in Englewood, CO. Cheeks, jawline, under-eyes, and more — customized by Erica Eskeli.",
+      "Restore volume and smooth contours with dermal filler in Englewood, CO, serving the Denver metro. Cheeks, jawline, under-eyes, and more by Erica Eskeli.",
     h1: "Dermal Filler Treatments",
     tagline: "Restore volume, enhance contours",
     description:
-      "Hyaluronic acid filler is used to restore volume lost to aging, add definition, or balance facial proportions. Treats cheeks, jawline, chin, temples, under-eyes, and nasolabial folds for natural-looking definition.",
+      "Hyaluronic acid filler is used to restore volume lost to aging, add definition, or balance facial proportions. Treats cheeks, jawline, chin, temples, under-eyes, and nasolabial folds for natural-looking definition.\n\nWe welcome patients from Englewood and the greater Denver metro who want refined, natural-looking filler results.",
     faq: [
       {
         q: "Which areas can be treated?",
@@ -244,13 +244,13 @@ export const services = [
     category: "injectables",
     slug: "lip-filler",
     title: "Lip Filler",
-    seoTitle: "Lip Filler in Englewood, CO | Artful Aesthetic Medicine",
+    seoTitle: "Lip Filler in Englewood, CO | Serving Denver Metro | Artful Aesthetic Medicine",
     seoDescription:
-      "Achieve natural, balanced lip enhancement with expert lip filler in Englewood, CO. Customized shape and volume by Erica Eskeli. Book now.",
+      "Natural, balanced lip enhancement with expert lip filler in Englewood, CO, serving the Denver metro. Customized shape and volume by Erica Eskeli.",
     h1: "Lip Filler",
     tagline: "Beautiful, balanced lips",
     description:
-      "Hyaluronic acid filler customized to enhance lip volume, shape, and symmetry. Balances proportion while keeping results looking natural.",
+      "Hyaluronic acid filler customized to enhance lip volume, shape, and symmetry. Balances proportion while keeping results looking natural.\n\nConveniently based in Englewood, our lip filler appointments draw clients from across the Denver metro area.",
     faq: [
       {
         q: "How much filler do I need for natural results?",
@@ -698,13 +698,13 @@ export const services = [
     category: "cellulite-treatment",
     slug: "aveli",
     title: "Aveli",
-    seoTitle: "Aveli Cellulite Treatment in Englewood, CO | Artful Aesthetic Medicine",
+    seoTitle: "Aveli Cellulite Treatment in Englewood, CO | Serving Denver Metro | Artful Aesthetic Medicine",
     seoDescription:
-      "Reduce cellulite dimpling with Aveli in Englewood, CO. Minimally invasive treatment by Artful Aesthetic Medicine.",
+      "Reduce cellulite dimpling with Aveli in Englewood, CO, serving the Denver metro. Minimally invasive treatment by Artful Aesthetic Medicine.",
     h1: "Aveli Cellulite Treatment",
     tagline: "Target cellulite at the source",
     description:
-      "A minimally invasive treatment that releases the fibrous bands under the skin that cause cellulite dimpling. Designed for lasting improvement in the appearance of cellulite on the thighs and buttocks.",
+      "A minimally invasive treatment that releases the fibrous bands under the skin that cause cellulite dimpling. Designed for lasting improvement in the appearance of cellulite on the thighs and buttocks.\n\nPatients throughout Englewood and the Denver metro choose Aveli here for a targeted approach to cellulite dimpling.",
     pricing: {
       label: "$2,899",
       unit: "per treatment",

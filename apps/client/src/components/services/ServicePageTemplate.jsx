@@ -11,7 +11,7 @@ import {
   MediaImage,
 } from "@/components/ui";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { getServiceSchema, getFaqPageSchema, getBreadcrumbSchema } from "@/components/seo/schema";
+import { getServiceSchema, getMedicalProcedureSchema, getFaqPageSchema, getBreadcrumbSchema } from "@/components/seo/schema";
 import styles from "@/components/ui/ui.module.css";
 
 function descriptionParagraphs(description) {
@@ -80,13 +80,14 @@ export function ServicePageTemplate({ service, category }) {
   return (
     <>
       <JsonLd data={getServiceSchema(service)} />
+      <JsonLd data={getMedicalProcedureSchema(service)} />
       {faqSchema && <JsonLd data={faqSchema} />}
       {breadcrumb && <JsonLd data={breadcrumb} />}
 
       <Hero
         eyebrow={category.title}
         title={service.h1 || service.title}
-        subtitle={service.tagline}
+        subtitle={`${service.title} in Englewood, CO, serving the Denver metro area.`}
         primaryCta={{ label: "Book This Treatment", href: "#book" }}
         secondaryCta={{ label: `All ${category.title}`, href: `/services/${service.category}` }}
         image={{ src: imageSrc, alt: imageAlt }}

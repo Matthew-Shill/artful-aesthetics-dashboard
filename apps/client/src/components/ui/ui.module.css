@@ -136,6 +136,8 @@
 
 .heroSubtitle {
   font-size: clamp(1rem, 1.6vw, 1.125rem);
+  font-weight: 400;
+  font-family: inherit;
   color: rgba(255, 255, 255, 0.78);
   max-width: 38ch;
   line-height: 1.85;

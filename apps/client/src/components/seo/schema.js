@@ -4,6 +4,27 @@ export function getBusinessId() {
   return `${siteConfig.url}/#medicalbusiness`;
 }
 
+export function getAreaServed() {
+  return [
+    {
+      "@type": "City",
+      name: "Englewood",
+      containedInPlace: {
+        "@type": "State",
+        name: "Colorado",
+      },
+    },
+    {
+      "@type": "City",
+      name: "Denver",
+      containedInPlace: {
+        "@type": "State",
+        name: "Colorado",
+      },
+    },
+  ];
+}
+
 export function getWebSiteSchema() {
   return {
     "@context": "https://schema.org",
@@ -57,12 +78,14 @@ export function getMedicalBusinessSchema() {
       latitude: geo.latitude,
       longitude: geo.longitude,
     },
+    openingHours: "Mo-Fr 09:00-16:00",
     openingHoursSpecification: openingHoursSpecification.map((entry) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: entry.dayOfWeek,
       opens: entry.opens,
       closes: entry.closes,
     })),
+    areaServed: getAreaServed(),
     founder: {
       "@type": "Person",
       name: founder.name,
@@ -80,27 +103,26 @@ function parsePriceAmount(label) {
   return match ? match[1] : null;
 }
 
+/**
+ * Treatment-level Service schema (offers, areaServed, provider).
+ */
 export function getServiceSchema(service) {
   const description = service.seoDescription
     || (Array.isArray(service.description) ? service.description.join(" ") : service.description);
+  const treatmentName = service.h1 || service.title;
+  const treatmentUrl = `${siteConfig.url}/services/${service.category}/${service.slug}`;
 
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: service.h1 || service.title,
+    name: treatmentName,
     description,
-    url: `${siteConfig.url}/services/${service.category}/${service.slug}`,
+    url: treatmentUrl,
     provider: {
       "@id": getBusinessId(),
     },
-    areaServed: {
-      "@type": "City",
-      name: "Englewood",
-      containedInPlace: {
-        "@type": "State",
-        name: "Colorado",
-      },
-    },
+    areaServed: getAreaServed(),
+    serviceType: treatmentName,
   };
 
   const pricedItems = service.pricing?.items?.length
@@ -130,6 +152,26 @@ export function getServiceSchema(service) {
   }
 
   return schema;
+}
+
+/**
+ * Treatment-specific MedicalProcedure schema nested alongside Service on detail pages.
+ */
+export function getMedicalProcedureSchema(service) {
+  const description = service.seoDescription
+    || (Array.isArray(service.description) ? service.description.join(" ") : service.description);
+  const treatmentName = service.h1 || service.title;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    name: treatmentName,
+    description,
+    url: `${siteConfig.url}/services/${service.category}/${service.slug}`,
+    provider: {
+      "@id": getBusinessId(),
+    },
+  };
 }
 
 export function getFaqPageSchema(faq) {

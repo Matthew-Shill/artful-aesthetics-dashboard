@@ -104,7 +104,7 @@ export function Hero({
               title
             )}
           </h1>
-          {subtitle && <p className={styles.heroSubtitle}>{subtitle}</p>}
+          {subtitle && <h2 className={styles.heroSubtitle}>{subtitle}</h2>}
           {(primaryCta || secondaryCta) && (
             <div className={styles.heroActions}>
               <HeroCta cta={primaryCta} />
