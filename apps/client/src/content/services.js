@@ -4,10 +4,10 @@ export const serviceCategories = [
     title: "Injectables",
     shortTitle: "Injectables",
     tagline: "Refine, restore, enhance",
-    description: "Neurotoxins, fillers, lip enhancement, threads, and more.",
+    description: "Botox, fillers, lip enhancement, threads, and more.",
     seoTitle: "Injectables in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
-      "Neurotoxin, dermal fillers, lip filler, Sculptra, PDO threads, and non-surgical nose jobs in Englewood, CO. Natural results with Erica Eskeli at Artful Aesthetic Medicine.",
+      "Botox, dermal fillers, lip filler, Sculptra, PDO threads, and non-surgical nose jobs in Englewood, CO. Natural results with Erica Eskeli at Artful Aesthetic Medicine.",
   },
   {
     slug: "skin",
@@ -111,14 +111,14 @@ export const services = [
     category: "injectables",
     slug: "neurotoxin-treatment",
     mangomintServiceId: 21,
-    title: "Neurotoxin Treatment",
+    title: "Botox",
     seoTitle: "Botox in Englewood & Denver Metro | Artful Aesthetic Medicine",
     seoDescription:
       "Looking for the best Botox near Denver? Personalized Botox, Letybo, Dysport, and Daxxify in Englewood, CO by Erica Eskeli — natural results for Denver metro patients.",
-    h1: "Botox & Neurotoxin Treatments",
+    h1: "Botox Treatments",
     tagline: "Smooth lines, preserve expression",
     description:
-      "Botox and other neurotoxins relax the muscles that cause expression lines while preserving natural movement. Target areas include forehead lines, glabella, crow's feet, and advanced areas such as lip flips, masseter slimming, neck bands, and traps.\n\nThis is also used for TMJ and hyperhidrosis. We offer Letybo, Dysport, and Daxxify so you can choose the product and longevity that fits your goals — with dosing tailored by Erica Eskeli.\n\nPatients searching for Botox in Englewood or the best Botox near Denver visit our studio for carefully placed, natural-looking results — never frozen or overdone.",
+      "Botox relaxes the muscles that cause expression lines while preserving natural movement. Target areas include forehead lines, glabella, crow's feet, and advanced areas such as lip flips, masseter slimming, neck bands, and traps.\n\nBotox is also used for TMJ and hyperhidrosis. We also offer Letybo, Dysport, and Daxxify so you can choose the product and longevity that fits your goals — with dosing tailored by Erica Eskeli.\n\nPatients searching for Botox in Englewood or the best Botox near Denver visit our studio for carefully placed, natural-looking results — never frozen or overdone.",
     pricing: {
       label: "From $7 / unit",
       unit: "priced per unit",
@@ -134,12 +134,12 @@ export const services = [
         a: "Initial effects within 3-7 days, full results by 2 weeks.",
       },
       {
-        q: "Does neurotoxin look natural?",
+        q: "Does Botox look natural?",
         a: "With proper dosing and placement, yes — the goal is softened lines with natural movement.",
       },
       {
         q: "How often do I need treatment?",
-        a: "Most patients return every 2–5 months depending on the product, activity level, and how your body metabolizes neurotoxin. Letybo typically lasts about 2 months, Dysport about 3.5 months, and Daxxify about 4–5 months.",
+        a: "Most patients return every 2–5 months depending on the product, activity level, and how your body metabolizes it. Letybo typically lasts about 2 months, Dysport about 3.5 months, and Daxxify about 4–5 months.",
       },
       {
         q: "Is it safe?",
@@ -147,7 +147,7 @@ export const services = [
       },
       {
         q: "Do you treat patients looking for Botox near Denver?",
-        a: "Yes. Our Englewood studio serves Denver metro patients who want precise Botox and neurotoxin care without a rushed, high-volume experience. Many clients drive from Denver, Cherry Creek, and nearby suburbs.",
+        a: "Yes. Our Englewood studio serves Denver metro patients who want precise Botox care without a rushed, high-volume experience. Many clients drive from Denver, Cherry Creek, and nearby suburbs.",
       },
       {
         q: "What makes your Botox approach different?",

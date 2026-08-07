@@ -9,7 +9,7 @@ Preventative Botox isn't about freezing your face — it's about strategically r
 
 ## How Preventative Botox Works
 
-When you frown, squint, or raise your eyebrows, repeated muscle contractions create lines over time. Neurotoxin treatments temporarily relax these muscles, preventing deep wrinkle formation while maintaining natural expression.
+When you frown, squint, or raise your eyebrows, repeated muscle contractions create lines over time. Botox treatments temporarily relax these muscles, preventing deep wrinkle formation while maintaining natural expression.
 
 ## Who Is a Good Candidate?
 
@@ -17,6 +17,6 @@ Many patients in their late twenties and thirties begin preventative treatments 
 
 ## Building Your Maintenance Plan
 
-Most patients benefit from treatments every 3–4 months. Combine neurotoxin with good skincare, sun protection, and healthy lifestyle habits for comprehensive anti-aging results.
+Most patients benefit from treatments every 3–4 months. Combine Botox with good skincare, sun protection, and healthy lifestyle habits for comprehensive anti-aging results.
 
 Schedule a consultation to create your personalized maintenance plan.

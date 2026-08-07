@@ -92,7 +92,7 @@ export const siteConfig = {
       href: "/services/injectables",
       children: [
         { label: "Non-Surgical Nose Job", href: "/services/injectables/non-surgical-nose-job" },
-        { label: "Botox & Neurotoxin", href: "/services/injectables/neurotoxin-treatment" },
+        { label: "Botox", href: "/services/injectables/neurotoxin-treatment" },
         { label: "Dissolver", href: "/services/injectables/dissolver" },
         { label: "Dermal Filler", href: "/services/injectables/dermal-filler" },
         { label: "Sculptra", href: "/services/injectables/sculptra" },

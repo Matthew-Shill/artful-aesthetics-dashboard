@@ -17,6 +17,6 @@ Cleanse promptly after sweating to prevent clogged pores. Hydrate well — exerc
 
 ## Combining In-Office and At-Home Care
 
-Treatments like neurotoxin, fillers, and skin rejuvenation work best alongside healthy lifestyle habits. Think of exercise as part of your comprehensive beauty and wellness routine.
+Treatments like Botox, fillers, and skin rejuvenation work best alongside healthy lifestyle habits. Think of exercise as part of your comprehensive beauty and wellness routine.
 
 Looking for a holistic approach to looking and feeling your best? We can help you build a plan that works inside and out.

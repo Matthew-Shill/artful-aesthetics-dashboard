@@ -17,6 +17,6 @@ Patients noticing dullness, fine lines, uneven texture, or early skin laxity oft
 
 ## Combining Treatments
 
-Skin rejuvenation works beautifully alongside neurotoxin, filler, and medical-grade skincare. Your provider can design a comprehensive plan for lasting glow.
+Skin rejuvenation works beautifully alongside Botox, filler, and medical-grade skincare. Your provider can design a comprehensive plan for lasting glow.
 
 Book a consultation to explore your skin rejuvenation options.

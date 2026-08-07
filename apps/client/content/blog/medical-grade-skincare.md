@@ -13,7 +13,7 @@ Medical-grade products contain pharmaceutical-level active ingredients (retinoid
 
 ## Why It Matters
 
-Effective skincare prevents and complements in-office treatments. The right regimen can extend neurotoxin and filler results, improve texture, and address pigmentation between visits.
+Effective skincare prevents and complements in-office treatments. The right regimen can extend Botox and filler results, improve texture, and address pigmentation between visits.
 
 ## Personalized Is Key
 

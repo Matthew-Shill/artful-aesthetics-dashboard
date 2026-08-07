@@ -5,7 +5,7 @@ export const priorityServiceLinks = [
   {
     category: "injectables",
     slug: "neurotoxin-treatment",
-    title: "Botox & Neurotoxin",
+    title: "Botox",
     blurb: "Smooth fine lines with precise, natural-looking dosing.",
   },
   {
@@ -54,7 +54,7 @@ export const locations = {
     subtitle:
       "Botox, fillers, Sculptra, and skin treatments for Denver patients — at our Englewood studio just south of the city.",
     intro: [
-      "Denver patients choose Artful Aesthetic Medicine for natural results and careful, personalized dosing — not a rushed injectables mill. Owner and aesthetic injector Erica Eskeli brings over a decade of experience in neurotoxin, filler, and skin treatments.",
+      "Denver patients choose Artful Aesthetic Medicine for natural results and careful, personalized dosing — not a rushed injectables mill. Owner and aesthetic injector Erica Eskeli brings over a decade of experience in Botox, filler, and skin treatments.",
       "Our studio is at 811 Englewood Pkwy in Englewood, CO — a short drive from downtown Denver, Cherry Creek, and the surrounding metro. Same trusted care whether you live in Denver proper or nearby suburbs.",
     ],
     whyTitle: "Why Denver patients come to Englewood",
@@ -107,7 +107,7 @@ export const locations = {
       },
       {
         q: "Is Botox available in Englewood at your studio?",
-        a: "Yes. We offer neurotoxin treatments including options such as Letybo, Dysport, and Daxxify, with dosing tailored to your goals. Many patients searching for Botox in Englewood start with a consultation to choose the right product and plan.",
+        a: "Yes. We offer Botox and related options such as Letybo, Dysport, and Daxxify, with dosing tailored to your goals. Many patients searching for Botox in Englewood start with a consultation to choose the right product and plan.",
       },
       {
         q: "What other treatments do Englewood clients book most?",

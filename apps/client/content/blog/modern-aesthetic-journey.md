@@ -13,7 +13,7 @@ Today's patients want to look like themselves, refreshed. "Prejuvenation," combi
 
 ## Trends Worth Knowing
 
-Preventative neurotoxin, biostimulatory fillers, skin quality treatments (microneedling, IPL), and wellness IV therapy are all gaining momentum. The best approach combines multiple modalities tailored to your goals.
+Preventative Botox, biostimulatory fillers, skin quality treatments (microneedling, IPL), and wellness IV therapy are all gaining momentum. The best approach combines multiple modalities tailored to your goals.
 
 ## Your Journey Is Unique
 
