@@ -39,9 +39,16 @@ export const siteConfig = {
     "aesthetic medicine Englewood CO",
     "med spa Englewood",
     "Botox Englewood CO",
+    "Botox Denver",
+    "best Botox near Denver",
     "dermal filler Englewood",
-    "lip filler Denver metro",
+    "filler Denver",
+    "lip filler Denver",
+    "lip filler Englewood",
+    "Sculptra Englewood",
+    "Sculptra Denver",
     "microneedling Englewood",
+    "microneedling Denver",
     "IV therapy Englewood CO",
     "laser hair removal Englewood",
     "microblading Englewood",
@@ -72,7 +79,12 @@ export const siteConfig = {
     { dayOfWeek: "Friday", opens: "09:00", closes: "16:00" },
   ],
   director: "Dr. Jonathan Stewart Gallen",
-  social: {},
+  social: {
+    // Paste live Instagram/Facebook URLs when ready — sameAs uses non-empty values only.
+    instagram: "",
+    facebook: "",
+    googleBusiness: "https://maps.google.com/?q=811+Englewood+Pkwy+Englewood+CO+80110",
+  },
   nav: [
     { label: "Home", href: "/" },
     {
@@ -80,9 +92,10 @@ export const siteConfig = {
       href: "/services/injectables",
       children: [
         { label: "Non-Surgical Nose Job", href: "/services/injectables/non-surgical-nose-job" },
-        { label: "Neurotoxin Treatment", href: "/services/injectables/neurotoxin-treatment" },
+        { label: "Botox & Neurotoxin", href: "/services/injectables/neurotoxin-treatment" },
         { label: "Dissolver", href: "/services/injectables/dissolver" },
         { label: "Dermal Filler", href: "/services/injectables/dermal-filler" },
+        { label: "Sculptra", href: "/services/injectables/sculptra" },
         { label: "PLLA PDO Threads", href: "/services/injectables/plla-pdo-threads" },
         { label: "Lip Filler", href: "/services/injectables/lip-filler" },
       ],

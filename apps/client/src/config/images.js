@@ -54,6 +54,9 @@ export const images = {
       "/images/treatments/dermal-filler-jaw-2.jpg",
     ],
     "lip-filler": "/images/treatments/lip-filler.jpg",
+    /** Reuse injectables stock until a dedicated Sculptra result photo is available */
+    sculptra:
+      "https://images.unsplash.com/photo-1746708810803-722593e53772?auto=format&fit=crop&w=1400&q=80",
     "plla-pdo-threads": "/images/treatments/plla-pdo-threads.jpg",
     /** Hip / buttock / thigh — Aveli treatment area (not muscle toning) */
     aveli:

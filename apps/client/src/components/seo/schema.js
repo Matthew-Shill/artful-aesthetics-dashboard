@@ -22,6 +22,34 @@ export function getAreaServed() {
         name: "Colorado",
       },
     },
+    {
+      "@type": "City",
+      name: "Greenwood Village",
+      containedInPlace: {
+        "@type": "State",
+        name: "Colorado",
+      },
+    },
+    {
+      "@type": "City",
+      name: "Centennial",
+      containedInPlace: {
+        "@type": "State",
+        name: "Colorado",
+      },
+    },
+    {
+      "@type": "Neighborhood",
+      name: "Cherry Creek",
+      containedInPlace: {
+        "@type": "City",
+        name: "Denver",
+        containedInPlace: {
+          "@type": "State",
+          name: "Colorado",
+        },
+      },
+    },
   ];
 }
 

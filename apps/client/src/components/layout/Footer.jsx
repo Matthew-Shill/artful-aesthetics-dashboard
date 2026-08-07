@@ -38,12 +38,25 @@ export function Footer() {
           </div>
 
           <div>
+            <p className={styles.footerHeading}>Service Areas</p>
+            <Link href="/englewood" className={styles.footerLink}>
+              Englewood, CO
+            </Link>
+            <Link href="/denver" className={styles.footerLink}>
+              Denver Metro
+            </Link>
+          </div>
+
+          <div>
             <p className={styles.footerHeading}>Explore</p>
             <Link href="/consultation" className={styles.footerLink}>
               Consultation
             </Link>
             <Link href="/contact" className={styles.footerLink}>
               Contact
+            </Link>
+            <Link href="/blog" className={styles.footerLink}>
+              Blog
             </Link>
             <Link href="/privacy" className={styles.footerLink}>
               Privacy Policy

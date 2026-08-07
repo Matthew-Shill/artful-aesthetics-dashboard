@@ -1,4 +1,3 @@
-// TODO: consider dedicated /denver landing page once GBP is live
 import Link from "next/link";
 import { siteConfig, testimonials } from "@/config/site";
 import { images, getCategoryImage, getEricaImageAlt } from "@/config/images";
@@ -65,7 +64,9 @@ export default function HomePage() {
           <p className={styles.deptHelpText}>
             Not sure where to start?{" "}
             <Link href="/consultation">Book a consultation</Link> and we&apos;ll guide you.
-            Conveniently located in Englewood, we welcome patients from across the Denver metro area.
+            Conveniently located in{" "}
+            <Link href="/englewood">Englewood</Link>, we welcome patients from across the{" "}
+            <Link href="/denver">Denver metro</Link> area.
           </p>
         </div>
       </section>

@@ -7,7 +7,7 @@ export const serviceCategories = [
     description: "Neurotoxins, fillers, lip enhancement, threads, and more.",
     seoTitle: "Injectables in Englewood, CO | Artful Aesthetic Medicine",
     seoDescription:
-      "Neurotoxin, dermal fillers, lip filler, PDO threads, and non-surgical nose jobs in Englewood, CO. Natural results with Erica Eskeli at Artful Aesthetic Medicine.",
+      "Neurotoxin, dermal fillers, lip filler, Sculptra, PDO threads, and non-surgical nose jobs in Englewood, CO. Natural results with Erica Eskeli at Artful Aesthetic Medicine.",
   },
   {
     slug: "skin",
@@ -112,13 +112,13 @@ export const services = [
     slug: "neurotoxin-treatment",
     mangomintServiceId: 21,
     title: "Neurotoxin Treatment",
-    seoTitle: "Botox & Neurotoxin in Englewood, CO | Serving Denver Metro | Artful Aesthetic Medicine",
+    seoTitle: "Botox in Englewood & Denver Metro | Artful Aesthetic Medicine",
     seoDescription:
-      "Smooth fine lines with Botox, Letybo, Dysport, and Daxxify in Englewood, CO, serving the Denver metro. Personalized dosing by Erica Eskeli.",
-    h1: "Neurotoxin Treatments",
+      "Looking for the best Botox near Denver? Personalized Botox, Letybo, Dysport, and Daxxify in Englewood, CO by Erica Eskeli — natural results for Denver metro patients.",
+    h1: "Botox & Neurotoxin Treatments",
     tagline: "Smooth lines, preserve expression",
     description:
-      "Neurotoxins relax the muscles that cause expression lines while preserving natural movement. Target areas include forehead lines, glabella, crow's feet, and a full range of advanced areas including lip flips, masseter slimming, neck bands, and traps.\n\nThis is also used for TMJ and hyperhidrosis. We offer Letybo, Dysport, and Daxxify so you can choose the product and longevity that fits your goals.\n\nPatients from Englewood and throughout the Denver metro area visit Artful Aesthetic Medicine for carefully dosed neurotoxin treatments.",
+      "Botox and other neurotoxins relax the muscles that cause expression lines while preserving natural movement. Target areas include forehead lines, glabella, crow's feet, and advanced areas such as lip flips, masseter slimming, neck bands, and traps.\n\nThis is also used for TMJ and hyperhidrosis. We offer Letybo, Dysport, and Daxxify so you can choose the product and longevity that fits your goals — with dosing tailored by Erica Eskeli.\n\nPatients searching for Botox in Englewood or the best Botox near Denver visit our studio for carefully placed, natural-looking results — never frozen or overdone.",
     pricing: {
       label: "From $7 / unit",
       unit: "priced per unit",
@@ -135,7 +135,7 @@ export const services = [
       },
       {
         q: "Does neurotoxin look natural?",
-        a: "With proper dosing and placement, yes, the goal is softened lines with natural movement.",
+        a: "With proper dosing and placement, yes — the goal is softened lines with natural movement.",
       },
       {
         q: "How often do I need treatment?",
@@ -144,6 +144,14 @@ export const services = [
       {
         q: "Is it safe?",
         a: "Yes, when administered by a trained, licensed provider. Millions of treatments are performed each year safely.",
+      },
+      {
+        q: "Do you treat patients looking for Botox near Denver?",
+        a: "Yes. Our Englewood studio serves Denver metro patients who want precise Botox and neurotoxin care without a rushed, high-volume experience. Many clients drive from Denver, Cherry Creek, and nearby suburbs.",
+      },
+      {
+        q: "What makes your Botox approach different?",
+        a: "Erica prioritizes anatomy-based placement, conservative starting doses when appropriate, and product choice (including Letybo, Dysport, and Daxxify) matched to your goals — so results look like you, refreshed.",
       },
     ],
   },
@@ -183,13 +191,13 @@ export const services = [
     slug: "dermal-filler",
     mangomintServiceId: 43,
     title: "Dermal Filler",
-    seoTitle: "Dermal Filler in Englewood, CO | Serving Denver Metro | Artful Aesthetic Medicine",
+    seoTitle: "Dermal Filler in Englewood & Denver | Artful Aesthetic Medicine",
     seoDescription:
-      "Restore volume and smooth contours with dermal filler in Englewood, CO, serving the Denver metro. Cheeks, jawline, under-eyes, and more by Erica Eskeli.",
+      "Dermal filler in Englewood, CO for Denver metro patients. Restore cheeks, jawline, under-eyes, and more with natural-looking results by Erica Eskeli.",
     h1: "Dermal Filler Treatments",
     tagline: "Restore volume, enhance contours",
     description:
-      "Hyaluronic acid filler is used to restore volume lost to aging, add definition, or balance facial proportions. Treats cheeks, jawline, chin, temples, under-eyes, and nasolabial folds for natural-looking definition.\n\nWe welcome patients from Englewood and the greater Denver metro who want refined, natural-looking filler results.",
+      "Hyaluronic acid filler restores volume lost to aging, adds definition, or balances facial proportions. Common areas include cheeks, jawline, chin, temples, under-eyes, and nasolabial folds — always with a plan for natural-looking definition.\n\nWhether you searched for filler in Denver or dermal filler in Englewood, our studio focuses on proportion and restraint: enough product to refine, never enough to look overdone. A consultation maps where filler will help most for your features.",
     faq: [
       {
         q: "Which areas can be treated?",
@@ -206,6 +214,48 @@ export const services = [
       {
         q: "How much filler do I need?",
         a: "This varies by goal. A consultation determines the right starting amount for natural results.",
+      },
+      {
+        q: "Do you treat Denver patients for dermal filler?",
+        a: "Yes. Clients from Denver and across the metro regularly book filler appointments at our Englewood location for cheeks, jawline, under-eyes, and full-face balancing.",
+      },
+    ],
+  },
+  {
+    category: "injectables",
+    slug: "sculptra",
+    title: "Sculptra",
+    seoTitle: "Sculptra in Englewood & Denver | Artful Aesthetic Medicine",
+    seoDescription:
+      "Sculptra biostimulatory treatment in Englewood, CO, serving Denver. Stimulate collagen for gradual, natural facial rejuvenation with Erica Eskeli.",
+    h1: "Sculptra Collagen Biostimulation",
+    tagline: "Rebuild collagen for lasting lift",
+    description:
+      "Sculptra is a poly-L-lactic acid (PLLA) injectable that stimulates your own collagen over time — different from hyaluronic acid filler, which adds immediate volume, and different from PLLA/PDO thread lifts, which mechanically lift tissue.\n\nResults build gradually over a series of sessions as collagen remodels, creating a refreshed look that develops over months. Ideal for patients who want subtle, progressive rejuvenation rather than an overnight change.\n\nPatients searching for Sculptra in Englewood or Sculptra in Denver can schedule a consultation to see if a biostimulatory plan fits their goals.",
+    pricing: {
+      label: "Pricing by consultation",
+      unit: "customized treatment plan",
+    },
+    faq: [
+      {
+        q: "How is Sculptra different from dermal filler?",
+        a: "HA fillers add volume right away. Sculptra works by stimulating collagen, so improvement builds gradually and can last longer for many patients.",
+      },
+      {
+        q: "How is Sculptra different from PLLA/PDO threads?",
+        a: "Threads mechanically lift and support tissue. Sculptra is an injectable biostimulator placed to encourage collagen — no threads are inserted.",
+      },
+      {
+        q: "How many sessions will I need?",
+        a: "Most plans involve a series of treatments spaced several weeks apart. Your consultation determines the right number for your goals.",
+      },
+      {
+        q: "When will I see results?",
+        a: "Collagen remodeling takes time. Many patients notice progressive improvement over 2–6 months as results build.",
+      },
+      {
+        q: "Is Sculptra available for Denver metro patients?",
+        a: "Yes. Our Englewood studio welcomes Denver and metro patients for Sculptra consultations and treatment series.",
       },
     ],
   },
@@ -244,13 +294,13 @@ export const services = [
     category: "injectables",
     slug: "lip-filler",
     title: "Lip Filler",
-    seoTitle: "Lip Filler in Englewood, CO | Serving Denver Metro | Artful Aesthetic Medicine",
+    seoTitle: "Lip Filler in Englewood & Denver Metro | Artful Aesthetic Medicine",
     seoDescription:
-      "Natural, balanced lip enhancement with expert lip filler in Englewood, CO, serving the Denver metro. Customized shape and volume by Erica Eskeli.",
+      "Natural lip filler in Englewood, CO for Denver metro patients. Customized shape and volume by Erica Eskeli — balanced results, never overfilled.",
     h1: "Lip Filler",
     tagline: "Beautiful, balanced lips",
     description:
-      "Hyaluronic acid filler customized to enhance lip volume, shape, and symmetry. Balances proportion while keeping results looking natural.\n\nConveniently based in Englewood, our lip filler appointments draw clients from across the Denver metro area.",
+      "Hyaluronic acid lip filler customized to enhance volume, shape, and symmetry while keeping results looking natural. Proportions are balanced to your face — not a one-size-fits-all pout.\n\nPatients searching for lip filler in Denver or lip filler in Englewood book at our Englewood Pkwy studio for careful technique, topical numbing, and a plan that can start conservatively and build over time.",
     faq: [
       {
         q: "How much filler do I need for natural results?",
@@ -267,6 +317,10 @@ export const services = [
       {
         q: "How often to maintain?",
         a: "Most patients return every 6-12 months.",
+      },
+      {
+        q: "Do you offer lip filler for Denver metro clients?",
+        a: "Yes. Denver and Englewood-area patients regularly choose Artful for lip filler when they want refined shape without an overdone look.",
       },
     ],
   },
@@ -306,13 +360,13 @@ export const services = [
     slug: "microneedling",
     mangomintServiceId: 28,
     title: "Microneedling",
-    seoTitle: "Microneedling in Englewood, CO | Artful Aesthetic Medicine",
+    seoTitle: "Microneedling in Englewood & Denver Metro | Artful Aesthetic Medicine",
     seoDescription:
-      "Improve skin texture, tone, and scarring with professional microneedling in Englewood, CO. Collagen-boosting treatments by Erica Eskeli.",
+      "Professional microneedling in Englewood, CO for Denver metro patients. Improve texture, tone, and acne scarring with collagen-boosting treatments by Erica Eskeli.",
     h1: "Microneedling",
     tagline: "Stimulate your skin's renewal",
     description:
-      "Collagen-induction therapy using fine needles to renew skin from within. Promoting the body's natural collagen and elastin production.\n\nTreats acne scarring, enlarged pores, fine lines, and uneven texture.",
+      "Collagen-induction therapy using fine needles to renew skin from within, promoting the body's natural collagen and elastin production.\n\nTreats acne scarring, enlarged pores, fine lines, and uneven texture. Patients from Englewood and across the Denver metro choose microneedling when they want visible skin quality improvement without lasers or surgery.",
     pricing: {
       label: "From $500",
       items: [
@@ -336,6 +390,10 @@ export const services = [
       {
         q: "Can it treat acne scars?",
         a: "Yes, microneedling is one of the most effective non-surgical treatments for textural acne scarring.",
+      },
+      {
+        q: "Can Denver patients book microneedling at your Englewood studio?",
+        a: "Absolutely. Microneedling appointments are open to Denver metro clients who want collagen-boosting skin renewal close to the city.",
       },
     ],
   },
