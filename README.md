@@ -6,7 +6,7 @@ Monorepo for **Artful Aesthetic Medicine** — public website and owner analytic
 
 | App | Package | URL | Description |
 |-----|---------|-----|-------------|
-| **Client** | `@artful/client` | `artfulaestheticmedicine.com` | Public website + admin dashboard at `/admin` |
+| **Client** | `@artful/client` | `www.artfulaestheticmedicine.com` (apex redirects here) | Public website + admin dashboard at `/admin` |
 | **Admin (legacy)** | `@artful/admin` | — | Deprecated Vite app; dashboard now lives in the client app |
 
 ## Quick start
@@ -19,7 +19,7 @@ npm run dev:client
 ```
 
 - Public site: http://localhost:3000  
-- Admin login: http://localhost:3000/admin/login
+- Admin login: http://localhost:3000/login
 
 ## Admin access
 
@@ -68,10 +68,10 @@ Optional: `NEXT_PUBLIC_ANTHROPIC_API_KEY` for AI Analyst in dev (prefer Edge Fun
 **One Vercel project:**
 
 - Root Directory: `apps/client`
-- Domain: `artfulaestheticmedicine.com`
+- Domain: `www.artfulaestheticmedicine.com` (set as primary; apex `artfulaestheticmedicine.com` should redirect to www)
 - Environment variables: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 
-In Supabase Auth settings, set site URL to your production domain and allow redirect URLs for `/admin/*`.
+In Supabase Auth settings, set site URL to `https://www.artfulaestheticmedicine.com` and allow redirect URLs for `/login` and `/admin/*`.
 
 ## Scripts
 

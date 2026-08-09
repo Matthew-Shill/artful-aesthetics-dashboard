@@ -6,9 +6,7 @@ export async function middleware(request) {
   const { pathname } = request.nextUrl;
   const { supabaseResponse, user, authConfigured } = await updateSession(request);
 
-  if (pathname === "/admin/login") {
-    return NextResponse.redirect(new URL("/login", request.url));
-  }
+  // /admin/login → /login is a permanent redirect in next.config.mjs (308).
 
   if (pathname === "/login") {
     if (authConfigured && user?.email) {
