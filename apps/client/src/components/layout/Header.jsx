@@ -114,9 +114,9 @@ export function Header() {
           </nav>
 
           <div className={styles.headerActions}>
-            <Link href={siteConfig.loginUrl} className={styles.loginLink}>
-              Login
-            </Link>
+            <Button href={siteConfig.smsHref} variant="outline" className={styles.headerQuestionsBtn}>
+              Questions
+            </Button>
             <Button href={siteConfig.bookingUrl} external variant="primary" className={styles.headerBookBtn}>
               Book
             </Button>
@@ -147,15 +147,25 @@ export function Header() {
           </button>
         </div>
 
-        <Button
-          href={siteConfig.bookingUrl}
-          external
-          variant="primary"
-          className={styles.mobileBookBtnTop}
-          onClick={() => setMobileOpen(false)}
-        >
-          Book Appointment
-        </Button>
+        <div className={styles.mobileCtaRow}>
+          <Button
+            href={siteConfig.bookingUrl}
+            external
+            variant="primary"
+            className={styles.mobileBookBtnTop}
+            onClick={() => setMobileOpen(false)}
+          >
+            Book Appointment
+          </Button>
+          <Button
+            href={siteConfig.smsHref}
+            variant="outline"
+            className={styles.mobileQuestionsBtn}
+            onClick={() => setMobileOpen(false)}
+          >
+            Questions
+          </Button>
+        </div>
 
         <div className={styles.mobilePrimaryLinks}>
           <Link href="/" className={styles.mobilePrimaryLink} onClick={() => setMobileOpen(false)}>
@@ -171,9 +181,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link href={siteConfig.loginUrl} className={styles.mobilePrimaryLink} onClick={() => setMobileOpen(false)}>
-            Login
-          </Link>
         </div>
 
         <p className={styles.mobileNavSectionTitle}>Services</p>

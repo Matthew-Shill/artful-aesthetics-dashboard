@@ -20,7 +20,7 @@ Details and FAQs live on our [dermal filler treatment page](/services/injectable
 
 Most hyaluronic acid fillers last roughly 6–18 months depending on the area, product, and how your body metabolizes them. Maintenance is personal — a consultation sets expectations before you start.
 
-## Local studio for Denver metro clients
+## Local studio for Denver area clients
 
 Artful Aesthetic Medicine is at **811 Englewood Pkwy, Englewood CO 80110**. We welcome patients from Englewood, Denver, and nearby suburbs who want natural-looking filler rather than trendy overfilling.
 

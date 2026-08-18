@@ -43,7 +43,7 @@ export function Footer() {
               Englewood, CO
             </Link>
             <Link href="/denver" className={styles.footerLink}>
-              Denver Metro
+              Denver Area
             </Link>
           </div>
 
@@ -60,9 +60,6 @@ export function Footer() {
             </Link>
             <Link href="/privacy" className={styles.footerLink}>
               Privacy Policy
-            </Link>
-            <Link href={siteConfig.loginUrl} className={styles.footerLink}>
-              Login
             </Link>
           </div>
         </div>

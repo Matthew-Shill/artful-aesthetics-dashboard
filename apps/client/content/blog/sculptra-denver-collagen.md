@@ -21,7 +21,7 @@ Most plans use a series of sessions spaced weeks apart. Improvement is progressi
 
 ## Serving Denver from Englewood
 
-Treatments are performed at **811 Englewood Pkwy, Englewood CO 80110**, convenient for Denver metro patients. Learn more on our [Denver](/denver) and [Englewood](/englewood) pages, or call **303.901.3381**.
+Treatments are performed at **811 Englewood Pkwy, Englewood CO 80110**, convenient for Denver area patients. Learn more on our [Denver](/denver) and [Englewood](/englewood) pages, or call **303.901.3381**.
 
 ## Book a Sculptra consult
 

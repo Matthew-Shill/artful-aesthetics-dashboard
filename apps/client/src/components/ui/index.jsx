@@ -31,6 +31,7 @@ export function SectionHeading({ eyebrow, title, subtitle, align = "center" }) {
 function HeroCta({ cta, variant = "primary" }) {
   if (!cta) return null;
   const isExternal = cta.href?.startsWith("http");
+  const isProtocol = /^(sms|tel|mailto):/i.test(cta.href || "");
   const isAnchor = cta.href?.startsWith("#");
   const className = variant === "outline" ? styles.heroBtnOutlineLight : styles.btnPrimary;
 
@@ -42,7 +43,7 @@ function HeroCta({ cta, variant = "primary" }) {
     );
   }
 
-  if (isAnchor) {
+  if (isProtocol || isAnchor) {
     return (
       <a href={cta.href} className={className}>
         {cta.label}

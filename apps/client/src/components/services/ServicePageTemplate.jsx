@@ -87,7 +87,7 @@ export function ServicePageTemplate({ service, category }) {
       <Hero
         eyebrow={category.title}
         title={service.h1 || service.title}
-        subtitle={`${service.title} in Englewood, CO, serving the Denver metro area.`}
+        subtitle={`${service.title} in Englewood, CO, serving the Denver area.`}
         primaryCta={{ label: "Book This Treatment", href: "#book" }}
         secondaryCta={{ label: `All ${category.title}`, href: `/services/${service.category}` }}
         image={{ src: imageSrc, alt: imageAlt }}

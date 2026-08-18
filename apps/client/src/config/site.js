@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Artful Aesthetic Medicine",
-  tagline: "Intentional Beauty. Artfully Crafted.",
-  heroHeadline: ["Intentional Beauty.", "Artfully Crafted."],
+  tagline: "Artfully Natural Results",
+  heroHeadline: ["Artfully Natural Results"],
   logo: {
     /** Switch to "redesign" when ready to use the horizontal icon + text logo. */
     variant: "owner",
@@ -29,6 +29,8 @@ export const siteConfig = {
   phone: "303.901.3381",
   phoneE164: "+13039013381",
   phoneHref: "tel:+13039013381",
+  /** Opens the device SMS app — preferred contact path for many clients. */
+  smsHref: "sms:+13039013381",
   email: "erica@artfulaestheticmedicine.com",
   founder: {
     name: "Erica Eskeli",

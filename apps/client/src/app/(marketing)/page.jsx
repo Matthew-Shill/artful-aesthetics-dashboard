@@ -13,9 +13,9 @@ import {
 import styles from "@/components/ui/ui.module.css";
 
 export const metadata = buildPageMetadata({
-  title: "Artful Aesthetic Medicine | Englewood, CO | Serving Denver Metro",
+  title: "Artful Aesthetic Medicine | Englewood, CO | Serving Denver Area",
   description:
-    "Personalized aesthetic care in Englewood, CO, serving the Denver metro. Botox, fillers, skin treatments, IV therapy, and more by Erica Eskeli.",
+    "Personalized aesthetic care in Englewood, CO, serving the Denver area. Botox, fillers, skin treatments, IV therapy, and more by Erica Eskeli.",
   path: "/",
   absoluteTitle: true,
   image: siteConfig.ogImage,
@@ -36,7 +36,7 @@ export default function HomePage() {
       <Hero
         eyebrow="Englewood, Colorado"
         titleLines={siteConfig.heroHeadline}
-        subtitle="Aesthetic medicine in Englewood, CO, serving the Denver metro area."
+        subtitle="Aesthetic medicine in Englewood, CO, serving the Denver area."
         primaryCta={{ label: "Book Appointment", href: siteConfig.bookingUrl }}
         secondaryCta={{ label: "Explore Treatments", href: "#treatments" }}
         image={images.hero}
@@ -66,7 +66,7 @@ export default function HomePage() {
             <Link href="/consultation">Book a consultation</Link> and we&apos;ll guide you.
             Conveniently located in{" "}
             <Link href="/englewood">Englewood</Link>, we welcome patients from across the{" "}
-            <Link href="/denver">Denver metro</Link> area.
+            <Link href="/denver">Denver area</Link>.
           </p>
         </div>
       </section>

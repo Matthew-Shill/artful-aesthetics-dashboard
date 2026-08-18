@@ -1,11 +1,11 @@
 ---
-title: "Lip Filler in the Denver Metro: What to Expect"
+title: "Lip Filler in the Denver Area: What to Expect"
 date: "2026-03-05"
 category: "Face Skin"
 excerpt: "Considering lip filler in Denver or Englewood? Here’s what a natural, proportion-first appointment looks like at Artful Aesthetic Medicine."
 ---
 
-Lip filler is one of the most searched aesthetic treatments in the Denver metro — and one of the easiest to overdo when technique and proportion are rushed. At Artful Aesthetic Medicine in Englewood, the goal is balanced shape and volume that still looks like your lips.
+Lip filler is one of the most searched aesthetic treatments in the Denver area — and one of the easiest to overdo when technique and proportion are rushed. At Artful Aesthetic Medicine in Englewood, the goal is balanced shape and volume that still looks like your lips.
 
 ## What happens at a lip filler visit
 

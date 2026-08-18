@@ -50,7 +50,7 @@ export const locations = {
     seoDescription:
       "Looking for Botox, lip filler, Sculptra, or microneedling near Denver? Visit Artful Aesthetic Medicine in Englewood — minutes from Denver, led by Erica Eskeli.",
     h1: "Aesthetic Medicine for Denver",
-    eyebrow: "Serving Denver Metro",
+    eyebrow: "Serving Denver Area",
     subtitle:
       "Botox, fillers, Sculptra, and skin treatments for Denver patients — at our Englewood studio just south of the city.",
     intro: [
@@ -71,11 +71,11 @@ export const locations = {
       },
       {
         q: "Can Denver residents book lip filler or dermal filler?",
-        a: "Yes. Denver metro patients regularly book lip filler, cheek and jawline filler, and full-face contouring consultations. Start with a consultation so we can map the right approach for your features.",
+        a: "Yes. Denver area patients regularly book lip filler, cheek and jawline filler, and full-face contouring consultations. Start with a consultation so we can map the right approach for your features.",
       },
       {
         q: "Do you offer Sculptra and microneedling for Denver patients?",
-        a: "Yes. Sculptra for collagen biostimulation and professional microneedling for texture and scarring are available at our Englewood studio for patients across the Denver metro.",
+        a: "Yes. Sculptra for collagen biostimulation and professional microneedling for texture and scarring are available at our Englewood studio for patients across the Denver area.",
       },
     ],
   },
@@ -91,7 +91,7 @@ export const locations = {
       "Your local studio for Botox, fillers, Sculptra, and skin treatments — intentional care on Englewood Pkwy.",
     intro: [
       "Artful Aesthetic Medicine is based in Englewood, Colorado. If you are searching for Botox in Englewood, lip filler, dermal filler, Sculptra, or microneedling close to home, you will find a focused, appointment-based practice led by Erica Eskeli.",
-      "We are at 811 Englewood Pkwy, Englewood CO 80110. Call 303.901.3381 or book online. Patients from Englewood, Greenwood Village, Centennial, and across the Denver metro are welcome.",
+      "We are at 811 Englewood Pkwy, Englewood CO 80110. Call 303.901.3381 or book online. Patients from Englewood, Greenwood Village, Centennial, and across the Denver area are welcome.",
     ],
     whyTitle: "Local Englewood care, elevated standards",
     whyBody:

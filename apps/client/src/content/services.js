@@ -112,9 +112,9 @@ export const services = [
     slug: "neurotoxin-treatment",
     mangomintServiceId: 21,
     title: "Botox",
-    seoTitle: "Botox in Englewood & Denver Metro | Artful Aesthetic Medicine",
+    seoTitle: "Botox in Englewood & Denver Area | Artful Aesthetic Medicine",
     seoDescription:
-      "Looking for the best Botox near Denver? Personalized Botox, Letybo, Dysport, and Daxxify in Englewood, CO by Erica Eskeli — natural results for Denver metro patients.",
+      "Looking for the best Botox near Denver? Personalized Botox, Letybo, Dysport, and Daxxify in Englewood, CO by Erica Eskeli — natural results for Denver area patients.",
     h1: "Botox Treatments",
     tagline: "Smooth lines, preserve expression",
     description:
@@ -147,7 +147,7 @@ export const services = [
       },
       {
         q: "Do you treat patients looking for Botox near Denver?",
-        a: "Yes. Our Englewood studio serves Denver metro patients who want precise Botox care without a rushed, high-volume experience. Many clients drive from Denver, Cherry Creek, and nearby suburbs.",
+        a: "Yes. Our Englewood studio serves Denver area patients who want precise Botox care without a rushed, high-volume experience. Many clients drive from Denver, Cherry Creek, and nearby suburbs.",
       },
       {
         q: "What makes your Botox approach different?",
@@ -193,7 +193,7 @@ export const services = [
     title: "Dermal Filler",
     seoTitle: "Dermal Filler in Englewood & Denver | Artful Aesthetic Medicine",
     seoDescription:
-      "Dermal filler in Englewood, CO for Denver metro patients. Restore cheeks, jawline, under-eyes, and more with natural-looking results by Erica Eskeli.",
+      "Dermal filler in Englewood, CO for Denver area patients. Restore cheeks, jawline, under-eyes, and more with natural-looking results by Erica Eskeli.",
     h1: "Dermal Filler Treatments",
     tagline: "Restore volume, enhance contours",
     description:
@@ -254,7 +254,7 @@ export const services = [
         a: "Collagen remodeling takes time. Many patients notice progressive improvement over 2–6 months as results build.",
       },
       {
-        q: "Is Sculptra available for Denver metro patients?",
+        q: "Is Sculptra available for Denver area patients?",
         a: "Yes. Our Englewood studio welcomes Denver and metro patients for Sculptra consultations and treatment series.",
       },
     ],
@@ -294,9 +294,9 @@ export const services = [
     category: "injectables",
     slug: "lip-filler",
     title: "Lip Filler",
-    seoTitle: "Lip Filler in Englewood & Denver Metro | Artful Aesthetic Medicine",
+    seoTitle: "Lip Filler in Englewood & Denver Area | Artful Aesthetic Medicine",
     seoDescription:
-      "Natural lip filler in Englewood, CO for Denver metro patients. Customized shape and volume by Erica Eskeli — balanced results, never overfilled.",
+      "Natural lip filler in Englewood, CO for Denver area patients. Customized shape and volume by Erica Eskeli — balanced results, never overfilled.",
     h1: "Lip Filler",
     tagline: "Beautiful, balanced lips",
     description:
@@ -319,7 +319,7 @@ export const services = [
         a: "Most patients return every 6-12 months.",
       },
       {
-        q: "Do you offer lip filler for Denver metro clients?",
+        q: "Do you offer lip filler for Denver area clients?",
         a: "Yes. Denver and Englewood-area patients regularly choose Artful for lip filler when they want refined shape without an overdone look.",
       },
     ],
@@ -360,13 +360,13 @@ export const services = [
     slug: "microneedling",
     mangomintServiceId: 28,
     title: "Microneedling",
-    seoTitle: "Microneedling in Englewood & Denver Metro | Artful Aesthetic Medicine",
+    seoTitle: "Microneedling in Englewood & Denver Area | Artful Aesthetic Medicine",
     seoDescription:
-      "Professional microneedling in Englewood, CO for Denver metro patients. Improve texture, tone, and acne scarring with collagen-boosting treatments by Erica Eskeli.",
+      "Professional microneedling in Englewood, CO for Denver area patients. Improve texture, tone, and acne scarring with collagen-boosting treatments by Erica Eskeli.",
     h1: "Microneedling",
     tagline: "Stimulate your skin's renewal",
     description:
-      "Collagen-induction therapy using fine needles to renew skin from within, promoting the body's natural collagen and elastin production.\n\nTreats acne scarring, enlarged pores, fine lines, and uneven texture. Patients from Englewood and across the Denver metro choose microneedling when they want visible skin quality improvement without lasers or surgery.",
+      "Collagen-induction therapy using fine needles to renew skin from within, promoting the body's natural collagen and elastin production.\n\nTreats acne scarring, enlarged pores, fine lines, and uneven texture. Patients from Englewood and across the Denver area choose microneedling when they want visible skin quality improvement without lasers or surgery.",
     pricing: {
       label: "From $500",
       items: [
@@ -393,7 +393,7 @@ export const services = [
       },
       {
         q: "Can Denver patients book microneedling at your Englewood studio?",
-        a: "Absolutely. Microneedling appointments are open to Denver metro clients who want collagen-boosting skin renewal close to the city.",
+        a: "Absolutely. Microneedling appointments are open to Denver area clients who want collagen-boosting skin renewal close to the city.",
       },
     ],
   },
@@ -756,13 +756,13 @@ export const services = [
     category: "cellulite-treatment",
     slug: "aveli",
     title: "Aveli",
-    seoTitle: "Aveli Cellulite Treatment in Englewood, CO | Serving Denver Metro | Artful Aesthetic Medicine",
+    seoTitle: "Aveli Cellulite Treatment in Englewood, CO | Serving Denver Area | Artful Aesthetic Medicine",
     seoDescription:
-      "Reduce cellulite dimpling with Aveli in Englewood, CO, serving the Denver metro. Minimally invasive treatment by Artful Aesthetic Medicine.",
+      "Reduce cellulite dimpling with Aveli in Englewood, CO, serving the Denver area. Minimally invasive treatment by Artful Aesthetic Medicine.",
     h1: "Aveli Cellulite Treatment",
     tagline: "Target cellulite at the source",
     description:
-      "A minimally invasive treatment that releases the fibrous bands under the skin that cause cellulite dimpling. Designed for lasting improvement in the appearance of cellulite on the thighs and buttocks.\n\nPatients throughout Englewood and the Denver metro choose Aveli here for a targeted approach to cellulite dimpling.",
+      "A minimally invasive treatment that releases the fibrous bands under the skin that cause cellulite dimpling. Designed for lasting improvement in the appearance of cellulite on the thighs and buttocks.\n\nPatients throughout Englewood and the Denver area choose Aveli here for a targeted approach to cellulite dimpling.",
     pricing: {
       label: "$2,899",
       unit: "per treatment",

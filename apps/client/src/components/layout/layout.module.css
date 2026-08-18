@@ -290,6 +290,7 @@
   color: var(--text);
 }
 
+.headerQuestionsBtn,
 .headerBookBtn {
   display: none;
   padding: 0.7rem 1.25rem !important;
@@ -386,10 +387,18 @@
   color: var(--text-mid);
 }
 
-.mobileBookBtnTop {
+.mobileCtaRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.mobileBookBtnTop,
+.mobileQuestionsBtn {
   width: 100%;
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0;
 }
 
 .mobileNavCategoryLink {
@@ -474,6 +483,7 @@
     display: inline-flex;
   }
 
+  .headerQuestionsBtn,
   .headerBookBtn {
     display: inline-flex;
   }

@@ -21,12 +21,14 @@ export function Button({
     .join(" ");
 
   if (href) {
-    if (external) {
+    const isProtocolLink = /^(sms|tel|mailto):/i.test(href);
+    if (external || isProtocolLink) {
       return (
         <a
           href={href}
-          target="_blank"
-          rel="noopener noreferrer"
+          {...(external && !isProtocolLink
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
           className={className}
           onClick={onClick}
         >
