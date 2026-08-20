@@ -22,11 +22,12 @@ export function Button({
 
   if (href) {
     const isProtocolLink = /^(sms|tel|mailto):/i.test(href);
-    if (external || isProtocolLink) {
+    const isAnchor = href.startsWith("#");
+    if (external || isProtocolLink || isAnchor) {
       return (
         <a
           href={href}
-          {...(external && !isProtocolLink
+          {...(external && !isProtocolLink && !isAnchor
             ? { target: "_blank", rel: "noopener noreferrer" }
             : {})}
           className={className}

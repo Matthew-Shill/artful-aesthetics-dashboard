@@ -42,17 +42,22 @@ function OwnerLogo({ inverted = false }) {
   );
 }
 
-export function Logo({ className = "", onClick, inverted = false }) {
+export function Logo({ className = "", onClick, inverted = false, href = "/" }) {
   const useOwnerLogo = siteConfig.logo.variant === "owner";
+  const mark = useOwnerLogo ? <OwnerLogo inverted={inverted} /> : <RedesignLogo inverted={inverted} />;
+  const classes = `${styles.logo} ${inverted ? styles.logoInverted : ""} ${!href ? styles.logoStatic : ""} ${className}`;
+
+  if (!href) {
+    return (
+      <span className={classes} aria-label={siteConfig.logo.alt}>
+        {mark}
+      </span>
+    );
+  }
 
   return (
-    <Link
-      href="/"
-      className={`${styles.logo} ${inverted ? styles.logoInverted : ""} ${className}`}
-      onClick={onClick}
-      aria-label={siteConfig.logo.alt}
-    >
-      {useOwnerLogo ? <OwnerLogo inverted={inverted} /> : <RedesignLogo inverted={inverted} />}
+    <Link href={href} className={classes} onClick={onClick} aria-label={siteConfig.logo.alt}>
+      {mark}
     </Link>
   );
 }

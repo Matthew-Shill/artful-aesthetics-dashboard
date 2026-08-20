@@ -26,6 +26,10 @@
   text-decoration: none;
 }
 
+.logoStatic {
+  cursor: default;
+}
+
 .logoOwnerImage {
   width: auto;
   height: clamp(2.5rem, 3.5vw, 3.25rem);

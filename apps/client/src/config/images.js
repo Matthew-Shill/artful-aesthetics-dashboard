@@ -13,18 +13,13 @@ export const images = {
     alt: "Erica Eskeli, Owner & Aesthetic Injector at Artful Aesthetic Medicine",
   },
   categories: {
-    /** Botox / facial injection — Unsplash (fallback for injectables without a dedicated result photo) */
-    injectables:
-      "https://images.unsplash.com/photo-1746708810803-722593e53772?auto=format&fit=crop&w=800&q=80",
-    skin: "https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80",
-    /** Active woman — weight management / wellness journey */
-    "weight-loss":
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80",
+    injectables: "/images/categories/injectables.png",
+    skin: "/images/categories/skin.png",
+    "weight-loss": "/images/categories/weight-loss.png",
     /** Laser device on patient — Unsplash (nmN0MAHoFjQ) */
     "laser-hair-removal":
       "https://images.unsplash.com/photo-1746806942799-b4db209e9a6b?auto=format&fit=crop&w=800&q=80",
-    wellness:
-      "https://images.unsplash.com/photo-1763310225009-50214e3c99d9?auto=format&fit=crop&w=800&q=80",
+    wellness: "/images/categories/wellness.png",
     /** Hip / thigh — Aveli cellulite treatment area */
     "cellulite-treatment":
       "https://images.unsplash.com/photo-1647832878669-b1c524dbc883?auto=format&fit=crop&w=800&q=80",
@@ -35,8 +30,7 @@ export const images = {
       "https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=800&q=80",
     skincare:
       "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80",
-    wellness:
-      "https://images.unsplash.com/photo-1763310225009-50214e3c99d9?auto=format&fit=crop&w=800&q=80",
+    wellness: "/images/categories/wellness.png",
   },
   /**
    * Per-service imagery. Values may be a path string or an array of paths
@@ -54,9 +48,9 @@ export const images = {
       "/images/treatments/dermal-filler-jaw-2.jpg",
     ],
     "lip-filler": "/images/treatments/lip-filler.jpg",
-    /** Reuse injectables stock until a dedicated Sculptra result photo is available */
-    sculptra:
-      "https://images.unsplash.com/photo-1746708810803-722593e53772?auto=format&fit=crop&w=1400&q=80",
+    "neurotoxin-treatment": "/images/treatments/botox.png",
+    dissolver: "/images/treatments/dissolver.png",
+    sculptra: "/images/treatments/sculptra.png",
     "plla-pdo-threads": "/images/treatments/plla-pdo-threads.jpg",
     /** Hip / buttock / thigh — Aveli treatment area (not muscle toning) */
     aveli:

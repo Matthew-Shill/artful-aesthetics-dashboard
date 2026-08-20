@@ -21,9 +21,8 @@ export const siteConfig = {
   description:
     "Personalized aesthetic care in Englewood, CO — crafted with intention by Erica Eskeli. Botox, fillers, skin treatments, IV therapy, and more.",
   url: "https://www.artfulaestheticmedicine.com",
-  /** Default Open Graph / social share image (landscape) — Injectables stock. */
-  ogImage:
-    "https://images.unsplash.com/photo-1746708810803-722593e53772?auto=format&fit=crop&w=1200&h=630&q=80",
+  /** Default Open Graph / social share image (landscape). */
+  ogImage: "/images/categories/injectables.png",
   bookingUrl: "https://booking.mangomint.com/artfulaestheticmedicine",
   loginUrl: "/login",
   phone: "303.901.3381",
