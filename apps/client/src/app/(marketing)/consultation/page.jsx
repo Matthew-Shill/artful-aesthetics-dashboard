@@ -1,7 +1,7 @@
 import { siteConfig, trustCards } from "@/config/site";
 import { images } from "@/config/images";
 import { buildPageMetadata } from "@/lib/seo";
-import { Hero, BookingCTA, TrustCards } from "@/components/ui";
+import { Hero, MangomintEmbed, StickyBookBar, TrustCards } from "@/components/ui";
 
 export const metadata = buildPageMetadata({
   title: "Consultation",
@@ -17,7 +17,7 @@ export default function ConsultationPage() {
         eyebrow="Get Started"
         titleLines={["Book a", "Consultation"]}
         subtitle="We'll understand your goals and craft a plan made for you."
-        primaryCta={{ label: "Book Appointment", href: siteConfig.bookingUrl }}
+        primaryCta={{ label: "Book Appointment", href: "#book" }}
         secondaryCta={{ label: "Contact", href: "/contact" }}
         image={images.hero}
         compact
@@ -29,15 +29,16 @@ export default function ConsultationPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="book">
         <div className="container">
-          <BookingCTA
-            title="Ready to Begin?"
-            bookingUrl={siteConfig.bookingUrl}
-            compact
+          <MangomintEmbed
+            title="Book a consultation"
+            subtitle="Pick a time below — you’ll confirm details without leaving this site."
           />
         </div>
       </section>
+
+      <StickyBookBar bookingUrl="#book" />
     </>
   );
 }

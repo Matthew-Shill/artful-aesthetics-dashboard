@@ -23,7 +23,10 @@ export const siteConfig = {
   url: "https://www.artfulaestheticmedicine.com",
   /** Default Open Graph / social share image (landscape). */
   ogImage: "/images/categories/injectables.png",
-  bookingUrl: "https://booking.mangomint.com/artfulaestheticmedicine",
+  /** First-party booking page — keep CTAs on-site so analytics stay in-session. */
+  bookingUrl: "/book",
+  mangomintCompanyId: 974319,
+  mangomintBookingOrigin: "https://booking.mangomint.com",
   /** Post-booking redirect — give this URL to Mangomint chat support. Not linked from the public site. */
   bookingThankYouPath: "/thank-you",
   loginUrl: "/login",
@@ -159,7 +162,19 @@ export const siteConfig = {
 };
 
 
-/** Deep-link to Mangomint for a treatment when service / category IDs are known. */
+/** Official Mangomint widget URL (loaded inside first-party booking pages). */
+export function getMangomintBookingUrl({ serviceId, showOnlyScId } = {}) {
+  const url = new URL(`${siteConfig.mangomintBookingOrigin}/${siteConfig.mangomintCompanyId}`);
+  if (serviceId != null && serviceId !== "") {
+    url.searchParams.set("serviceId", String(serviceId));
+  }
+  if (showOnlyScId != null && showOnlyScId !== "") {
+    url.searchParams.set("showOnlyScId", String(showOnlyScId));
+  }
+  return url.toString();
+}
+
+/** First-party booking path, with service / category deep links when IDs are known. */
 export function getServiceBookingUrl(service) {
   const base = siteConfig.bookingUrl;
   if (service?.mangomintServiceId != null) {

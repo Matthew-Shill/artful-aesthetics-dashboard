@@ -49,6 +49,9 @@ export function Footer() {
 
           <div>
             <p className={styles.footerHeading}>Explore</p>
+            <Link href={siteConfig.bookingUrl} className={styles.footerLink}>
+              Book Appointment
+            </Link>
             <Link href="/consultation" className={styles.footerLink}>
               Consultation
             </Link>

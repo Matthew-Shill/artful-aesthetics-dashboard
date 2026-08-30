@@ -18,7 +18,7 @@ export function SiteError({
   title = "This page took a quiet turn.",
   description = "The page you're looking for isn't here — but your next treatment is only a click away.",
   primaryCta = { label: "Return Home", href: "/" },
-  secondaryCta = { label: "Book Appointment", href: siteConfig.bookingUrl, external: true },
+  secondaryCta = { label: "Book Appointment", href: siteConfig.bookingUrl },
   destinations = DEFAULT_DESTINATIONS,
   onRetry,
   retryLabel = "Try again",

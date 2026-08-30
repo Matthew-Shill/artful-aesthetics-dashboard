@@ -1,6 +1,7 @@
 import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { MangomintScript } from "@/components/booking/MangomintScript";
 import { siteConfig } from "@/config/site";
 
 export const metadata = {
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <GoogleAnalytics />
+        <MangomintScript />
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

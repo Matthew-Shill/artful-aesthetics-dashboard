@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { getServiceBookingUrl } from "@/config/site";
 import { getServiceImage, getServiceGallery } from "@/config/images";
 import { getRelatedServices } from "@/content/services";
 import {
@@ -69,7 +68,6 @@ export function ServicePageTemplate({ service, category }) {
   const imageAlt = treatmentAlt(service.title);
   const paragraphs = descriptionParagraphs(service.description);
   const related = getRelatedServices(service, 2);
-  const bookingUrl = getServiceBookingUrl(service);
   const faqSchema = getFaqPageSchema(service.faq);
   const breadcrumb = getBreadcrumbSchema([
     { name: "Home", path: "/" },
@@ -217,7 +215,11 @@ export function ServicePageTemplate({ service, category }) {
 
       <section className="section" id="book">
         <div className="container">
-          <MangomintEmbed bookingUrl={bookingUrl} title="Schedule your treatment" />
+          <MangomintEmbed
+            serviceId={service.mangomintServiceId}
+            showOnlyScId={service.mangomintShowOnlyScId}
+            title="Schedule your treatment"
+          />
         </div>
       </section>
 

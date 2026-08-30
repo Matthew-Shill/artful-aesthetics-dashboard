@@ -10,6 +10,7 @@ export default function sitemap() {
     { path: "/denver", priority: 0.9, changeFrequency: "monthly" },
     { path: "/englewood", priority: 0.9, changeFrequency: "monthly" },
     { path: "/consultation", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/book", priority: 0.9, changeFrequency: "monthly" },
     { path: "/contact", priority: 0.8, changeFrequency: "monthly" },
     { path: "/blog", priority: 0.7, changeFrequency: "weekly" },
     { path: "/privacy", priority: 0.3, changeFrequency: "yearly" },

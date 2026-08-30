@@ -275,9 +275,9 @@ export function StorefrontCTA({ quote, author, bookingUrl, phone, phoneHref, hou
         </blockquote>
         <div className={styles.storefrontCtaAction}>
           <h2 className={styles.storefrontCtaTitle}>Ready to visit?</h2>
-          <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+          <Link href={bookingUrl} className={styles.btnPrimary}>
             Book Appointment
-          </a>
+          </Link>
           <div className={styles.storefrontCtaMeta}>
             <a href={phoneHref}>{phone}</a>
             {hours?.map((h) => (
@@ -297,9 +297,9 @@ export function BookingCTA({ title, text, bookingUrl, compact = false }) {
     <div className={`${styles.bookingCta} ${compact ? styles.bookingCtaCompact : ""}`}>
       <h2 className={styles.bookingCtaTitle}>{title}</h2>
       {text && <p className={styles.bookingCtaText}>{text}</p>}
-      <a href={bookingUrl} target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
+      <Link href={bookingUrl} className={styles.btnPrimary}>
         Book Appointment
-      </a>
+      </Link>
     </div>
   );
 }

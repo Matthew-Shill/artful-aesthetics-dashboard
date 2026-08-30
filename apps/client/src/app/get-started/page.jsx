@@ -1,5 +1,6 @@
 import { siteConfig } from "@/config/site";
 import { buildPageMetadata } from "@/lib/seo";
+import { BookingStart } from "@/components/analytics/BookingStart";
 import { GetStartedPage } from "@/components/landing/GetStartedPage";
 
 export const metadata = buildPageMetadata({
@@ -12,5 +13,10 @@ export const metadata = buildPageMetadata({
 });
 
 export default function GetStartedRoute() {
-  return <GetStartedPage />;
+  return (
+    <>
+      <BookingStart />
+      <GetStartedPage />
+    </>
+  );
 }

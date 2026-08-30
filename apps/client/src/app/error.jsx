@@ -18,7 +18,7 @@ export default function Error({ reset }) {
           onRetry={reset}
           retryLabel="Try again"
           destinations={[
-            { label: "Book Appointment", href: siteConfig.bookingUrl, external: true },
+            { label: "Book Appointment", href: siteConfig.bookingUrl },
             { label: "Consultation", href: "/consultation" },
             { label: "Contact", href: "/contact" },
           ]}

@@ -117,7 +117,7 @@ export function Header() {
             <Button href={siteConfig.smsHref} variant="outline" className={styles.headerQuestionsBtn}>
               Questions
             </Button>
-            <Button href={siteConfig.bookingUrl} external variant="primary" className={styles.headerBookBtn}>
+            <Button href={siteConfig.bookingUrl} variant="primary" className={styles.headerBookBtn}>
               Book
             </Button>
             <button
@@ -150,7 +150,6 @@ export function Header() {
         <div className={styles.mobileCtaRow}>
           <Button
             href={siteConfig.bookingUrl}
-            external
             variant="primary"
             className={styles.mobileBookBtnTop}
             onClick={() => setMobileOpen(false)}

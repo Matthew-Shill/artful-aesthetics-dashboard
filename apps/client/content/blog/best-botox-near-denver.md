@@ -15,7 +15,7 @@ At [Artful Aesthetic Medicine](/services/injectables/neurotoxin-treatment), Eric
 
 ## Where we are for Denver patients
 
-Our studio is at **811 Englewood Pkwy, Englewood CO 80110** — typically a short drive from downtown Denver, Cherry Creek, and much of the metro. Call **303.901.3381** or [book online](https://booking.mangomint.com/artfulaestheticmedicine).
+Our studio is at **811 Englewood Pkwy, Englewood CO 80110** — typically a short drive from downtown Denver, Cherry Creek, and much of the metro. Call **303.901.3381** or [book online](/book).
 
 Learn more about care for [Denver area patients](/denver) or our [Englewood studio](/englewood).
 

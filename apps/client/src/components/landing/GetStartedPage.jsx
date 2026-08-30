@@ -90,7 +90,6 @@ export function GetStartedPage() {
       <section className={`section ${styles.bookSection}`} id="book">
         <div className="container">
           <MangomintEmbed
-            bookingUrl={siteConfig.bookingUrl}
             title="Book your visit"
             subtitle="Pick a time below — you’ll confirm details in the booking flow."
           />

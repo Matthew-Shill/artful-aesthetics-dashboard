@@ -1,15 +1,17 @@
+import { getMangomintBookingUrl } from "@/config/site";
 import styles from "./ui.module.css";
 
 /**
- * Embedded Mangomint booking calendar.
- * Prefer a service-deep-linked bookingUrl (`?serviceId=` / `?showOnlyScId=`).
+ * In-page Mangomint booking calendar.
+ * The official booking script (root layout) handles thank-you redirects.
  */
 export function MangomintEmbed({
-  bookingUrl,
+  serviceId,
+  showOnlyScId,
   title = "Schedule your treatment",
   subtitle = "Pick a time below — you’ll confirm details in the booking flow.",
 }) {
-  if (!bookingUrl) return null;
+  const src = getMangomintBookingUrl({ serviceId, showOnlyScId });
 
   return (
     <div className={styles.mangomintEmbed}>
@@ -21,8 +23,8 @@ export function MangomintEmbed({
       )}
       <div className={styles.mangomintEmbedFrame}>
         <iframe
-          src={bookingUrl}
-          title="Mangomint online booking"
+          src={src}
+          title="Book an appointment"
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
