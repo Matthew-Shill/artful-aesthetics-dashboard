@@ -2,9 +2,8 @@ import Script from "next/script";
 import { siteConfig } from "@/config/site";
 
 /**
- * Official Mangomint booking + redirect listener.
- * Intercepts booking.mangomint.com links into an on-site overlay and
- * handles the post-booking redirect to /thank-you.
+ * Official Mangomint booking script.
+ * Intercepts booking.mangomint.com links into an on-site overlay.
  */
 export function MangomintScript() {
   return (

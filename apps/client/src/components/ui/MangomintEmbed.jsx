@@ -3,7 +3,6 @@ import styles from "./ui.module.css";
 
 /**
  * In-page Mangomint booking calendar.
- * The official booking script (root layout) handles thank-you redirects.
  */
 export function MangomintEmbed({
   serviceId,

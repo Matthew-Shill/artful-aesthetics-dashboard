@@ -32,6 +32,11 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/thank-you",
+        destination: "/book",
+        permanent: true,
+      },
 
       // Apex + trailing slash → www without slash (avoids www slash-strip hop).
       {
