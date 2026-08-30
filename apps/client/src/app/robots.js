@@ -6,7 +6,7 @@ export default function robots() {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin", "/admin/", "/login", "/account"],
+        disallow: ["/admin", "/admin/", "/login", "/account", "/thank-you"],
       },
     ],
     sitemap: `${siteConfig.url}/sitemap.xml`,

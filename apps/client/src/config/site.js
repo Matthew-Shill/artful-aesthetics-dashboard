@@ -24,6 +24,8 @@ export const siteConfig = {
   /** Default Open Graph / social share image (landscape). */
   ogImage: "/images/categories/injectables.png",
   bookingUrl: "https://booking.mangomint.com/artfulaestheticmedicine",
+  /** Post-booking redirect — give this URL to Mangomint chat support. Not linked from the public site. */
+  bookingThankYouPath: "/thank-you",
   loginUrl: "/login",
   phone: "303.901.3381",
   phoneE164: "+13039013381",
