@@ -37,6 +37,16 @@ export default function PrivacyPage() {
             <li>To send newsletters and promotional communications you opt into</li>
             <li>To improve our website and services</li>
           </ul>
+          <h2>Analytics</h2>
+          <p>
+            We use Google Analytics to understand how visitors use this site (pages viewed, traffic
+            sources, and similar aggregate measures). Google may set cookies and process data as
+            described in{" "}
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              Google&apos;s Privacy Policy
+            </a>
+            .
+          </p>
           <h2>Contact</h2>
           <p>
             For privacy-related questions, contact us at{" "}

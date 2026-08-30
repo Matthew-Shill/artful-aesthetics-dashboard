@@ -57,7 +57,7 @@ supabase/
 ## Environment setup
 
 1. Copy `apps/client/.env.example` → `apps/client/.env.local`
-2. Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+2. Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`. Optional: `NEXT_PUBLIC_GA_MEASUREMENT_ID` (defaults to the live GA4 property if omitted).
 3. Run migrations: `supabase db push` (requires Supabase CLI)
 4. Create admin users in Supabase Auth (see above)
 
@@ -69,7 +69,7 @@ Optional: `NEXT_PUBLIC_ANTHROPIC_API_KEY` for AI Analyst in dev (prefer Edge Fun
 
 - Root Directory: `apps/client`
 - Domain: `www.artfulaestheticmedicine.com` (set as primary; apex `artfulaestheticmedicine.com` should redirect to www)
-- Environment variables: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- Environment variables: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `NEXT_PUBLIC_GA_MEASUREMENT_ID`
 
 In Supabase Auth settings, set site URL to `https://www.artfulaestheticmedicine.com` and allow redirect URLs for `/login` and `/admin/*`.
 
