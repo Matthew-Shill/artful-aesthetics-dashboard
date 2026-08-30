@@ -1,6 +1,7 @@
 import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { MangomintIframeDiagnostic } from "@/components/analytics/MangomintIframeDiagnostic";
 import { MangomintScript } from "@/components/booking/MangomintScript";
 import { siteConfig } from "@/config/site";
 
@@ -64,6 +65,8 @@ export default function RootLayout({ children }) {
       <body>
         <GoogleAnalytics />
         <MangomintScript />
+        {/* TEMPORARY DIAGNOSTIC — remove with MangomintIframeDiagnostic.jsx */}
+        <MangomintIframeDiagnostic />
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
