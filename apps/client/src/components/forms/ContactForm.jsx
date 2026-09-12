@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { createSupabaseClient } from "@artful/shared/supabase";
+import { trackLead } from "@/lib/gtag";
 import { Button } from "@/components/ui";
 import styles from "../ui/ui.module.css";
 
@@ -43,6 +44,8 @@ export function ContactForm() {
     if (error) {
       setStatus({ type: "error", message: "Something went wrong. Please try again or call us." });
     } else {
+      // Only after the row is actually written — a failed insert is not a lead.
+      trackLead({ method: "contact_form" });
       setStatus({ type: "success", message: "Thank you! We'll be in touch soon." });
       setForm({ name: "", email: "", phone: "", message: "" });
     }

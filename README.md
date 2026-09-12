@@ -71,8 +71,14 @@ GA4 property `G-DRMHQ428LB` (override with `NEXT_PUBLIC_GA_MEASUREMENT_ID`). Eve
 |-------|----------|---------|
 | `booking_start` | `/book`, `/get-started`, `/consultation`, every service page | Top of the booking funnel |
 | `booking_complete` | The `/thank-you` landing after a Mangomint booking | The conversion — mark as a key event |
+| `generate_lead` | A contact form submission that actually reached Supabase | An inquiry rather than a booking |
+| `contact_click` | Tapping a `tel:`, `sms:` or `mailto:` link (`method` says which) | The no-form path to reaching us |
 
-Both carry the same attribution parameters, so funnel drop-off can be compared channel by channel.
+All four carry the same attribution parameters, so channels can be compared at every stage.
+
+`generate_lead` fires on a successful insert, never on a contact *page view*. GA4's automated recommendations suggest marking `/contact` page views as leads; don't. A page view measures curiosity, and since those vastly outnumber bookings, treating them as a key event blends noise into every conversion-rate report and, with Google Ads connected, steers bidding toward the cheap signal instead of real bookings.
+
+`contact_click` is delegated from a single document-level listener rather than wired into each link, because those links appear in the header, footer, service pages, location pages and the thank-you page.
 
 ### How booking completion is detected
 
@@ -109,7 +115,7 @@ Parameters are prefixed because GA4 reserves the bare `source`, `medium`, `campa
 
 These are console-side and not covered by deploying the site.
 
-1. Admin → Events: mark `booking_complete` as a key event.
+1. Admin → Data display → Key events → **New key event**, named `booking_complete`. Use this rather than the Events list (which only offers names GA4 has already received) and rather than the "Create an event" builder — building a `booking_complete` from `page_view` on `/thank-you` would double-count against the event the site already sends. Consider `generate_lead` as a second key event; `contact_click` is better left as a regular event unless phone calls are a primary goal.
 2. Admin → Data streams → Configure tag settings → **List unwanted referrals**: add `mangomint.com`. Without this the post-booking redirect registers as a referral and restarts the session, so GA4's own acquisition reports credit bookings to Mangomint. The `attr_*` parameters are unaffected, but the standard reports are.
 3. Admin → Custom definitions: register the `attr_*` parameters above as event-scoped custom dimensions, and `first_channel` / `first_source` as user-scoped ones. Parameters are not queryable in reports or explorations until registered, and registration is not retroactive — do it before you want the data.
 4. Admin → Data filters: confirm **Developer Traffic** is not set to `Active`. It permanently discards any event carrying `debug_mode`, and excluded data is never recoverable.

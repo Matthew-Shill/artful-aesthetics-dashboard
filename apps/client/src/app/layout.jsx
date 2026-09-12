@@ -2,6 +2,7 @@ import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
 import { AttributionTracker } from "@/components/analytics/AttributionTracker";
 import { BookingComplete } from "@/components/analytics/BookingComplete";
+import { ContactLinkTracker } from "@/components/analytics/ContactLinkTracker";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MangomintScript } from "@/components/booking/MangomintScript";
 import { siteConfig } from "@/config/site";
@@ -68,6 +69,7 @@ export default function RootLayout({ children }) {
         <MangomintScript />
         <AttributionTracker />
         <BookingComplete />
+        <ContactLinkTracker />
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

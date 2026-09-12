@@ -35,14 +35,36 @@ export function setUserProperties(properties) {
 const BOOKING_COMPLETE_KEY = "aam_booking_complete";
 
 /**
- * Reports a step in the booking funnel, stamped with acquisition attribution.
+ * Reports a conversion-relevant event stamped with acquisition attribution.
  *
  * Carrying the source on the event itself is what makes "which channel produced
- * this booking" answerable directly, instead of depending on GA4 still holding
- * the session together across the Mangomint redirect.
+ * this" answerable directly, instead of depending on GA4 still holding the
+ * session together across the Mangomint redirect or a long booking flow.
  */
+export function trackAttributedEvent(name, params = {}) {
+  trackEvent(name, { ...getAttributionParams(), ...params });
+}
+
+/** A step in the booking funnel. */
 export function trackBookingEvent(name, params = {}) {
-  trackEvent(name, { method: "mangomint", ...getAttributionParams(), ...params });
+  trackAttributedEvent(name, { method: "mangomint", ...params });
+}
+
+/**
+ * An inquiry that is not a booking — a submitted contact form.
+ *
+ * `generate_lead` is a GA4 recommended event, so it is reported only on a
+ * genuine submission. Firing it on a contact *page view* would make the
+ * conversion count measure curiosity rather than intent, and would drown out
+ * `booking_complete` in any channel comparison.
+ */
+export function trackLead(params = {}) {
+  trackAttributedEvent("generate_lead", params);
+}
+
+/** A tap on a phone, SMS, or email link — the no-form path to reaching us. */
+export function trackContactClick(method, params = {}) {
+  trackAttributedEvent("contact_click", { method, ...params });
 }
 
 /**
