@@ -27,6 +27,8 @@ export const siteConfig = {
   bookingUrl: "/book",
   mangomintCompanyId: 974319,
   mangomintBookingOrigin: "https://booking.mangomint.com",
+  /** Post-booking redirect, configured on the Mangomint account. Not linked from the public site. */
+  bookingThankYouPath: "/thank-you",
   loginUrl: "/login",
   phone: "303.901.3381",
   phoneE164: "+13039013381",

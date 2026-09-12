@@ -1,7 +1,8 @@
 import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
+import { AttributionTracker } from "@/components/analytics/AttributionTracker";
+import { BookingComplete } from "@/components/analytics/BookingComplete";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
-import { MangomintIframeDiagnostic } from "@/components/analytics/MangomintIframeDiagnostic";
 import { MangomintScript } from "@/components/booking/MangomintScript";
 import { siteConfig } from "@/config/site";
 
@@ -65,8 +66,8 @@ export default function RootLayout({ children }) {
       <body>
         <GoogleAnalytics />
         <MangomintScript />
-        {/* TEMPORARY DIAGNOSTIC — remove with MangomintIframeDiagnostic.jsx */}
-        <MangomintIframeDiagnostic />
+        <AttributionTracker />
+        <BookingComplete />
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

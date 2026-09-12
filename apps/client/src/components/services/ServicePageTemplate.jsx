@@ -9,6 +9,7 @@ import {
   StickyBookBar,
   MediaImage,
 } from "@/components/ui";
+import { BookingStart } from "@/components/analytics/BookingStart";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { getServiceSchema, getMedicalProcedureSchema, getFaqPageSchema, getBreadcrumbSchema } from "@/components/seo/schema";
 import styles from "@/components/ui/ui.module.css";
@@ -81,6 +82,11 @@ export function ServicePageTemplate({ service, category }) {
       <JsonLd data={getMedicalProcedureSchema(service)} />
       {faqSchema && <JsonLd data={faqSchema} />}
       {breadcrumb && <JsonLd data={breadcrumb} />}
+
+      <BookingStart
+        serviceId={service.mangomintServiceId}
+        showOnlyScId={service.mangomintShowOnlyScId}
+      />
 
       <Hero
         eyebrow={category.title}

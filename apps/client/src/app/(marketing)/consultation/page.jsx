@@ -1,6 +1,7 @@
 import { siteConfig, trustCards } from "@/config/site";
 import { images } from "@/config/images";
 import { buildPageMetadata } from "@/lib/seo";
+import { BookingStart } from "@/components/analytics/BookingStart";
 import { Hero, MangomintEmbed, StickyBookBar, TrustCards } from "@/components/ui";
 
 export const metadata = buildPageMetadata({
@@ -13,6 +14,8 @@ export const metadata = buildPageMetadata({
 export default function ConsultationPage() {
   return (
     <>
+      <BookingStart />
+
       <Hero
         eyebrow="Get Started"
         titleLines={["Book a", "Consultation"]}
