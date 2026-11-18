@@ -199,8 +199,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 18% 50%, rgba(166, 99, 75, 0.18) 0%, transparent 42%),
-    linear-gradient(135deg, #1f1a16 0%, #3a322a 55%, #4a4036 100%);
+    radial-gradient(circle at 18% 50%, rgba(166, 99, 75, 0.22) 0%, transparent 42%),
+    linear-gradient(135deg, #2e2620 0%, #4a4036 55%, #5c5348 100%);
 }
 
 .heroVideoBg {
@@ -222,9 +222,9 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(20, 16, 14, 0.72) 0%,
-    rgba(20, 16, 14, 0.52) 42%,
-    rgba(20, 16, 14, 0.28) 100%
+    rgba(20, 16, 14, 0.55) 0%,
+    rgba(20, 16, 14, 0.35) 42%,
+    rgba(20, 16, 14, 0.15) 100%
   );
 }
 
@@ -263,9 +263,9 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(20, 16, 14, 0.75) 0%,
-    rgba(20, 16, 14, 0.58) 45%,
-    rgba(20, 16, 14, 0.22) 100%
+    rgba(20, 16, 14, 0.58) 0%,
+    rgba(20, 16, 14, 0.4) 45%,
+    rgba(20, 16, 14, 0.12) 100%
   );
 }
 
